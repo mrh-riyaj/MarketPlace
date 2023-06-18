@@ -1,0 +1,20 @@
+.menu_item {
+    font-size: 15px;
+    color: #8f8f8f;
+    position: relative;
+    padding: 15px 0 15px 67px;
+    border-left: 5px solid transparent;
+}
+.menu_item:hover {
+    color: #fff;
+    transition: 0.3s;
+    background-color: #484d53;
+    border-left: 5px solid #879dff
+}
+.icon {
+    top: 12px;
+    left: 24px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+}

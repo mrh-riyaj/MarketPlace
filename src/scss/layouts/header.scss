@@ -1,0 +1,16 @@
+.header-body {
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    background-color: aliceblue;
+    justify-content: space-between;
+    border-bottom: 1px solid #b1b1b15e;
+}
+.heading {
+    font-size: 30px;
+    margin-top: -6px;
+    color: #9ca8ffc4;
+}
