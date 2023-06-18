@@ -2,7 +2,7 @@ import Dashboard from "../pages/Dashboard"
 
 const Body = () => {
     return(
-        <section className="main-body">
+        <section className="main-body hgh">
             <Dashboard />
         </section>
     )
