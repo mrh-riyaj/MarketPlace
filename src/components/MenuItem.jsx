@@ -1,9 +1,7 @@
-import icon from '../images/menu.png';
-
 const MenuItem = (props) => {
     return (
         <div className="menu_item">
-            <img className='icon' src={icon} />
+            <i className={'icon icon-' + (props.icon ? props.icon : 'home')}></i>
             <span>{props.text}</span>
         </div>
     )

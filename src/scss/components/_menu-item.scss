@@ -1,3 +1,7 @@
+.menu_item:focus {
+    color: red;
+    background-color: #879dff;
+}
 .menu_item {
     font-size: 15px;
     color: #8f8f8f;
@@ -14,7 +18,6 @@
 .icon {
     top: 12px;
     left: 24px;
-    width: 22px;
-    height: 22px;
+    font-size: 18px;
     position: absolute;
 }
