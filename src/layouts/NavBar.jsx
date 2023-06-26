@@ -4,7 +4,7 @@ import ItemType from "../components/ItemType";
 
 const NavBar = () => {
     return (
-        <section className="menu-body">
+        <section className="position-r">
             <Logo />
             <div className="menu-item-body">
                 <ItemType text='Social Media' icon='social-media'/>

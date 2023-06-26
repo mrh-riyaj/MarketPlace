@@ -1,23 +1,17 @@
-.menu_item:focus {
-    color: red;
-    background-color: #879dff;
-}
 .menu_item {
     font-size: 15px;
-    color: #8f8f8f;
-    position: relative;
+    color: #c7c7c7;
     padding: 15px 0 15px 67px;
     border-left: 5px solid transparent;
 }
 .menu_item:hover {
     color: #fff;
     transition: 0.3s;
-    background-color: #484d53;
+    background-color: #000000;
     border-left: 5px solid #879dff
 }
 .icon {
-    top: 12px;
+    top: 14px;
     left: 24px;
     font-size: 18px;
-    position: absolute;
 }

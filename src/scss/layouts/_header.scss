@@ -2,15 +2,19 @@
     z-index: 1;
     width: 100%;
     height: 50px;
-    display: flex;
     padding: 10px;
+    color: #fff;
     position: absolute;
-    background-color: aliceblue;
+    background-color: #2f3337;
     justify-content: space-between;
     border-bottom: 1px solid #b1b1b15e;
 }
 .heading {
-    font-size: 30px;
-    margin-top: -6px;
-    color: #9ca8ffc4;
+    font-size: 20px;
+    margin-top: -8px;
+    color: #c7c7c7;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.clicked-menu {
+    margin: auto 0;
 }

@@ -5,11 +5,11 @@ import Body from './layouts/Body'
 
 function App() {
   return (
-    <section className='main-container'>
+    <section className='main-container d-flex'>
       <div className='nav-body'>
         <NavBar />
       </div>
-      <div className='landing-body'>
+      <div className='landing-body position-r'>
         <Header />
         <Body />
       </div>

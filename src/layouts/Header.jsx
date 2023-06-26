@@ -2,17 +2,15 @@ import User from "../components/User"
 
 const Header = () => {
     return(
-        <section>
-            <div className="header-body">
-                <div>Clicked item</div>
-                <div className="heading">
-                    <h1>Project For Practice </h1>
-                </div>
-                <div>
-                    <User />
-                </div>
+        <div className="header-body d-flex">
+            <span className="clicked-menu">Facebook</span>
+            <div className="heading">
+                <h1>Project For Practice </h1>
             </div>
-        </section>
+            <div>
+                <User />
+            </div>
+        </div>
     )
 }
 

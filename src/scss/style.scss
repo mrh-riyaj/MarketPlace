@@ -1,11 +1,18 @@
 @import './components/icons.scss';
-@import './layouts/app.scss';
-@import './layouts/body.scss';
-@import './layouts/header.scss';
 @import './components/logo.scss';
-@import './layouts/nav-bar.scss';
-@import './pages/dashboard.scss';
 @import './components/item-type';
 @import './components/menu-item.scss';
 @import './components/user.scss';
 @import './components/common-class';
+@import './components/button';
+@import './components/user-management';
+@import './components/websites';
+@import './components/user-info';
+
+@import './pages/dashboard.scss';
+@import './pages/user-profile';
+
+@import './layouts/app.scss';
+@import './layouts/body.scss';
+@import './layouts/header.scss';
+@import './layouts/nav-bar.scss';
