@@ -1,0 +1,19 @@
+.button {
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.black {
+    color: #000;
+
+    &:hover {
+        color: rgb(104, 104, 104);
+    }
+}
+.common {
+    color: #3d93f5;
+    
+    &:hover {
+        color: #81bbfd;
+    }
+}

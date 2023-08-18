@@ -1,11 +1,13 @@
+import {Link} from 'react-router-dom'
+
 const MenuItem = (props) => {
     return (
-        <div className="menu_item position-r">
-            <i className={'icon position-a icon-' +
+        <Link to={props.path} className="menu_item d-flex">
+            <i className={'icon icon-' +
                 (props.icon ? props.icon : 'home')}
             ></i>
             <span>{props.text}</span>
-        </div>
+        </Link>
     )
 }
 

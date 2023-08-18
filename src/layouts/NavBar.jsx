@@ -1,30 +1,22 @@
 import Logo from "../components/Logo";
 import MenuItem from "../components/MenuItem";
-import ItemType from "../components/ItemType";
 
 const NavBar = () => {
     return (
         <section className="position-r">
-            <Logo />
             <div className="menu-item-body">
-                <ItemType text='Social Media' icon='social-media'/>
-
-                <MenuItem text='Facebook' icon='facebook'/>
-                <MenuItem text='Instagram' icon='instagram'/>
-                <MenuItem text='Whatsapp' icon='whatsapp'/>
-
-                <ItemType text='Browsers' icon='google2'/>
-
-                <MenuItem text='Chrome' icon='chrome'/>
-                <MenuItem text='First text' icon='chrome'/>
-                <MenuItem text='First text' icon='chrome'/>
-
-                <ItemType text='Sports'/>
-
-                <MenuItem text='First text' icon='chrome'/>
-                <MenuItem text='First text' icon='chrome'/>
-                <MenuItem text='First text' icon='chrome'/>
-                
+                <Logo />
+                <MenuItem text='Home' icon='home' path="/home"/>
+                <MenuItem text='Search' icon='search' path="/user-profile"/>
+                <MenuItem text='Explore' icon='safari' />
+                <MenuItem text='Reels' />
+                <MenuItem text='Messages' />
+                <MenuItem text='Notification' icon='notification' />
+                <MenuItem text='Create' />
+                <MenuItem text='Profile' path="/user-profile" />
+                <div className="more-item position-a">
+                    <MenuItem text='More' icon="menu" />
+                </div>     
             </div>
         </section>
     )

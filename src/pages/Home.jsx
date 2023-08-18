@@ -1,6 +1,6 @@
 import img from '../images/dashboard.png'
 
-const Dashboard = () => {
+const Home = () => {
     return (
         <section className="cart">
             <img className='dashboard' src={img} />
@@ -8,4 +8,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Home
