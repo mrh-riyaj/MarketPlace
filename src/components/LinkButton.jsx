@@ -5,6 +5,7 @@ const LinkButton = (props) => {
         <Link
             className={"button " + (props.color ? props.color : "common") }
             to={props.path}
+            onClick={props.onClick}
         >
             {props.text}
         </Link>

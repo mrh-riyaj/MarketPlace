@@ -3,17 +3,27 @@
     font-weight: 600;
     text-decoration: none;
 }
-.black {
-    color: #000;
 
-    &:hover {
-        color: rgb(104, 104, 104);
-    }
-}
 .common {
     color: #3d93f5;
     
     &:hover {
         color: #81bbfd;
+    }
+}
+
+.black {
+    color: #000;
+
+    &:hover {
+        color: #686868;
+    }
+}
+
+.red {
+    color: #ff0505;
+
+    &:hover {
+        color: #fc6666;
     }
 }

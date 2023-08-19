@@ -5,7 +5,7 @@ import UserProfile from "../pages/UserProfile"
 const Routing = () => {
     return (
         <Router>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/user-profile" component={UserProfile} />
         </Router>
     )

@@ -1,3 +1,4 @@
+// Components
 @import './components/icons.scss';
 @import './components/icon.scss';
 @import './components/logo.scss';
@@ -10,8 +11,14 @@
 @import './components/_suggested';
 @import './components/new-post';
 
+// Pages
 @import './pages/user-profile';
 
+// Layouts
 @import './layouts/app.scss';
 @import './layouts/body.scss';
 @import './layouts/nav-bar.scss';
+
+// Common Popup
+@import './components/common/popup';
+@import './components/common/_alert-popup';

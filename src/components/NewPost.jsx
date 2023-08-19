@@ -25,10 +25,9 @@ const NewPost = (props) => {
             <div className="d-flex comment-section">
                 <div className="d-flex">
                     <Icon icon="heart" />
-                    <Icon icon="heart" class="comment" />
-                    <Icon icon="heart" />
+                    <Icon icon="bubble2" class="comment" />
                 </div>
-                <Icon icon="heart" />
+                <Icon icon="bookmark" />
             </div>
             <div>
                 <LinkButton text={50 + " Likes"} color="black" />
