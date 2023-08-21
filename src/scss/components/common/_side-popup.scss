@@ -3,24 +3,6 @@
     top: 0; right: 0; bottom: 0; left: 0;
 }
 
-.popup-header {
-    padding: 15px;
-    background-color: #fafafa;
-    justify-content: space-between;
-    border-bottom: 1px solid #eee;
-
-    .popup-title {
-        font-size: 15px;
-        color: #a5a5a5;;
-        font-weight: 600;
-    }
-
-    .popup-close {
-        color: red;
-        cursor: pointer;
-    }
-}
-
 .short-popup-container {
     width: 300px;
     overflow: hidden;

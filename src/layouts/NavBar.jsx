@@ -1,13 +1,15 @@
 import { useState } from "react";
+// import MiddlePopUp from "../components/common/MiddlePopUp";
 import SidePopUp from "../components/common/SidePopUp";
 import Logo from "../components/Logo";
 import MenuItem from "../components/MenuItem";
 
 const NavBar = () => {
-    const [moreMenuPopUp, setMoreMenuPopUp] = useState(false)
     const [searchPopUp, setSearchPopUp] = useState(false)
     const [messagePopUp, setMessagePopUp] = useState(false)
     const [notificationPopUp, setNotificationPopUp] = useState(false)
+    const [moreMenuPopUp, setMoreMenuPopUp] = useState(false)
+    // const [middleMenuPopUp, setMiddleMenuPopUp] = useState(false)
 
     return (
         <section className="position-r">
@@ -16,7 +18,7 @@ const NavBar = () => {
                 <MenuItem text='Home' icon='home2' path="/"/>
                 <MenuItem text='Search' icon='search' onClick={() => setSearchPopUp(true)} />
                 <MenuItem text='Explore' icon='compass2' />
-                <MenuItem text='Reels' icon="home" />
+                <MenuItem text='Reels' icon="film" />
                 <MenuItem text='Messages' icon="bubbles4" onClick={() => setMessagePopUp(true)} />
                 <MenuItem text='Notification' icon='bell' onClick={() => setNotificationPopUp(true)} />
                 <MenuItem text='Create' icon="pencil2" />
@@ -57,6 +59,16 @@ const NavBar = () => {
                 SidePopUpShort
                 onClose={() => setMoreMenuPopUp(false)}
             />}
+            {/* {middleMenuPopUp && <MiddlePopUp
+                title="try"
+                MiddleMenuPopUp
+                content={
+                    <div>
+                        AAA
+                    </div>
+                }
+                onClose={() => setMiddleMenuPopUp(false)}
+            />} */}
         </section>
     )
 }

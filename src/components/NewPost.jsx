@@ -1,8 +1,13 @@
+import { useState } from "react"
 import image from "../images/user.png"
 import LinkButton from "../components/LinkButton"
+import MenuItem from "../components/MenuItem"
 import Icon from "../components/Icon"
+import MiddlePopUp from "./common/MiddlePopUp"
 
 const NewPost = (props) => {
+    const [middleMenuPopUp, setMiddleMenuPopUp] = useState(false)
+
     return (
         <section className="new-posts">
             <div className="post-header d-flex">
@@ -17,7 +22,7 @@ const NewPost = (props) => {
                         <div className="post-status">Post Status</div>
                     </div>
                 </div>
-                <Icon icon="flickr" />
+                <Icon icon="list2" onClick={() => setMiddleMenuPopUp(true)} />
             </div>
             <div className="post-image">
                 <img src={image}/>
@@ -35,6 +40,24 @@ const NewPost = (props) => {
             <div>
                 <LinkButton text={"View all " + 50 + " comments"} color="black" />
             </div>
+            {middleMenuPopUp && <MiddlePopUp
+                title="Search"
+                MiddleMenuPopUp
+                content={
+                    <div>
+                        <MenuItem text="Report" color="red" />
+                        <MenuItem text="UnFollow" color="red" />
+                        <MenuItem text="Add to favorites"/>
+                        <MenuItem text="Go to post" />
+                        <MenuItem text="Share to..." />
+                        <MenuItem text="Copy link" />
+                        <MenuItem text="Embed" />
+                        <MenuItem text="About this account" />
+                        <MenuItem text="Remove" color="red" />
+                    </div>
+                }
+                onClose={() => setMiddleMenuPopUp(false)}
+            />}
         </section>
     )
 }

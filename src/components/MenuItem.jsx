@@ -6,7 +6,7 @@ const MenuItem = (props) => {
             {props.icon && 
                 <i className={'icon icon-' + props.icon}></i>
             }
-            <span>{props.text}</span>
+            <span className={"item-text " + props.color}>{props.text}</span>
         </Link>
     )
 }
