@@ -1,7 +1,7 @@
 import './scss/style.scss'
+import {BrowserRouter as Router} from 'react-router-dom'
 import NavBar from './layouts/NavBar'
 import Body from './layouts/Body'
-import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   return (

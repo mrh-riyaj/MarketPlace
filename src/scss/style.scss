@@ -5,10 +5,10 @@
 @import './components/menu-item.scss';
 @import './components/user.scss';
 @import './components/common-class';
-@import './components/_link-button';
-@import './components/_stories';
+@import './components/link-button';
+@import './components/stories';
 @import './components/header.scss';
-@import './components/_suggested';
+@import './components/suggested';
 @import './components/new-post';
 
 // Pages
@@ -20,5 +20,4 @@
 @import './layouts/nav-bar.scss';
 
 // Common Popup
-@import './components/common/popup';
-@import './components/common/_alert-popup';
+@import './components/common/side-popup';

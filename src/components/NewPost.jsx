@@ -17,7 +17,7 @@ const NewPost = (props) => {
                         <div className="post-status">Post Status</div>
                     </div>
                 </div>
-                <Icon icon="menu" />
+                <Icon icon="flickr" />
             </div>
             <div className="post-image">
                 <img src={image}/>

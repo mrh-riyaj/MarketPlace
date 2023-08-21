@@ -6,8 +6,8 @@ import UserProfile from "../pages/UserProfile"
 const Body = () => {
     return(
         <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/user-profile" element={<UserProfile />} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/user-profile" element={<UserProfile />} />
         </Routes>
     )
 }

@@ -1,21 +1,19 @@
 .menu_item {
     margin: 10px;
     color: #000;
-    display: block;
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 10px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
+
+    &:hover {
+        transition: 0.3s;
+        background-color: #eee;
+    }
 
     .icon {
         font-size: 25px;
-        font-weight: 100;
-        margin-right: 20px;
+        margin-right: 15px;
     }
-}
-.menu_item:hover {
-    color: #000;
-    transition: 0.3s;
-    background-color: #eee;
 }

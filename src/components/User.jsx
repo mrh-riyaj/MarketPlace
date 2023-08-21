@@ -8,7 +8,7 @@ const User = () => {
                 <img src={image} /> 
             </div>
             <div>
-                <LinkButton text="riyaj_hossain" color="black"  />
+                <LinkButton text="riyaj_hossain" color="black" path="/user-profile" />
                 <div className='full-name'>Md Riyaj Hossain</div>
             </div>
             <div>

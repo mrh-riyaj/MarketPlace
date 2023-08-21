@@ -1,8 +1,8 @@
-import { useState } from "react"
-import PopUp from "../components/common/PopUp"
+// import { useState } from "react"
+// import SidePopUp from "../components/common/SidePopUp"
 
 const UserProfile = () => {
-    const [isPopup, setIsPopup] = useState(false)
+    // const [isPopup, setIsPopup] = useState(false)
     // const [user, setUser] = useState([
     //     {name: 'Abul', age: 20},
     //     {name: 'Babul', age: 20},
@@ -32,10 +32,10 @@ const UserProfile = () => {
                             </li>
                         ))} */}
                     </div>
-                    <strong onClick={() => setIsPopup(true)}>Edit Profile</strong>
+                    {/* <strong onClick={() => setIsPopup(true)}>Edit Profile</strong> */}
                 </div>
             </div>
-            {isPopup && <PopUp content="Content" onClose={() => setIsPopup(false)} onSubmit={() => {}} title="Profile Edit" />}
+            {/* {isPopup && <SidePopUp content="Content" onClose={() => setIsPopup(false)} onSubmit={() => {}} title="Profile Edit" />} */}
         </section>
     )
 }
