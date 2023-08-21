@@ -17,11 +17,11 @@ const NavBar = () => {
                 <Logo />
                 <MenuItem text='Home' icon='home2' path="/"/>
                 <MenuItem text='Search' icon='search' onClick={() => setSearchPopUp(true)} />
-                <MenuItem text='Explore' icon='compass2' />
-                <MenuItem text='Reels' icon="film" />
+                <MenuItem text='Explore' icon='compass2' path="/explore" />
+                <MenuItem text='Reels' icon="film" path="reels" />
                 <MenuItem text='Messages' icon="bubbles4" onClick={() => setMessagePopUp(true)} />
                 <MenuItem text='Notification' icon='bell' onClick={() => setNotificationPopUp(true)} />
-                <MenuItem text='Create' icon="pencil2" />
+                <MenuItem text='Create' icon="pencil2" path="create-post" />
                 <MenuItem text='Profile' icon="user" path="/user-profile" />
                 <div className="more-item position-a">
                     <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} />
