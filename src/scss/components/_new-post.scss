@@ -1,43 +1,50 @@
 .new-posts {
-    padding: 10px;
     min-width: 19%;
+    cursor: pointer;
+    overflow: hidden;
     margin: 0.5% 0.5%;
+    padding-bottom: 10px;
     border-radius: 5px;
     border-bottom: 1px solid #e9e9e9;
-    box-shadow: 0 0 10px 5px #e9e9e9a6;
-    
-    &:hover {
-        transition: 0.5s;
-        box-shadow: 0 0 20px 0px #797979a6
-    }
 
-    .post-header {
-        align-items: center;
-
-        .user-image {
-            width: 40px;
-            height: 40px;
-            overflow: hidden;
-            margin-right: 15px;
-            border-radius: 50%;
-        }
-        .post-status {
-            font-size: 13px;
-            color: #575757;
-            margin-top: 2px;
-        }
-    }
-    .post-image {
-        cursor: pointer;
-        margin-top: 15px;
-        overflow: hidden;
-        max-height: 200px;
-        border-radius: 5px;
-        border-radius: inherit;
-        vertical-align: bottom;
-    }
-    .product-infos {
+    .info-section {
         padding: 10px 0;
-        justify-content: space-between;
+
+        .price {
+            font-size: 15px;
+            margin-right: 10px;
+            color: #a1a1a1;
+
+            &.old {
+                color: red;
+            }
+        }
+
+        .status {
+            font-size: 15px;
+            padding: 5px 8px;
+            border-radius: 4px;
+            top: 10px; right: 10px;
+
+            &.new {
+                color: green;
+                background-color: #bffcbf7c;
+            }
+            &.used {
+                color: red;
+                background-color: #f7b7b777;
+            }
+        }
+
+        .product-name {
+            padding: 8px 0;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .location {
+            font-size: 15px;
+            color: #a1a1a1;
+        }
     }
 }

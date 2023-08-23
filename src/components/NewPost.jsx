@@ -1,34 +1,21 @@
 import { useState } from "react"
-import image from "../images/user.png"
-import LinkButton from "../components/LinkButton"
-import Button from "../components/Button"
 import MiddlePopUp from "./common/MiddlePopUp"
 
 const NewPost = (props) => {
     const [middleMenuPopUp, setMiddleMenuPopUp] = useState(false)
 
     return (
-        <section className="new-posts">
-            <div className="post-header d-flex">
-                <div className='user-image'>
-                    <img src={image} />
+        <section className="new-posts position-r">
+            <div onClick={() => setMiddleMenuPopUp(true)}>
+                <div className="post-image">
+                    <img src={props.image}/>
                 </div>
-                <div>
-                    <h4 className="user-name">Username</h4> 
-                    <span className="post-status">Category</span>
-                </div>
-                <Button text="Demo" icon="heart"/>
-            </div>
-            <div className="product-content">
-                <div className="post-image" onClick={() => setMiddleMenuPopUp(true)}>
-                    <img src={image}/>
-                </div>
-                <div className="d-flex product-infos">
-                    <div>
-                        <span>Price</span>
-                        <span>Old Price</span>
-                    </div>
-                    <LinkButton text="Message" />
+                <div className="info-section">
+                    <span className="price">{props.price} BDT</span>
+                    <del className="price old">{props.oldPrice} BDT</del>
+                    <span className={"status position-a " + props.status}>{props.status}</span>
+                    <div className="product-name">{props.name}</div>
+                    <div className="location">{props.location}</div>
                 </div>
             </div>
 

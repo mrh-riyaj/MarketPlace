@@ -1,15 +1,19 @@
 .button-wrapper {
-    padding: 5px;
+    padding: 10px;
     font-size: 22px;
     color: #000000;
     border-radius: 4px;
     text-decoration: none;
+    background-color: #e4e4e4;
     
     &:hover {
-        color: #6e6e6e;
+        background-color: #c2c2c2;
     }
 
     .btn-text {
         color: red;
     }
+}
+
+.common {
 }

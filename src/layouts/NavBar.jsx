@@ -19,7 +19,7 @@ const NavBar = () => {
                 <MenuItem text='Profile' icon="user" path="/user-profile" />
                 <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} />    
                 <MenuItem text='Create' icon="pencil2" path="create-post" />
-                <Button text="Demo" icon="jdfvchi" />
+                <Button text="demo" icon="home" iconLeft="home" iconRight="home" />
             </div>
             {messagePopUp && <SidePopUp 
                 title="Messages"
