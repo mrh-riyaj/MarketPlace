@@ -1,5 +1,10 @@
 .header-body {
     padding: 10px;
-    overflow: hidden;
     margin-bottom: 30px;
+    min-height: 60px;
+    max-width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    background-color: khaki;
+    box-shadow: 0 0 0 #000;
 }

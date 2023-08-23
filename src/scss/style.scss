@@ -1,25 +1,22 @@
 // Components
 @import './components/icons.scss';
-@import './components/icon.scss';
+@import './components/button.scss';
 @import './components/logo.scss';
 @import './components/menu-item.scss';
 @import './components/user.scss';
 @import './components/common-class';
 @import './components/link-button';
-@import './components/stories';
 @import './components/header.scss';
 @import './components/suggested';
 @import './components/new-post';
 
 // Pages
 @import './pages/create-post';
-@import './pages/explore';
-@import './pages/reels';
 @import './pages/user-profile';
+@import './pages/home';
 
 // Layouts
 @import './layouts/app.scss';
-@import './layouts/body.scss';
 @import './layouts/nav-bar.scss';
 
 // Common Popup

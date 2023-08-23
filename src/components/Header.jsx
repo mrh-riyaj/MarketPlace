@@ -1,13 +1,14 @@
-import Stories from "./Stories"
+// import User from "./User"
 
 const Header = () => {
     return(
         <div className="header-body d-flex">
-            {[1,2,3,4,5,6,7,8].map((k="number") => (
-                <div key={k}>
-                    <Stories />
-                </div>
-            ))}
+            <div>A</div>
+            <div>B</div>
+            <div>
+                C
+                {/* <User /> */}
+            </div>
         </div>
     )
 }

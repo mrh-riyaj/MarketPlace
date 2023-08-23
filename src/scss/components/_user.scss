@@ -1,18 +1,15 @@
 .user-wrapper {
     align-items: center;
-    justify-content: space-between;
 
     .user-image {
-        max-width: 65px;
-        max-height: 65px;
+        max-width: 25px;
+        max-height: 25px;
         overflow: hidden;
         border-radius: 50%;
-        margin-right: -70px;
-        border: 2px solid #ff5858;
-    }
-    .full-name {
-        font-size: 13px;
         color: #888888;
+    }
+    .user-name {
+        font-size: 13px;
         margin-top: 5px;
     }
 }

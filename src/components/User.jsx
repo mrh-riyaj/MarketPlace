@@ -1,19 +1,12 @@
 import image from '../images/user.png'
-import LinkButton from '../components/LinkButton'
 
 const User = () => {
     return (
-        <div className='user-wrapper d-flex'>
+        <div className='user-wrapper'>
             <div className='user-image'>
                 <img src={image} /> 
             </div>
-            <div>
-                <LinkButton text="riyaj_hossain" color="black" path="/user-profile" />
-                <div className='full-name'>Md Riyaj Hossain</div>
-            </div>
-            <div>
-                <LinkButton text="Switch" />
-            </div>
+            <span className="user-name">User Name</span>
         </div>
     )
 }

@@ -1,8 +1,7 @@
 import { useState } from "react"
 import image from "../images/user.png"
 import LinkButton from "../components/LinkButton"
-import MenuItem from "../components/MenuItem"
-import Icon from "../components/Icon"
+import Button from "../components/Button"
 import MiddlePopUp from "./common/MiddlePopUp"
 
 const NewPost = (props) => {
@@ -11,50 +10,33 @@ const NewPost = (props) => {
     return (
         <section className="new-posts">
             <div className="post-header d-flex">
-                <div className="d-flex">
-                    <div className='user-image'>
-                        <img src={image} />
-                    </div>
-                    <div className="" style={{margin: "auto 0"}}>
-                        <LinkButton text="Username" color="black" />
-                        <span className="post-time position-r">Now</span>
-                        <LinkButton text="Follow" />
-                        <div className="post-status">Post Status</div>
-                    </div>
+                <div className='user-image'>
+                    <img src={image} />
                 </div>
-                <Icon icon="list2" onClick={() => setMiddleMenuPopUp(true)} />
-            </div>
-            <div className="post-image">
-                <img src={image}/>
-            </div>
-            <div className="d-flex comment-section">
-                <div className="d-flex">
-                    <Icon icon="heart" />
-                    <Icon icon="bubble2" class="comment" />
+                <div>
+                    <h4 className="user-name">Username</h4> 
+                    <span className="post-status">Category</span>
                 </div>
-                <Icon icon="bookmark" />
+                <Button text="Demo" icon="heart"/>
             </div>
-            <div>
-                <LinkButton text={50 + " Likes"} color="black" />
+            <div className="product-content">
+                <div className="post-image" onClick={() => setMiddleMenuPopUp(true)}>
+                    <img src={image}/>
+                </div>
+                <div className="d-flex product-infos">
+                    <div>
+                        <span>Price</span>
+                        <span>Old Price</span>
+                    </div>
+                    <LinkButton text="Message" />
+                </div>
             </div>
-            <div>
-                <LinkButton text={"View all " + 50 + " comments"} color="black" />
-            </div>
+
             {middleMenuPopUp && <MiddlePopUp
-                title="Search"
+                title="Product details"
                 MiddleMenuPopUp
                 content={
-                    <div>
-                        <MenuItem text="Report" color="red" />
-                        <MenuItem text="UnFollow" color="red" />
-                        <MenuItem text="Add to favorites"/>
-                        <MenuItem text="Go to post" />
-                        <MenuItem text="Share to..." />
-                        <MenuItem text="Copy link" />
-                        <MenuItem text="Embed" />
-                        <MenuItem text="About this account" />
-                        <MenuItem text="Remove" color="red" />
-                    </div>
+                    <div>Product details</div>
                 }
                 onClose={() => setMiddleMenuPopUp(false)}
             />}

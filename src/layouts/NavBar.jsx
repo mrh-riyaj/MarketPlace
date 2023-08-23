@@ -1,37 +1,26 @@
 import { useState } from "react";
-// import MiddlePopUp from "../components/common/MiddlePopUp";
+import Button from "../components/Button";
 import SidePopUp from "../components/common/SidePopUp";
 import Logo from "../components/Logo";
 import MenuItem from "../components/MenuItem";
 
 const NavBar = () => {
-    const [searchPopUp, setSearchPopUp] = useState(false)
     const [messagePopUp, setMessagePopUp] = useState(false)
     const [notificationPopUp, setNotificationPopUp] = useState(false)
     const [moreMenuPopUp, setMoreMenuPopUp] = useState(false)
-    // const [middleMenuPopUp, setMiddleMenuPopUp] = useState(false)
 
     return (
         <section className="position-r">
             <div className="menu-item-body">
                 <Logo />
                 <MenuItem text='Home' icon='home2' path="/"/>
-                <MenuItem text='Search' icon='search' onClick={() => setSearchPopUp(true)} />
-                <MenuItem text='Explore' icon='compass2' path="/explore" />
-                <MenuItem text='Reels' icon="film" path="reels" />
                 <MenuItem text='Messages' icon="bubbles4" onClick={() => setMessagePopUp(true)} />
                 <MenuItem text='Notification' icon='bell' onClick={() => setNotificationPopUp(true)} />
-                <MenuItem text='Create' icon="pencil2" path="create-post" />
                 <MenuItem text='Profile' icon="user" path="/user-profile" />
-                <div className="more-item position-a">
-                    <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} />
-                </div>     
+                <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} />    
+                <MenuItem text='Create' icon="pencil2" path="create-post" />
+                <Button text="Demo" icon="jdfvchi" />
             </div>
-            {searchPopUp && <SidePopUp 
-                title="Search"
-                SidePopUpFull
-                onClose={() => setSearchPopUp(false)}
-            />}
             {messagePopUp && <SidePopUp 
                 title="Messages"
                 SidePopUpFull
@@ -59,16 +48,6 @@ const NavBar = () => {
                 SidePopUpShort
                 onClose={() => setMoreMenuPopUp(false)}
             />}
-            {/* {middleMenuPopUp && <MiddlePopUp
-                title="try"
-                MiddleMenuPopUp
-                content={
-                    <div>
-                        AAA
-                    </div>
-                }
-                onClose={() => setMiddleMenuPopUp(false)}
-            />} */}
         </section>
     )
 }
