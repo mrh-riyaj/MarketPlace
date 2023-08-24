@@ -1,19 +1,32 @@
 .button-wrapper {
     padding: 10px;
-    font-size: 22px;
+    margin: 03px;
     color: #000000;
     border-radius: 4px;
     text-decoration: none;
     background-color: #e4e4e4;
+    align-items: center;
     
     &:hover {
-        background-color: #c2c2c2;
+        background-color: #dadada;
     }
-
+    
+    &.primary {
+        color: #fff;
+        background-color: #1b74e4;
+        
+        &:hover {
+            background-color: #397fd4;
+        }
+    }
+    
     .btn-text {
-        color: red;
+        padding: 0 5px;
+        font-size: 16px;
     }
-}
-
-.common {
+    
+    .btn-icon {
+        padding: 2px;
+        font-size: 13px;
+    }
 }

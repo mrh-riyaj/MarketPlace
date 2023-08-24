@@ -7,7 +7,7 @@ import MenuItem from "../components/MenuItem";
 const NavBar = () => {
     const [messagePopUp, setMessagePopUp] = useState(false)
     const [notificationPopUp, setNotificationPopUp] = useState(false)
-    const [moreMenuPopUp, setMoreMenuPopUp] = useState(false)
+    // const [moreMenuPopUp, setMoreMenuPopUp] = useState(false)
 
     return (
         <section className="position-r">
@@ -16,10 +16,9 @@ const NavBar = () => {
                 <MenuItem text='Home' icon='home2' path="/"/>
                 <MenuItem text='Messages' icon="bubbles4" onClick={() => setMessagePopUp(true)} />
                 <MenuItem text='Notification' icon='bell' onClick={() => setNotificationPopUp(true)} />
-                <MenuItem text='Profile' icon="user" path="/user-profile" />
-                <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} />    
                 <MenuItem text='Create' icon="pencil2" path="create-post" />
-                <Button text="demo" icon="home" iconLeft="home" iconRight="home" />
+                <MenuItem text='Profile' icon="user" path="/user-profile" />
+                {/* <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} /> */}
             </div>
             {messagePopUp && <SidePopUp 
                 title="Messages"
@@ -31,7 +30,7 @@ const NavBar = () => {
                 SidePopUpFull
                 onClose={() => setNotificationPopUp(false)}
             />}
-            {moreMenuPopUp && <SidePopUp 
+            {/* {moreMenuPopUp && <SidePopUp 
                 title="More"
                 content={
                     <div>
@@ -47,7 +46,7 @@ const NavBar = () => {
                 }
                 SidePopUpShort
                 onClose={() => setMoreMenuPopUp(false)}
-            />}
+            />} */}
         </section>
     )
 }

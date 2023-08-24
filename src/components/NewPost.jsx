@@ -1,31 +1,31 @@
 import { useState } from "react"
-import MiddlePopUp from "./common/MiddlePopUp"
+import ProductDetails from "./common/ProductDetails"
 
 const NewPost = (props) => {
-    const [middleMenuPopUp, setMiddleMenuPopUp] = useState(false)
+    const [ProductDetailsPopUp, setProductDetailsPopUp] = useState(false)
 
     return (
         <section className="new-posts position-r">
-            <div onClick={() => setMiddleMenuPopUp(true)}>
-                <div className="post-image">
-                    <img src={props.image}/>
+            <div onClick={() => setProductDetailsPopUp(true)}>
+                <div className="post-images">
+                    <img src={props.productImage}/>
                 </div>
                 <div className="info-section">
-                    <span className="price">{props.price} BDT</span>
-                    <del className="price old">{props.oldPrice} BDT</del>
-                    <span className={"status position-a " + props.status}>{props.status}</span>
+                    <span className="price">{props.price}</span>
+                    {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
                     <div className="product-name">{props.name}</div>
                     <div className="location">{props.location}</div>
                 </div>
             </div>
 
-            {middleMenuPopUp && <MiddlePopUp
-                title="Product details"
-                MiddleMenuPopUp
-                content={
-                    <div>Product details</div>
-                }
-                onClose={() => setMiddleMenuPopUp(false)}
+            {ProductDetailsPopUp && <ProductDetails
+                productImage={props.productImage}
+                price={props.price}
+                oldPrice={props.oldPrice}
+                name={props.name}
+                condition={props.condition}
+                location={props.location}
+                onClose={() => setProductDetailsPopUp(false)}
             />}
         </section>
     )
