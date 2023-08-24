@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import NewPost from "../components/NewPost"
-import Header from "../components/Header"
 import image from "../images/user.png"
 
 const Home = () => {
@@ -11,10 +11,17 @@ const Home = () => {
     let productImage = image;
     let condition = "New";
 
+    let userImage = image;
+
     return(
         <section className="main-body d-flex">
             <div className="post-section position-r">
-                <Header />
+                <div className="home-header d-flex">
+                    <span className="home-tittle">Market place</span>
+                    <Link className="user-image" to={"/user-profile"}>
+                        <img src={userImage} />
+                    </Link>
+                </div>
                 <div className="posts d-flex">
                     {postItem.map((k="number") => (
                         <NewPost kye={k}

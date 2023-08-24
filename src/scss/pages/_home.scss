@@ -1,6 +1,23 @@
+.home-header {
+    padding: 0 26px;
+    min-height: 80px;
+    align-items: center;
+    justify-content: space-between;
+
+    .home-tittle {
+        font-size: 20px;
+    }
+
+    .user-image {
+        max-width: 40px;
+        overflow: hidden;
+        max-height: 40px;
+        border-radius: 50%;
+    }
+}
+
 .posts {
-    padding: 20px;
-    margin-top: 60px;
-    flex-direction: row;
+    padding: 0 20px;
     flex-wrap: wrap;
+    flex-direction: row;
 }

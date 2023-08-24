@@ -1,5 +1,19 @@
 .menu-item-body {
     height: 100vh;
+    overflow: auto;
     padding-top: 30px;
     border-right: 1px solid #eee;
+    
+    .tittle {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 20px;
+        color: #afadad;
+        padding: 5px 10px;
+        justify-content: space-between;
+
+        .tittle-icon {
+            font-size: 15px;
+        }
+    }
 }

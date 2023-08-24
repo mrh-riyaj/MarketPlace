@@ -2,7 +2,7 @@ import image from "../images/user.png"
 import LinkButton from "../components/LinkButton"
 
 const UserProfile = () => {
-    let posts = 5;
+    let posts = 0 + " Posts";
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
     return (
@@ -16,7 +16,7 @@ const UserProfile = () => {
                     <span className="fullName">{fullName}</span>
                 </div>
                 <div className="profile-edit d-flex">
-                    <span className="infos">{posts} Posts</span>
+                    <span className="infos">{posts}</span>
                     <LinkButton text="Edit profile" />
                 </div>
             </div>

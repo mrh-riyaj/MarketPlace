@@ -4,22 +4,28 @@
     font-family: arial;
     box-sizing: border-box;
 }
+
 img {
     height: 100%;
     width: 100%;
 }
+
 body {
     background-color: #ffffff;
 }
+
 .d-flex {
     display: flex;
 }
+
 .position-a {
     position: absolute;
 }
+
 .position-r {
     position: relative;
 }
+
 .popup-header {
     padding: 15px;
     background-color: #fafafa;
@@ -36,4 +42,12 @@ body {
         color: #ff5858;
         cursor: pointer;
     }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #deebfd;
 }
