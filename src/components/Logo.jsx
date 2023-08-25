@@ -1,8 +1,13 @@
+import {Link} from "react-router-dom"
+import image from "../images/user.png"
+
 const Logo = () => {
     return (
-        <div className="logo-body">
-            <span className="logo ">Market place</span>
-        </div>
+        <Link className="logo-body" to="/">
+            <div className="logo">
+                <img src={image}/>
+            </div>
+        </Link>
     )
 }
 

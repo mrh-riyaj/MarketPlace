@@ -1,15 +1,12 @@
 .logo-body {
-    z-index: 1;
-    height: 50px;
-    width: 100%;
-    padding: 10px 90px 10px 30px;
+    // z-index: 1;
+    // height: 50px;
+    // width: 100%;
 
     .logo {
-        top: 0;
-        left: 0;
-        font-size: 25px;
-        font-weight: 600;
-        color: #ff6f6f;
-        text-align: center;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        overflow: hidden;
     }
 }

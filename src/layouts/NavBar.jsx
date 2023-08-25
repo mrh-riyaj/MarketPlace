@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SidePopUp from "../components/common/SidePopUp";
-import Logo from "../components/Logo";
+import Filter from "../components/Filter";
 import MenuItem from "../components/MenuItem";
 
 const NavBar = () => {
@@ -10,8 +10,10 @@ const NavBar = () => {
 
     return (
         <section className="position-r">
-            <div className="menu-item-body">
-                <Logo />
+            <div className="filter-section">
+                <Filter />
+            </div>
+            <div className="menu-body">
                 <MenuItem text='Browse all' icon='home2' path="/"/>
                 <MenuItem text='Notification' icon='bell' notification onClick={() => setNotificationPopUp(true)} />
                 <MenuItem text='Inbox' icon="bubbles4" notification onClick={() => setMessagePopUp(true)} />
