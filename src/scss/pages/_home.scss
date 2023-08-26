@@ -1,29 +1,5 @@
-.home-header {
-    padding: 0 26px;
-    min-height: 71px;
-    width: 82%;
-    align-items: center;
-    position: fixed;
-    background-color: #fff;
-    z-index: 1;
-    box-shadow: 0 0 5px 2px #eee;
-    border-bottom: 1px solid #eee;
-    justify-content: space-between;
-
-    .home-tittle {
-        font-size: 20px;
-    }
-
-    .user-image {
-        max-width: 40px;
-        overflow: hidden;
-        max-height: 40px;
-        border-radius: 50%;
-    }
-}
-
 .posts {
-    padding: 90px 20px 20px 20px;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: 20px;
 }

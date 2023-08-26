@@ -1,6 +1,7 @@
 .popup-main-container {
     z-index: 1;
     top: 0; right: 0; bottom: 0; left: 0;
+    background: none;
 }
 
 .short-popup-container {
@@ -18,6 +19,15 @@
     height: 100vh;
     overflow: hidden;
     border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 5px #e9e9e9;
+}
+
+.filter-popup-container {
+    width: 17%;
+    overflow: hidden;
+    border-radius: 10px;
+    top: 75px; left: 10px;
     background-color: #fff;
     box-shadow: 0 0 10px 5px #e9e9e9;
 }

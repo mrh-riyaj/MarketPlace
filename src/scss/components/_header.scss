@@ -1,6 +1,23 @@
-// .header-body {
-//     padding: 10px;
-//     max-width: 100%;
-//     justify-content: space-between;
-//     background-color: khaki;
-// }
+.header-body {
+    padding: 0 26px;
+    height: 70px;
+    width: 82%;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0 0 5px 2px #eee;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+
+    .header-tittle {
+        font-size: 20px;
+    }
+
+    .user-image {
+        max-width: 40px;
+        overflow: hidden;
+        max-height: 40px;
+        border-radius: 50%;
+    }
+}

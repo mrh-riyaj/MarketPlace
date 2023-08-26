@@ -1,17 +1,10 @@
 .filter-body {
-    min-height: 70px;
-    padding: 10px 15px;
+    height: 70px;
+    padding: 0 15px;
     align-items: center;
     border-bottom: 1px solid #eee;
     border-right: 1px solid #eee;
     background-color: #fff;
     box-shadow: 0 0 5px 2px #eee;
     justify-content: space-between;
-
-    // .icon-search {
-    //     padding: 10px;
-    //     border-radius: 50%;
-    //     cursor: pointer;
-    //     background-color: red;
-    // }
 }

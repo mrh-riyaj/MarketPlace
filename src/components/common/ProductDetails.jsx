@@ -24,17 +24,16 @@ const ProductDetails = (props) => {
                                 <div className="product-name">{props.name}</div>
                                 <div className="location">{props.location}</div>
                             </div>
-                            <div>
-                                <Button text="Message" type="primary"/>
-                                <Button text="Message" />
-                                <Button text="Message" iconLeft="home" />
-                                <Button text="Message" iconRight="home" />
-                                <Button icon="home" />
-                            </div>
+                            <Button icon="home" />
                         </div>
                     </div>
                     <div className="column-right">
                         <span className={"condition " + props.condition}>{props.condition}</span>
+                        <div><Button text="Message" type="primary"/></div>
+                        <div><Button text="Message" /></div>
+                        <div><Button text="Message" iconLeft="home" /></div>
+                        <div><Button text="Message" iconLeft="home" iconRight="home" /></div>
+                        <div><Button text="Message" iconRight="home" /></div>
                     </div>
                 </div>
             </div>

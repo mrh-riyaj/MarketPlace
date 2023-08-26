@@ -26,6 +26,17 @@ const SidePopUp = (props) => {
                     {props.content}
                 </div>
             }
+            {props.SidePopUpFilter &&
+                <div className="filter-popup-container position-a">
+                    <div className="popup-header d-flex">
+                        <div className="popup-title">{props.title}</div>
+                        <span className="popup-close" onClick={props.onClose}>
+                            <i className="icon-cancel-circle"></i>
+                        </span>
+                    </div>
+                    {props.content}
+                </div>
+            }
         </div>,
         document.body
         )

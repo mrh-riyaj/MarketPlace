@@ -6,7 +6,7 @@ const UserProfile = () => {
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
     return (
-        <section className="d-flex">
+        <section className="profile-section d-flex">
             <div className="profile-left-panel">
                 <div className="profile-header d-flex">
                     <div className="user-image-box">

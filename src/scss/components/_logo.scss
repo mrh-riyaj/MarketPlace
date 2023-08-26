@@ -1,12 +1,10 @@
 .logo-body {
-    // z-index: 1;
-    // height: 50px;
-    // width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #aebcfd;
 
     .logo {
-        height: 50px;
         width: 50px;
-        border-radius: 50%;
-        overflow: hidden;
+        height: 50px;
     }
 }

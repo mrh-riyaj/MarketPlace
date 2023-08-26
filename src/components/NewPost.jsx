@@ -7,7 +7,7 @@ const NewPost = (props) => {
     return (
         <section className="new-posts position-r">
             <div onClick={() => setProductDetailsPopUp(true)}>
-                <div className="post-images">
+                <div className="post-images d-flex">
                     <img src={props.productImage}/>
                 </div>
                 <div className="info-section">
