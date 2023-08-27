@@ -1,16 +1,17 @@
-import image from "../images/user.png"
+import image from "../images/User.jpg"
 import LinkButton from "../components/LinkButton"
 
 const UserProfile = () => {
     let posts = 0 + " Posts";
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
+    let userImage = image;
     return (
         <section className="profile-section d-flex">
             <div className="profile-left-panel">
                 <div className="profile-header d-flex">
                     <div className="user-image-box">
-                        <img src={image} />
+                        <img src={userImage} />
                     </div>
                     <span className="userName">{userName}</span>
                     <span className="fullName">{fullName}</span>

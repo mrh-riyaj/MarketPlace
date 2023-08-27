@@ -11,10 +11,10 @@ const NewPost = (props) => {
                     <img src={props.productImage}/>
                 </div>
                 <div className="info-section">
-                    <span className="price">{props.price}</span>
+                    {props.price && <span className="price">{props.price}</span>}
                     {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
-                    <div className="product-name">{props.name}</div>
-                    <div className="location">{props.location}</div>
+                    {props.name && <div className="product-name">{props.name}</div>}
+                    {props.location && <div className="location">{props.location}</div>}
                 </div>
             </div>
 
@@ -25,6 +25,9 @@ const NewPost = (props) => {
                 name={props.name}
                 condition={props.condition}
                 location={props.location}
+                details={props.details}
+                functions={props.functions}
+                description={props.description}
                 onClose={() => setProductDetailsPopUp(false)}
             />}
         </section>
