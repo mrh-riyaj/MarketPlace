@@ -1,0 +1,39 @@
+.form-body {
+    padding: 15px;
+    max-width: 80%;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 22px auto;
+    box-shadow: 0 0 15px 10px #e9e9e985;
+    
+    .required {
+        color: #ff0505;
+        font-size: 15px;
+    }
+    
+    .label {
+        font-size: 15px;
+        color: #a5a5a5;
+        margin-bottom: 5px;
+    }
+
+    .input-body {
+        border: none;
+        margin: 5px 0;
+        padding: 10px;
+        font-size: 17px;
+        border-radius: 5px;
+        background-color: #eee;
+
+        &.textarea {
+            resize: none
+        }
+        
+    }
+
+    .submit-section {
+        align-items: center;
+        padding: 20px 0 10px 0;
+        justify-content: space-between;
+    }
+}

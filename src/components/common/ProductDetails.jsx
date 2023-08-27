@@ -56,18 +56,6 @@ const ProductDetails = (props) => {
                                 <span className="infos">{props.description}</span>
                             </div>
                         }
-                        {props.functions &&
-                            <div className="product-infos">
-                                <span className="info-tittle">Functions : </span>
-                                <span className="infos">{props.functions}</span>
-                            </div>
-                        }
-                        {props.details &&
-                            <div className="product-infos">
-                                <span className="info-tittle">Details : </span>
-                                <span className="infos">{props.details}</span>
-                            </div>
-                        }
                     </div>
                     <div className="seller-info d-flex">
                         <div className="seller-img">

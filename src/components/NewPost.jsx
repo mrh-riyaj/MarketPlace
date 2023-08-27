@@ -25,8 +25,6 @@ const NewPost = (props) => {
                 name={props.name}
                 condition={props.condition}
                 location={props.location}
-                details={props.details}
-                functions={props.functions}
                 description={props.description}
                 onClose={() => setProductDetailsPopUp(false)}
             />}

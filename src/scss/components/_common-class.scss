@@ -10,7 +10,11 @@ img {
     width: 100%;
 }
 
-input {
+span {
+    display: inline-block;
+}
+
+input, select, textarea, table {
     width: 100%;
 }
 
@@ -56,10 +60,41 @@ body {
     background-color: #deebfd;
 }
 
+// Common page padding
 .posts,
 .menu-body,
 .create-section,
 .profile-section
 {
     padding-top: 70px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    
+    .clm {
+        width: 100%;
+        padding: 10px;
+
+    }
+}
+.row:last-child {
+    border-bottom: none;
+}
+.row-head {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #e8f4ff;
+
+    .head-titles {
+        font-size: 18px;
+        font-weight: 600;
+    }
 }
