@@ -27,6 +27,7 @@ const NewPost = (props) => {
                 location={props.location}
                 description={props.description}
                 onClose={() => setProductDetailsPopUp(false)}
+                id={props.id}
             />}
         </section>
     )

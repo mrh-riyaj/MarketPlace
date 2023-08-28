@@ -1,9 +1,13 @@
+.create-section {
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .form-body {
     padding: 15px;
     max-width: 80%;
     border-radius: 10px;
     background-color: #fff;
-    margin: 22px auto;
     box-shadow: 0 0 15px 10px #e9e9e985;
     
     .required {
@@ -26,7 +30,11 @@
         background-color: #eee;
 
         &.textarea {
-            resize: none
+            resize: none;
+            min-height: 120px;
+        }
+        &.select-photo {
+            min-height: 120px;
         }
         
     }

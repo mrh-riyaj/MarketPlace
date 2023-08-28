@@ -1,11 +1,18 @@
-import { queryAllByAttribute } from "@testing-library/react"
+// import { queryAllByAttribute } from "@testing-library/react"
+import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
+import { getProductById } from "../../services/product"
 import Button from "../Button"
-// import image from "../../images.User.jpg"
+import image from "../../images.User.jpg"
 
 const ProductDetails = (props) => {
-    // let sellerImage = image;
-
+    let sellerImage = image;
+    const [product, setProduct] = useState({})
+    useEffect(() => {
+        getProductById(props.id)
+        .then(data => setProduct(data))
+        console.log(product)
+    }, [])
     return(
         createPortal(
         <div className="middle-popup-main-container d-flex position-a">
@@ -25,7 +32,7 @@ const ProductDetails = (props) => {
                             <div>
                                 {props.price && <span className="price">{props.price}</span>}
                                 {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
-                                {props.name && <div className="product-name">{props.name}</div>}
+                                {props.name && <div className="product-name">{product.name}</div>}
                                 {props.location &&
                                     <div className="location">{props.location}
                                         <i className="icon-location"></i>
@@ -59,7 +66,7 @@ const ProductDetails = (props) => {
                     </div>
                     <div className="seller-info d-flex">
                         <div className="seller-img">
-                            {/* <img src={image}/> */}
+                            <img src={sellerImage}/>
                         </div>
                     </div>
                 </div>

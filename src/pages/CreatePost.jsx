@@ -1,33 +1,55 @@
-import { useState } from "react";
+import { useEffect, useState } from "react"
 import Button from "../components/Button"
 import LinkButton from "../components/LinkButton"
+import { createProduct } from "../services/product"
 
 const CreatePost = () => {
-    const [formValue, setFormValue] = useState({
-        // Price: "",
-        // OldPrice: "",
-        // condition: "",
-        // categories: "",
-        // productName: "",
-        productName: "",
-        sellerLocation: "",
-        // productDetails: "",
-        // selectImage: "",
-    });
-    const handelInput = (e) => {
-        const {productName, value} = e.target;
-        setFormValue({...formValue, [productName]: value})
-        // console.log(formValue)
+    const [formData, setFormData] = useState({})
+
+    const handInputField = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+        const currentData = {...formData}
+        currentData[name] = value
+
+        setFormData(currentData)
     }
-    const handelFormSubmit = (e) => {
-        e.preventDefault();
-        console.log(formValue)
+
+    const validateForm = () => {
+        const requiredFields = ["name", "price"]
+        const addedFields = []
+        if(Object.keys(formData).length) {
+            requiredFields.forEach((item) => {
+                for(const k in formData) {
+                    if(k === item && formData[k] !== '') {
+                        addedFields.push(item)
+                    }
+                }
+            })
+        }
+        else {
+            alert('All missing')
+        }
+        if(addedFields.length === requiredFields.length) {
+            createProduct(formData)
+            .then(re => {
+                alert("Created")
+            })
+            .catch(err => {
+                if(err) {
+                    alert("Not Created")
+                }
+            })
+        }
+        else {
+            alert('Single field missing')
+        }
     }
 
     return (
-        <section className="create-section">
+        <section className="create-section d-flex">
             <div className="form-body">
-                <form className="will-be-form-section" onSubmit={handelFormSubmit}>
+                <form id="formId">
                     <div className="row-head">
                         <div className="clm">
                             <span className="head-titles">For sell</span>
@@ -42,66 +64,55 @@ const CreatePost = () => {
                         </div>
                     </div>
                     <div className="row">
-                        {/* <div className="clm">
-                            <span className="label">Categories<i className="required">*</i></span>
-                            <select className="input-body">
-                                <option value="New">Select categories</option>
-                                <option value="New">New</option>
-                                <option value="Used">Used</option>
-                            </select>
-                        </div>
                         <div className="clm">
                             <span className="label">Condition<i className="required">*</i></span>
-                            <select className="input-body">
+                            <select 
+                                className="input-body"
+                                name="condition"
+                                onChange={handInputField}
+                            >
                                 <option value="New">Select condition</option>
                                 <option value="New">New</option>
                                 <option value="Used">Used</option>
                             </select>
-                        </div> */}
-                        <div className="clm">
-                            
                         </div>
                         <div className="clm">
-                            <span className="label">Product name<i className="required">*</i></span>
-                            <input
-                                className="input-body" type="text" name="productName"
-                                onChange={handelInput}
-                            />
-                        </div>
-                    </div>
-                    <div className="row">
-                        {/* <div className="clm">
-                            <span className="label">Seller location<i className="required">*</i></span>
-                            <input
-                                className="input-body" type="text" name="sellerLocation"
-                                value={formValue.sellerLocation}
-                                onChange={handelInput}
-                            />
-                        </div> */}
-                        {/* <div className="clm">
                             <span className="label">Price<i className="required">*</i></span>
                             <input
-                                className="input-body" type="number" name="price" 
-                                value={formValue.price}
-                                onChange={handelInput}
+                                className="input-body" type="number" name="price"
+                                onChange={handInputField}
                             />
                         </div>
                         <div className="clm">
                             <span className="label">OldPrice</span>
                             <input
                                 className="input-body" type="number" name="OldPrice"
-                                value={formValue.OldPrice}
-                                onChange={handelInput}
                             />
-                        </div> */}
+                        </div>
                     </div>
                     <div className="row">
-                        {/* <div className="clm">
+                        <div className="clm">
+                            <span className="label">Product name<i className="required">*</i></span>
+                            <input
+                                className="input-body" 
+                                name="name"
+                                type="text"
+                                id="productName"
+                                onChange={handInputField}
+                            />
+                        </div>
+                        <div className="clm">
+                            <span className="label">Seller location<i className="required">*</i></span>
+                            <input
+                                className="input-body" type="text" id="sellerLocation"
+                            />
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="clm">
                             <span className="label">Product details</span>
                             <textarea
-                                rows="8" name="productDetails" className="input-body textarea"
-                                value={formValue.productDetails}
-                                onChange={handelInput}
+                                name="productDetails" className="input-body textarea"
                             />
                         </div>
                         <div className="clm">
@@ -109,26 +120,24 @@ const CreatePost = () => {
                             <input
                                 type="file"
                                 name="productImage"
-                                className="input-body"
-                                onChange={handelInput}
-                                value={formValue.productImage}
-                                accept="image/png, image/gif, image/jpeg"
+                                className="input-body select-photo"
                             />
-                        </div> */}
+                        </div>
+                    </div>
+                    <div className="submit-section d-flex">
+                        <LinkButton
+                            color="red"
+                            text="Cancel"
+                        />
+                        <Button
+                            text="Submit"
+                            name="Submit"
+                            type="primary"
+                            iconLeft="pencil"
+                            onClick={validateForm}
+                        />
                     </div>
                 </form>
-                <div className="submit-section d-flex">
-                    <LinkButton
-                        color="red"
-                        text="Cancel"
-                    />
-                    <Button
-                        text="Submit"
-                        type="primary"
-                        iconLeft="pencil"
-                        onClick={() => handelFormSubmit()}
-                    />
-                </div>
             </div>
         </section>
     )
