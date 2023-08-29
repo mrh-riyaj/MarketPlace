@@ -14,20 +14,24 @@ const NewPost = (props) => {
                     {props.price && <span className="price">{props.price}</span>}
                     {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
                     {props.name && <div className="product-name">{props.name}</div>}
-                    {props.location && <div className="location">{props.location}</div>}
+                    {props.sellerLocation &&
+                        <div className="location">{props.sellerLocation}
+                            <i className="locket-icon icon-location"></i>
+                        </div>
+                    }
                 </div>
             </div>
 
             {ProductDetailsPopUp && <ProductDetails
-                productImage={props.productImage}
+                id={props.id}
+                name={props.name}
                 price={props.price}
                 oldPrice={props.oldPrice}
-                name={props.name}
-                condition={props.condition}
-                location={props.location}
-                description={props.description}
+                productImage={props.productImage}
+                sellerLocation={props.sellerLocation}
+                productDetails={props.productDetails}
+                productCondition={props.productCondition}
                 onClose={() => setProductDetailsPopUp(false)}
-                id={props.id}
             />}
         </section>
     )

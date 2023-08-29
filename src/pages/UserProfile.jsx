@@ -2,6 +2,7 @@ import image from "../images/User.jpg"
 import LinkButton from "../components/LinkButton"
 
 const UserProfile = () => {
+    let postItems = [1,2,3,4,5]
     let posts = 0 + " Posts";
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
@@ -22,9 +23,9 @@ const UserProfile = () => {
                 </div>
             </div>
             <div className="profile-right-panel">
-                {[1,2,3,4,5].map((k="number") => (
+                {postItems.map((item, k) => (
                     <div key={k}>
-                        <div>Demo</div>
+                        <div>DemoA</div>
                     </div>
                 ))}
             </div>

@@ -1,12 +1,9 @@
-// import { queryAllByAttribute } from "@testing-library/react"
 import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import { getProductById } from "../../services/product"
 import Button from "../Button"
-import image from "../../images.User.jpg"
 
 const ProductDetails = (props) => {
-    let sellerImage = image;
     const [product, setProduct] = useState({})
     useEffect(() => {
         getProductById(props.id)
@@ -33,9 +30,9 @@ const ProductDetails = (props) => {
                                 {props.price && <span className="price">{props.price}</span>}
                                 {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
                                 {props.name && <div className="product-name">{product.name}</div>}
-                                {props.location &&
-                                    <div className="location">{props.location}
-                                        <i className="icon-location"></i>
+                                {props.sellerLocation &&
+                                    <div className="location">{props.sellerLocation}
+                                        <i className="locket-icon icon-location"></i>
                                     </div>
                                 }
                             </div>
@@ -44,31 +41,31 @@ const ProductDetails = (props) => {
                                     className="message-value"
                                     type="text"
                                     disabled={true}
-                                    value={`Hi ${"seller_name"}, is this still available?`}
+                                    value={`Hi ${"props.sellerName"}, is this still available?`}
                                 />
                                 <Button text="Send" type="primary" onClick={() => alert("Hi Ahad")}/>
                             </div>
                         </div>
                     </div>
                     <div className="column-right">
-                        {props.condition &&
+                        {props.productCondition &&
                             <div className="product-infos">
                                 <span className="info-tittle">Condition : </span>
-                                <span className={"condition " + props.condition}>{props.condition}</span>
+                                <span className={"condition " + props.productCondition}>{props.productCondition}</span>
                             </div>
                         }
-                        {props.description &&
+                        {props.productDetails &&
                             <div className="product-infos">
-                                <span className="info-tittle">Description : </span>
-                                <span className="infos">{props.description}</span>
+                                <span className="info-tittle">Details : </span>
+                                <span className="infos">{props.productDetails}</span>
                             </div>
                         }
                     </div>
-                    <div className="seller-info d-flex">
+                    {/* <div className="seller-info d-flex">
                         <div className="seller-img">
-                            <img src={sellerImage}/>
+                            Here seller image
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>,
