@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import { getProductById } from "../../services/product"
 import Button from "../Button"
+import LinkButton from "../LinkButton"
 
 const ProductDetails = (props) => {
     const [product, setProduct] = useState({})
@@ -58,6 +59,12 @@ const ProductDetails = (props) => {
                             <div className="product-infos">
                                 <span className="info-tittle">Details : </span>
                                 <span className="infos">{props.productDetails}</span>
+                            </div>
+                        }
+                        {props.sellerName &&
+                            <div className="sellerName">
+                                Seller Name :-
+                                <LinkButton color="black" text={props.sellerName} />
                             </div>
                         }
                     </div>

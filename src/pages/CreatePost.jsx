@@ -70,6 +70,7 @@ const CreatePost = () => {
                             className="input-body"
                             name="productCondition"
                             onChange={handInputField}
+                            required
                         >
                             <option value="New">Select condition</option>
                             <option value="New">New</option>
@@ -81,6 +82,7 @@ const CreatePost = () => {
                         <input
                             className="input-body" type="number" name="price"
                             onChange={handInputField}
+                            required
                         />
                     </div>
                     <div className="clm">
@@ -88,6 +90,7 @@ const CreatePost = () => {
                         <input
                             className="input-body" type="number" name="oldPrice"
                             onChange={handInputField}
+                            required
                         />
                     </div>
                 </div>
@@ -100,6 +103,7 @@ const CreatePost = () => {
                             type="text"
                             id="productName"
                             onChange={handInputField}
+                            required
                         />
                     </div>
                     <div className="clm">
@@ -107,6 +111,7 @@ const CreatePost = () => {
                         <input
                             className="input-body" type="text" name="sellerLocation"
                             onChange={handInputField}
+                            required
                         />
                     </div>
                 </div>
@@ -116,6 +121,7 @@ const CreatePost = () => {
                         <textarea
                             className="input-body textarea" name="productDetails"
                             onChange={handInputField}
+                            required
                         />
                     </div>
                     <div className="clm">

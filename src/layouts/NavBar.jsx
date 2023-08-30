@@ -19,6 +19,7 @@ const NavBar = () => {
                 <MenuItem text='Inbox' icon="bubbles4" notification onClick={() => setMessagePopUp(true)} />
                 <MenuItem text='Create' icon="pencil2" path="create-post" />
                 <MenuItem text='Profile' icon="user" path="/user-profile" />
+                <MenuItem text='Login' icon="user" path="/login" />
                 <MenuItem text='More' icon="list2" onClick={() => setMoreMenuPopUp(true)} />
                 <div className="tittle d-flex">
                     <span>Categories</span>

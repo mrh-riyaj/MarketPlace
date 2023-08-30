@@ -3,8 +3,9 @@ import image from "../images/Logo.svg"
 
 const Logo = () => {
     return (
-        <Link className="logo-body" to="/">
-            <div className="logo">
+        <Link className="logo-body position-r" to="/">
+            <span className="logo-design"></span>
+            <div className="logo position-a">
                 <img src={image}/>
             </div>
         </Link>

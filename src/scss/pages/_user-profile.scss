@@ -1,7 +1,9 @@
 .profile-left-panel {
     width: 20%;
-    padding: 40px 0;
+    height: 92vh;
+    padding: 40px 15px;
     align-items: center;
+    overflow: auto;
     border-right: 1px solid #eee;
 
     .profile-header {
@@ -15,24 +17,34 @@
             border-radius: 50%;
             margin-bottom: 15px;
         }
+    }
 
-        .userName {
-            margin: 10px 0;
-            font-size: 15px;
-            font-weight: 600;
-        }
-        
-        .fullName {
-            font-size: 18px;
-            color: #a5a5a5;
-        }
+    .userName {
+        margin: 10px 0;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    .fullName {
+        font-size: 18px;
+        color: #a5a5a5;
+    }
+    .fullName {
+        font-size: 18px;
+        color: #a5a5a5;
+    }
+    .fullName {
+        font-size: 18px;
+        color: #a5a5a5;
+    }
+    .fullName {
+        font-size: 18px;
+        color: #a5a5a5;
     }
 
     .profile-edit {
-        margin: 20px 30px;
+        margin: 0px 0;
         padding: 20px 0;
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
         justify-content: space-around;
     }
 }
@@ -43,8 +55,8 @@
     padding: 20px;
     overflow: auto;
 
-    div {
-        height: 300px;
-        border-bottom: 1px solid #eee;
-    }
+    // div {
+    //     height: 300px;
+    //     border-bottom: 1px solid #eee;
+    // }
 }

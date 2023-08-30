@@ -27,6 +27,7 @@ const NewPost = (props) => {
                 name={props.name}
                 price={props.price}
                 oldPrice={props.oldPrice}
+                sellerName={props.sellerName}
                 productImage={props.productImage}
                 sellerLocation={props.sellerLocation}
                 productDetails={props.productDetails}

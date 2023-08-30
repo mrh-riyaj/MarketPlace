@@ -4,7 +4,7 @@ import image from "../images/demo_product.jpg"
 import { getAllProducts } from "../services/product"
 
 const Home = () => {
-    // let sellerName = "RIYAJ_HOSSAIN"
+    let sellerName = "RIYAJ_HOSSAIN"
     const [products, setProducts] = useState([])
     useEffect(() => {
         getAllProducts()
@@ -23,7 +23,7 @@ const Home = () => {
                             price={item.price}
                             oldPrice={item.oldPrice}
                             sellerLocation={item.sellerLocation}
-                            // sellerName={sellerName}
+                            sellerName={sellerName}
                         
                             // product detail section
                             productCondition={item.productCondition}
