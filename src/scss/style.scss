@@ -12,6 +12,7 @@
 @import './components/filter';
 
 // Pages
+@import './pages/notifications';
 @import './pages/create-post';
 @import './pages/user-profile';
 @import './pages/home';
@@ -22,5 +23,7 @@
 @import './layouts/nav-bar.scss';
 
 // Common Popup
-@import './components/common/side-popup';
-@import './components/common/product-details';
+@import './components/popUps/product-details';
+@import './components/popUps/for-more';
+@import './components/popUps/for-filter';
+@import './components/popUps/for-edit-profile';

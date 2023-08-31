@@ -63,7 +63,7 @@ const CreatePost = () => {
                         </span>
                     </div>
                 </div>
-                <div className="row">
+                <div className="formRow">
                     <div className="clm">
                         <span className="label">Condition<i className="required">*</i></span>
                         <select 
@@ -94,7 +94,7 @@ const CreatePost = () => {
                         />
                     </div>
                 </div>
-                <div className="row">
+                <div className="formRow">
                     <div className="clm">
                         <span className="label">Product name<i className="required">*</i></span>
                         <input
@@ -115,7 +115,7 @@ const CreatePost = () => {
                         />
                     </div>
                 </div>
-                <div className="row">
+                <div className="formRow">
                     <div className="clm">
                         <span className="label">Product details<i className="required">*</i></span>
                         <textarea

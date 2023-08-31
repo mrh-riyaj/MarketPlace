@@ -4,6 +4,8 @@ import CreatePost from "../pages/CreatePost"
 import UserProfile from "../pages/UserProfile"
 import { Routes, Route } from "react-router-dom"
 import Login from "../pages/Login"
+import Notifications from "../pages/Notifications"
+import Inboxes from "../pages/Inboxes"
 
 const Body = () => {
     return(
@@ -11,6 +13,8 @@ const Body = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/create-post" element={<CreatePost />} />
             <Route exact path="/user-profile" element={<UserProfile />} />
+            <Route exact path="/notification" element={<Notifications />} />
+            <Route exact path="/inbox" element={<Inboxes />} />
             <Route exact path="/login" element={<Login />} />
         </Routes>
     )

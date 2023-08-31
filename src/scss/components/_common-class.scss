@@ -16,6 +16,9 @@ span {
 
 input, select, textarea, table {
     width: 100%;
+    border: none;
+    outline: none;
+    background-color: #eee;
 }
 
 body {
@@ -39,17 +42,15 @@ body {
     background-color: #fafafa;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
-
-    .popup-title {
-        font-size: 15px;
-        color: #a5a5a5;;
-        font-weight: 600;
-    }
-
-    .popup-close {
-        color: #ff5858;
-        cursor: pointer;
-    }
+}
+.popup-title {
+    font-size: 15px;
+    color: #a5a5a5;;
+    font-weight: 600;
+}
+.popup-close {
+    color: #ff5858;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -63,14 +64,16 @@ body {
 // Common page padding
 .posts,
 .menu-body,
-.login-page,
+.login-page, //will be remove
 .create-section,
-.profile-section
+.profile-section,
+.inboxes-section,
+.notification-section
 {
     padding-top: 70px;
 }
 
-.row {
+.formRow {
     width: 100%;
     display: flex;
     padding: 10px 0;
@@ -79,7 +82,15 @@ body {
     .clm {
         width: 100%;
         padding: 10px;
-
+    }
+}
+.row {
+    width: 100%;
+    display: flex;
+    
+    .clm {
+        width: 100%;
+        padding: 0 10px;
     }
 }
 .row:last-child {
@@ -98,4 +109,10 @@ body {
         font-size: 18px;
         font-weight: 600;
     }
+}
+
+.popup-main-container {
+    z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: none;
 }

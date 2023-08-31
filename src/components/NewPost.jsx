@@ -1,5 +1,5 @@
 import { useState } from "react"
-import ProductDetails from "./common/ProductDetails"
+import ProductDetails from "./popUps/ProductDetails"
 
 const NewPost = (props) => {
     const [ProductDetailsPopUp, setProductDetailsPopUp] = useState(false)
