@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import NewPost from "../components/NewPost"
-import image from "../images/demo_product.jpg"
+import ProductImage from "../images/demo_product.jpg"
+import SellerImage from "../images/User.jpg"
 import { getAllProducts } from "../services/product"
 
 const Home = () => {
     let sellerName = "RIYAJ_HOSSAIN"
+    let sellerImage= SellerImage
     const [products, setProducts] = useState([])
     useEffect(() => {
         getAllProducts()
@@ -22,13 +24,14 @@ const Home = () => {
                             name={item.name}
                             price={item.price}
                             oldPrice={item.oldPrice}
+                            productImage={ProductImage}
                             sellerLocation={item.sellerLocation}
+                            
+                            // product details section
                             sellerName={sellerName}
-                        
-                            // product detail section
-                            productCondition={item.productCondition}
+                            sellerImage={sellerImage}
                             productDetails={item.productDetails}
-                            productImage={image}
+                            productCondition={item.productCondition}
                          />
                     ))}
                 </div>

@@ -1,5 +1,6 @@
 import { createPortal } from "react-dom"
 import Button from "../Button"
+import Input from "../Input"
 
 const ForFilter = (props) => {
     return(
@@ -35,10 +36,16 @@ const ForFilter = (props) => {
                         <div className="clm">
                             <div className="row">
                                 <div className="clm">
-                                    <input className="filter-inputs" type="number" placeholder="Min"/>
+                                    <Input
+                                        input type="number" placeholder="Min"
+                                        class="filter-inputs"
+                                    />
                                 </div>
                                 <div className="clm">
-                                    <input className="filter-inputs" type="number" placeholder="Max"/>
+                                    <Input
+                                        input type="number" placeholder="Max"
+                                        class="filter-inputs"
+                                    />
                                 </div>
                                 <div className="clm">
                                     <Button text="Search" iconLeft="search" type="primary" />
