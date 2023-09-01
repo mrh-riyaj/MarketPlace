@@ -16,7 +16,9 @@ const CreatePost = () => {
     }
 
     const validateForm = () => {
-        const requiredFields = ["name", "price", "productCondition", "sellerLocation", "productDetails"]
+        const requiredFields = [
+            "name", "price", "productDetails", "sellerLocation"
+        ]
         const addedFields = []
         if(Object.keys(formData).length) {
             requiredFields.forEach((item) => {
@@ -69,7 +71,7 @@ const CreatePost = () => {
                             onChange={handInputField} required={true}
                             className="input-body" name="productCondition"
                         >
-                            <option value="New">Select condition</option>
+                            <option>-- Select condition --</option>
                             <option value="New">New</option>
                             <option value="Used">Used</option>
                         </select>
@@ -77,7 +79,7 @@ const CreatePost = () => {
                     <div className="clm">
                         <Input
                             required={true} onChange={handInputField}
-                            input name="Price" type="number" label="Price"
+                            input name="price" type="number" label="Price"
                         />
                     </div>
                     <div className="clm">
@@ -110,7 +112,8 @@ const CreatePost = () => {
                     </div>
                     <div className="clm">
                         <Input
-                            required={true} onChange={handInputField}
+                            // required={true}
+                            onChange={handInputField}
                             input type="file" class="select-photo"
                             name="productImage" label="Select your item"
                         />

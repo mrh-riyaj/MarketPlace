@@ -1,14 +1,14 @@
 .header-body {
-    padding: 0 26px;
-    height: 70px;
     width: 82%;
-    align-items: center;
-    position: fixed;
-    background-color: #fff;
     z-index: 1;
+    height: 70px;
+    position: fixed;
+    padding: 0 26px;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
     box-shadow: 0 0 5px 2px #eee;
     border-bottom: 1px solid #eee;
-    justify-content: space-between;
 
     .header-tittle {
         font-size: 20px;
@@ -22,14 +22,16 @@
     }
 
     .search-bar {
+        padding: 3px 0;
+        margin-left: -35px;
+        border-radius: 30px;
         background-color: #fff;
         box-shadow: 0 0 5px 5px #eee;
-        border-radius: 10px;
 
         .input-body {
-            min-width: 400px;
             padding: 0 15px;
             font-size: 17px;
+            min-width: 400px;
             background: none;
         }
         .search-icon {

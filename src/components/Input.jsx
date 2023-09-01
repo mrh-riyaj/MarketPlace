@@ -31,6 +31,18 @@ const Input = (props) => {
                     />
                 </>
             }
+            {props.imageSelector &&
+                <>
+                    {props.label &&
+                        <span className="label">{props.label}
+                            {props.required && <i className="required">*</i>}
+                        </span>
+                    }
+                    <input
+                        type={props.type} name={props.name} className="input-body" onChange={props.onChange}
+                    />
+                </>
+            }
             {/* {props.select &&
                 <>
                     {props.label &&
@@ -43,9 +55,6 @@ const Input = (props) => {
                     >
                         <option value=""></option>
                     </select>
-                    <input
-                        type={props.type}
-                    />
                 </>
             } */}
         </>

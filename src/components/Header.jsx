@@ -7,9 +7,11 @@ const Header = () => {
 
     return(
         <div className="header-body d-flex">
-            <span className="header-tittle">Clicked</span>
+            <div className="header-tittle">
+                <span>Clicked</span>
+            </div>
             <div className="search-bar d-flex">
-                <input className="input-body" className="input-body" type="text"/>
+                <input className="input-body" className="input-body" type="text" placeholder="Search MarketPlace"/>
                 <Button type="search-icon" icon="search" />
             </div>
             <Link className="user-image" to={"/user-profile"}>
