@@ -17,15 +17,6 @@ const ForFilter = (props) => {
                     <div className="row">
                         <div className="clm">
                             <select className="filter-inputs">
-                                <option value="#">-- Sort By --</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                            </select>
-                        </div>
-                        <div className="clm">
-                            <select className="filter-inputs">
                                 <option value="#">-- Categories --</option>
                                 <option value="A">A</option>
                                 <option value="B">B</option>
