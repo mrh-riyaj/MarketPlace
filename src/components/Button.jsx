@@ -2,7 +2,10 @@ import {Link} from "react-router-dom"
 
 const Button = (props) => {
     return (
-        <Link className={"button-wrapper " + props.type} to={props.path} onClick={props.onClick}>
+        <Link
+            className={props.class + " button-wrapper " + props.type}
+            to={props.path} onClick={props.onClick}
+        >
             {!props.text && props.icon && <i className={"btn-icon icon-" + props.icon}></i>}
             {props.text &&
                 <span>

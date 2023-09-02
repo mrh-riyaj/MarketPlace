@@ -1,22 +1,23 @@
 // Components
-@import './components/icons.scss';
-@import './components/button.scss';
-@import './components/logo.scss';
-@import './components/menu-item.scss';
-@import './components/user.scss';
-@import './components/common-class';
-@import './components/link-button';
-@import './components/header.scss';
-@import './components/suggested';
-@import './components/new-post';
+@import './components/input';
 @import './components/filter';
+@import './components/new-post';
+@import './components/user.scss';
+@import './components/suggested';
+@import './components/logo.scss';
+@import './components/icons.scss';
+@import './components/link-button';
+@import './components/button.scss';
+@import './components/header.scss';
+@import './components/common-class';
+@import './components/menu-item.scss';
 
 // Pages
-@import './pages/notifications';
-@import './pages/create-post';
-@import './pages/user-profile';
 @import './pages/home';
 @import './pages/login';
+@import './pages/create-post';
+@import './pages/user-profile';
+@import './pages/notifications';
 
 // Layouts
 @import './layouts/app.scss';
@@ -24,6 +25,8 @@
 
 // Common Popup
 @import './components/popUps/product-details';
-@import './components/popUps/for-more';
-@import './components/popUps/for-filter';
 @import './components/popUps/for-edit-profile';
+
+// Hidden components
+@import './components/hidden-components/for-more';
+@import './components/hidden-components/for-filter';

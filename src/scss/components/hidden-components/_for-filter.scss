@@ -1,0 +1,33 @@
+.filter-container {
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    top: 70px; left: 0;
+    border-radius: 10px;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px 5px #e9e9e9;
+    
+    .container {
+        padding: 15px;
+        
+        .filter-inputs {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            background-color: #eee;
+        }
+
+        .filter-buttons {
+            padding-top: 15px;
+            align-items: center;
+
+            .filter-search {
+                text-align: right;
+            }
+        }
+    }
+}

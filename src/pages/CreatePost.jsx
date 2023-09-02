@@ -71,9 +71,9 @@ const CreatePost = () => {
                             onChange={handInputField} required={true}
                             className="input-body" name="productCondition"
                         >
-                            <option>-- Select condition --</option>
-                            <option value="New">New</option>
-                            <option value="Used">Used</option>
+                            <option className="options">-- Select condition --</option>
+                            <option className="options" value="New">New</option>
+                            <option className="options" value="Used">Used</option>
                         </select>
                     </div>
                     <div className="clm">

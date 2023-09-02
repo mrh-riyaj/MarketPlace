@@ -21,25 +21,6 @@
         margin-bottom: 5px;
     }
 
-    .input-body {
-        border: none;
-        outline: none;
-        margin: 5px 0;
-        padding: 10px;
-        font-size: 17px;
-        border-radius: 5px;
-        background-color: #eee;
-
-        &.textarea {
-            resize: none;
-            min-height: 120px;
-        }
-        &.select-photo {
-            min-height: 120px;
-        }
-        
-    }
-
     .submit-section {
         align-items: center;
         padding: 20px 0 10px 0;

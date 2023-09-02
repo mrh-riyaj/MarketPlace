@@ -43,20 +43,6 @@ const Input = (props) => {
                     />
                 </>
             }
-            {/* {props.select &&
-                <>
-                    {props.label &&
-                        <span className="label">{props.label}
-                            {props.required && <i className="required">*</i>}
-                        </span>
-                    }
-                    <select
-                        name={props.name} className="input-body" onChange={props.onChange}
-                    >
-                        <option value=""></option>
-                    </select>
-                </>
-            } */}
         </>
     )
 }
