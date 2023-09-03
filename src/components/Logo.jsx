@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom"
 import image from "../images/Logo.svg"
 
-const Logo = () => {
+const Logo = (props) => {
     return (
-        <Link className="logo-body position-r" to="/">
+        <Link className="logo-body position-r" to={props.path}>
             <span className="logo-design"></span>
             <div className="logo position-a">
                 <img src={image}/>

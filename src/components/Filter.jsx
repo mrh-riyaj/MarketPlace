@@ -8,7 +8,7 @@ const Filter = () => {
     
     return (
         <div className="filter-body d-flex position-r">
-            <Logo />
+            <Logo path="/"/>
             <Button
                 text="Filter" type="primary" iconRight="search"
                 onClick={() => setFilter(true)}

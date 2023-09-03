@@ -1,5 +1,6 @@
 import './scss/style.scss'
 import {BrowserRouter as Router} from 'react-router-dom'
+// import Login from './pages/Login'
 import NavBar from './layouts/NavBar'
 import Body from './layouts/Body'
 import Header from './components/Header'
@@ -7,6 +8,7 @@ import Header from './components/Header'
 function App() {
   return (
     <Router>
+      {/* <Login /> */}
       <section className='main-container d-flex position-r'>
         <div className='nav-section'>
           <NavBar />

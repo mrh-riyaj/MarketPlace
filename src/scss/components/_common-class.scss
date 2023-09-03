@@ -54,10 +54,9 @@ body {
     background-color: #deebfd;
 }
 
-// Common page padding
+// Common page padding for pages
 .posts,
 .menu-body,
-.login-page, //will be remove
 .create-section,
 .profile-section,
 .inboxes-section,
@@ -80,6 +79,7 @@ body {
 .row {
     width: 100%;
     display: flex;
+    justify-content: center;
     
     .clm {
         width: 100%;

@@ -23,7 +23,7 @@ const NavBar = () => {
                 <div className="menu_item d-flex position-r" onClick={() => setMoreMenu(true)}>
                     <i className="icon icon-list2"></i>
                     <span className="item-text">More</span>
-                    {moreMenu && <ForMore onClose={() => setMoreMenu(false)}/>}
+                    {moreMenu && <ForMore onClose={() => console.log(setMoreMenu(false))}/>}
                 </div>
                 <>
                     <div className="tittle d-flex">

@@ -1,0 +1,57 @@
+.login-page {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.login-container {
+    width: 60%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 10px;
+    align-items: center;
+    background-size: cover;
+    box-shadow: 0 0 20px 3px #d3d3d3;
+    background-image: url(../../images/login-them.JPG);
+
+    .login-form {
+        text-align: center;
+        justify-content: center;
+
+        .login-form-body {
+            width: 70%;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 15px 10px #e9e9e985;
+
+            .forms {
+                padding: 5px 0;
+            }
+
+            .logo-section {
+                padding: 30px 0;
+            }
+
+            .tittle {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .login-btn {
+                width: 100%;
+                margin-top: 5px;
+            }
+
+            .create-forget {
+                padding: 5px 10px;
+                justify-content: space-between;
+            }
+            
+            .other-webs {
+                padding: 30px 10px;
+                justify-content: space-between;
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@ const Input = (props) => {
                         </span>
                     }
                     <input
-                        type={props.type}
+                        type={props.type ? props.type : "text"}
                         name={props.name}
                         className={"input-body " + (props.class)}
                         onChange={props.onChange}
@@ -39,7 +39,9 @@ const Input = (props) => {
                         </span>
                     }
                     <input
-                        type={props.type} name={props.name} className="input-body" onChange={props.onChange}
+                        className="input-body"
+                        onChange={props.onChange}
+                        type="file" name={props.name}
                     />
                 </>
             }
