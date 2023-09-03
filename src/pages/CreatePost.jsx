@@ -64,67 +64,67 @@ const CreatePost = () => {
                         </span>
                     </div>
                 </div>
-                <div className="formRow">
-                    <div className="clm">
-                        <span className="label">Condition<i className="required">*</i></span>
-                        <select 
-                            onChange={handInputField} required={true}
-                            className="input-body" name="productCondition"
-                        >
-                            <option className="options">-- Select condition --</option>
-                            <option className="options" value="New">New</option>
-                            <option className="options" value="Used">Used</option>
-                        </select>
+                <div className="form-container">
+                    <div className="formRow">
+                        <div className="clm">
+                            <span className="label">Condition<i className="required">*</i></span>
+                            <select 
+                                onChange={handInputField} required={true}
+                                className="input-body" name="productCondition"
+                            >
+                                <option className="options">-- Select condition --</option>
+                                <option className="options" value="New">New</option>
+                                <option className="options" value="Used">Used</option>
+                            </select>
+                        </div>
+                        <div className="clm">
+                            <Input
+                                required={true} onChange={handInputField}
+                                input name="price" type="number" label="Price"
+                            />
+                        </div>
+                        <div className="clm">
+                            <Input
+                                onChange={handInputField}
+                                input type="number" name="oldPrice" label="OldPrice"
+                            />
+                        </div>
                     </div>
-                    <div className="clm">
-                        <Input
-                            required={true} onChange={handInputField}
-                            input name="price" type="number" label="Price"
+                    <div className="formRow">
+                        <div className="clm">
+                            <Input
+                                required={true} onChange={handInputField}
+                                input name="name" type="text" label="Product name"
+                            />
+                        </div>
+                        <div className="clm">
+                            <Input
+                                required={true} onChange={handInputField}
+                                input type="text" name="sellerLocation" label="Seller location"
+                            />
+                        </div>
+                    </div>
+                    <div className="formRow">
+                        <div className="clm">
+                            <Input
+                                required={true} onChange={handInputField}
+                                textarea name="productDetails" label="Product details"
+                            />
+                        </div>
+                        <div className="clm">
+                            <Input
+                                imageSelector onChange={handInputField}
+                                type="file" name="productImage" label="Select your item"
+                            />
+                        </div>
+                    </div>
+                    <div className="submit-section d-flex">
+                        <LinkButton color="red" text="Cancel" />
+                        <Button
+                            onClick={validateForm}
+                            text="Submit" name="Submit" type="primary" iconLeft="pencil"
                         />
                     </div>
-                    <div className="clm">
-                        <Input
-                            onChange={handInputField}
-                            input type="number" name="oldPrice" label="OldPrice"
-                        />
-                    </div>
-                </div>
-                <div className="formRow">
-                    <div className="clm">
-                        <Input
-                            required={true} onChange={handInputField}
-                            input name="name" type="text" label="Product name"
-                        />
-                    </div>
-                    <div className="clm">
-                        <Input
-                            required={true} onChange={handInputField}
-                            input type="text" name="sellerLocation" label="Seller location"
-                        />
-                    </div>
-                </div>
-                <div className="formRow">
-                    <div className="clm">
-                        <Input
-                            required={true} onChange={handInputField}
-                            textarea name="productDetails" label="Product details"
-                        />
-                    </div>
-                    <div className="clm">
-                        <Input
-                            // required={true}
-                            onChange={handInputField}
-                            input type="file" class="select-photo"
-                            name="productImage" label="Select your item"
-                        />
-                    </div>
-                </div>
-                <div className="submit-section d-flex">
-                    <LinkButton color="red" text="Cancel" />
-                    <Button
-                        onClick={validateForm}
-                        text="Submit" name="Submit" type="primary" iconLeft="pencil"
-                    />
                 </div>
             </div>
         </section>

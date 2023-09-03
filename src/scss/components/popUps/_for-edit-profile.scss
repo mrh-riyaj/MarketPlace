@@ -1,22 +1,13 @@
-.filter-popup-container {
-    width: 60%;
+.edit-profile-container {
+    width: 40%;
     overflow: hidden;
     border-radius: 10px;
-    top: 0; left: 19%;
+    top: 15%; left: 30%;
     background-color: #fff;
     align-items: center;
-    box-shadow: 0 0 10px 5px #e9e9e9;
+    box-shadow: 0 0 10px 5px #cfcfcf;
 
-    .container {
+    .form-container {
         padding: 15px;
-
-        .filter-inputs {
-            background-color: #eee;
-            border: none;
-            outline: none;
-            padding: 10px;
-            font-size: 15px;
-            border-radius: 5px;
-        }
     }
 }

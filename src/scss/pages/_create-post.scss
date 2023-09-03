@@ -4,26 +4,20 @@
     justify-content: center;
 }
 .form-body {
-    padding: 15px;
     max-width: 80%;
+    overflow: hidden;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 0 15px 10px #e9e9e985;
     
-    .required {
-        color: #ff0505;
-        font-size: 15px;
+    .form-container {
+        padding: 15px;
+
     }
     
-    .label {
-        font-size: 15px;
-        color: #a5a5a5;
-        margin-bottom: 5px;
-    }
-
-    .submit-section {
-        align-items: center;
-        padding: 20px 0 10px 0;
-        justify-content: space-between;
-    }
+}
+.submit-section {
+    padding: 15px 10px 0 10px;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -38,12 +38,12 @@ body {
 }
 .popup-title {
     font-size: 15px;
-    color: #a5a5a5;;
     font-weight: 600;
+    color: #a5a5a5;
 }
 .popup-close {
-    color: #ff5858;
     cursor: pointer;
+    color: #ff5858;
 }
 
 ::-webkit-scrollbar {
@@ -92,11 +92,10 @@ body {
 .row-head {
     z-index: 1;
     display: flex;
-    justify-content: space-between;
     padding: 5px 15px;
     align-items: center;
-    border-radius: 5px;
     background-color: #e8f4ff;
+    justify-content: space-between;
 
     .head-titles {
         font-size: 18px;
@@ -106,6 +105,6 @@ body {
 
 .popup-main-container {
     z-index: 1;
+    background: #8080803a;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: none;
 }

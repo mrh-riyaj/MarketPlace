@@ -44,7 +44,10 @@ const ProductDetails = (props) => {
                                     disabled={true}
                                     value={`Hi ${"props.sellerName"}, is this still available?`}
                                 />
-                                <Button text="Send" type="primary" onClick={() => alert("Hi Ahad")}/>
+                                <Button
+                                    onClick={() => alert("Will be send")}
+                                    text="Send" type="primary" iconLeft="home"
+                                />
                             </div>
                         </div>
                     </div>
@@ -62,8 +65,7 @@ const ProductDetails = (props) => {
                             </div>
                         }
                         {props.sellerName &&
-                            <div className="sellerName">
-                                Seller Name :-
+                            <div className="sellerName">Seller Name :-
                                 <LinkButton color="black" text={props.sellerName} />
                             </div>
                         }

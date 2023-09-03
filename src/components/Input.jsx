@@ -39,7 +39,7 @@ const Input = (props) => {
                         </span>
                     }
                     <input
-                        className="input-body"
+                        className="input-body select-photo"
                         onChange={props.onChange}
                         type="file" name={props.name}
                     />

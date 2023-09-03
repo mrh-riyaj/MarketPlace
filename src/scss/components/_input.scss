@@ -8,14 +8,7 @@
     border-radius: 5px;
     background-color: #eee;
 
-    .options {
-        font-size: 15px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        background-color: #eee;
-
-    }
-
+    
     &.textarea {
         resize: none;
         min-height: 120px;
@@ -24,4 +17,14 @@
         min-height: 120px;
     }
     
+}
+.required {
+    color: #ff0505;
+    font-size: 15px;
+}
+
+.label {
+    font-size: 15px;
+    color: #a5a5a5;
+    margin-bottom: 5px;
 }
