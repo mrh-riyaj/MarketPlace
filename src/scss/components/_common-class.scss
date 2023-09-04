@@ -6,8 +6,9 @@
 }
 
 img {
-    height: 100%;
     width: 100%;
+    height: 100%;
+    vertical-align: bottom;
 }
 
 span {
@@ -56,10 +57,9 @@ body {
 
 // Common page padding for pages
 .posts,
-.menu-body,
+.inbox-section,
 .create-section,
 .profile-section,
-.inboxes-section,
 .notification-section
 {
     padding-top: 70px;
