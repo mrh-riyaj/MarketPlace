@@ -5,8 +5,6 @@ import { useState } from "react";
 
 const NavBar = () => {
     const [moreMenu, setMoreMenu] = useState(false)
-    console.log(useState(10, 20))
-
     return (
         <section className="position-r">
             <div className="filter-section">
@@ -16,7 +14,7 @@ const NavBar = () => {
                 <div>
                     <MenuItem text='Browse all' icon='home2' path="/"/>
                     <MenuItem text='Notification' icon='bell' notification path="/notification"/>
-                    <MenuItem text='Inbox' icon="bubbles4" notification path="/Inbox"/>
+                    <MenuItem text='Inbox' icon="bubbles4" notification path="/inbox"/>
                     <MenuItem text='Create' icon="pencil2" path="create-post" />
                     <MenuItem text='Profile' icon="user" path="/user-profile" />
                     <MenuItem text='Login' icon="user" path="/login" />
@@ -26,7 +24,9 @@ const NavBar = () => {
                         <i className="icon icon-list2"></i>
                         <span className="item-text">More</span>
                     </div>
-                    {moreMenu && <ForMore onClose={() => setMoreMenu(false)}/>}
+                    <div>
+                        {moreMenu && <ForMore onClose={() => setMoreMenu(false)}/>}
+                    </div>
                 </div>
                 <div className="tittle d-flex">
                     <span>Categories</span>

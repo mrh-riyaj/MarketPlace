@@ -9,7 +9,7 @@ const ProductDetails = (props) => {
     useEffect(() => {
         getProductById(props.id)
         .then(data => setProduct(data))
-        console.log(product)
+        // console.log(product)
     }, [])
     return(
         createPortal(
@@ -28,8 +28,8 @@ const ProductDetails = (props) => {
                         </div>
                         <div className="info-section d-flex">
                             <div>
-                                {props.price && <span className="price">{props.price}</span>}
-                                {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
+                                {props.price && <span className="price">৳{props.price}</span>}
+                                {props.oldPrice && <del className="price old">৳{props.oldPrice}</del>}
                                 {props.name && <div className="product-name">{product.name}</div>}
                                 {props.sellerLocation &&
                                     <div className="location">{props.sellerLocation}

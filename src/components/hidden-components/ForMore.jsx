@@ -1,8 +1,30 @@
+// import { useEffect, useRef } from "react"
 import MenuItem from "../MenuItem"
 
 const ForMore = (props) => {
+    // const forMoreRef = useRef()
+    
+    // const manageOutsideClick = (event) => {
+    //     if(
+    //         forMoreRef && forMoreRef.current &&
+    //         forMoreRef.current.contains(event.target)
+    //         ) {
+    //             console.log("Inside clicked")
+    //         } else {
+                
+    //             console.log("Outside clicked")
+    //         }
+    //     }
+    //     useEffect(() => {
+    //         document.addEventListener("click", manageOutsideClick)
+    //         return () => {
+    //             document.removeEventListener("click", manageOutsideClick)
+    //         }
+    //     },[])
+
+    //ref={forMoreRef}
     return(
-        <div className="more-container position-a">
+        <div className="more-container position-a" ref={props.ref} > 
             <div className="popup-header d-flex">
                 <div className="popup-title">More</div>
                 <span className="popup-close" onClick={props.onClose}>

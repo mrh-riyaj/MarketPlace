@@ -11,8 +11,8 @@ const NewPost = (props) => {
                     <img src={props.productImage}/>
                 </div>
                 <div className="info-section">
-                    {props.price && <span className="price">{props.price}</span>}
-                    {props.oldPrice && <del className="price old">{props.oldPrice}</del>}
+                    {props.price && <span className="price">৳{props.price}</span>}
+                    {props.oldPrice && <del className="price old">৳{props.oldPrice}</del>}
                     {props.name && <div className="product-name">{props.name}</div>}
                     {props.sellerLocation &&
                         <div className="location">{props.sellerLocation}
