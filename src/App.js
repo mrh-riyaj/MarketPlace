@@ -1,13 +1,15 @@
 import './scss/style.scss'
 import {BrowserRouter as Router} from 'react-router-dom'
-// import Login from './pages/Login'
-import NavBar from './layouts/NavBar'
-import Body from './layouts/Body'
+// import CreateAccount from './pages/CreateAccount'
 import Header from './components/Header'
+import NavBar from './layouts/NavBar'
+// import Login from './pages/Login'
+import Body from './layouts/Body'
 
 function App() {
   return (
     <Router>
+      {/* <CreateAccount /> */}
       {/* <Login /> */}
       <section className='main-container d-flex position-r'>
         <div className='nav-section'>

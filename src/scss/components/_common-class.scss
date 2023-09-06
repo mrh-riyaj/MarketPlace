@@ -92,6 +92,7 @@ body {
 .row-head {
     z-index: 1;
     display: flex;
+    min-height: 55px;
     padding: 5px 15px;
     align-items: center;
     background-color: #e8f4ff;

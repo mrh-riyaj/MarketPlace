@@ -94,13 +94,13 @@ const CreatePost = () => {
                         <div className="clm">
                             <Input
                                 required={true} onChange={handInputField}
-                                input name="name" type="text" label="Product name"
+                                input name="name" label="Product name"
                             />
                         </div>
                         <div className="clm">
                             <Input
                                 required={true} onChange={handInputField}
-                                input type="text" name="sellerLocation" label="Seller location"
+                                input name="sellerLocation" label="Seller location"
                             />
                         </div>
                     </div>

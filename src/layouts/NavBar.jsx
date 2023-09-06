@@ -18,6 +18,7 @@ const NavBar = () => {
                     <MenuItem text='Create' icon="pencil2" path="create-post" />
                     <MenuItem text='Profile' icon="user" path="/user-profile" />
                     <MenuItem text='Login' icon="user" path="/login" />
+                    <MenuItem text='Create account' icon="user" path="/create-account" />
                 </div>
                 <div className="position-r">
                     <div className="menu_item d-flex" onClick={() => setMoreMenu(true)}>
