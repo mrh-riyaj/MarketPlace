@@ -25,10 +25,18 @@ const ForEditProfile = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input input label="Change email" />
+                            <Input input label="Change mobile/email" />
                         </div>
                         <div className="clm">
-                            <Input input label="Change mobile" />
+                            <Input input label="Change date of birth" />
+                        </div>
+                    </div>
+                    <div className="formRow">
+                        <div className="clm">
+                            <Input input label="Change address" />
+                        </div>
+                        <div className="clm">
+                            <Input input label="Change gender" />
                         </div>
                     </div>
                     <div className="formRow">
@@ -47,10 +55,10 @@ const ForEditProfile = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input textarea />
+                            <Input textarea label="Change bio" />
                         </div>
                         <div className="clm">
-                            <Input imageSelector class="select-photo" />
+                            <Input imageSelector class="select-photo" label="Change your profile" />
                         </div>
                     </div>
                     <div className="submit-section  d-flex">

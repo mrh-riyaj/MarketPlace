@@ -136,8 +136,8 @@ const CreateAccount = () => {
                         </div>
                         <div className="clm">
                             <Input
-                                required={true} imageSelector onChange={handInputField}
-                                type="file" name="productImage" label="Select your item"
+                                imageSelector required={true} onChange={handInputField}
+                                name="userImage" label="Select your profile"
                             />
                         </div>
                     </div>
