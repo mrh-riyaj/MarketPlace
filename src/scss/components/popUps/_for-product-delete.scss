@@ -1,0 +1,17 @@
+.middle-popup-main-container {
+    background-color: #8f8f8f9f;
+
+    .delete-popup-container {
+        width: 15%;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #fff;
+
+        .content {
+            padding: 15px;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+

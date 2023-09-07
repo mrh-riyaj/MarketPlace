@@ -1,26 +1,30 @@
-import image from "../images/User.jpg"
+import ForEditProfile from "../components/popUps/ForEditProfile"
 import LinkButton from "../components/LinkButton"
-import ForEditProfile from "../components/popUps/ForEditProfile";
-import { useState } from "react";
+import P_Imag from "../images/demo_product.jpg"
+import OwnPost from "../components/OwnPost"
+import image from "../images/User.jpg"
+import { useState } from "react"
 
 const UserProfile = () => {
     // For User
-    let postItems = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    let products = [1,2,3,4,5,6,7,8,9,10,11,12]
     let userImage = image;
-    let posts = postItems.length + " Posts";
+    let gender = "Male";
+    let posts = products.length + " Posts";
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
     let email = "a.mrh.riyaj@gmail.com";
-    let mobile = "01930445289";
+    let birth = "10 / 05 / 2000";
+    let address = "Shuvadda west para puraton coloni dhaka";
     let bio = "My name is riyja hossain i live in dhaka keranigong shuvadda school dhaka coligrat school";
     
     // For Product
-    // let name = "Demo product";
-    // let price = "100";
-    // let oldPrice = "150";
-    // let sellerLocation = "Dhaka";
-    // let productCondition = "New";
-    // let productDetails = "Nothing to say";
+    let ProductImage = P_Imag;
+    let name = "Demo product";
+    let price = "100";
+    let oldPrice = "150";
+    let sellerLocation = "Dhaka";
+
     const [editProfile, setEditProfile] = useState(false)
 
     return (
@@ -38,34 +42,37 @@ const UserProfile = () => {
                     <LinkButton text="Edit profile" onClick={() => setEditProfile(true)} />
                 </div>
                 <div className="infos"> 
-                    <span className="label">Email :</span>
+                    <span className="label">Gender :</span>
+                    <span className="mobile">{gender}</span>
+                </div>
+                <div className="infos"> 
+                    <span className="label">Date of birth :</span>
+                    <span className="mobile">{birth}</span>
+                </div>
+                <div className="infos"> 
+                    <span className="label">Mobile/Email :</span>
                     <span className="email">{email}</span>
                 </div>
                 <div className="infos"> 
-                    <span className="label">Mobile :</span>
-                    <span className="mobile">{mobile}</span>
+                    <span className="label">Current address :</span>
+                    <span className="mobile">{address}</span>
                 </div>
                 <div className="infos">
                     <span className="label">Bio :</span>
                     <span className="bio">{bio}</span>
                 </div>
             </div>
-            <div className="profile-right-panel">
-                {postItems.map((item, k) => (
-                    <div kye={k}>Demo</div>
-                    // <NewPost 
-                    //     key={k}
-                    //     name={name}
-                    //     price={price}
-                    //     oldPrice={oldPrice}
-                    //     sellerLocation={sellerLocation}
-                    //     // sellerName={sellerName}
-                    
-                    //     // product detail section
-                    //     productCondition={productCondition}
-                    //     productDetails={productDetails}
-                    //     productImage={image}
-                    // />
+            <div className="profile-right-panel d-flex">
+                {products.map((item, k) => (
+                    <OwnPost
+                        key={k}
+                        name={name}
+                        id={item.id}
+                        price={price}
+                        oldPrice={oldPrice}
+                        productImage={ProductImage}
+                        sellerLocation={sellerLocation}
+                        />
                 ))}
             </div>
             {editProfile && <ForEditProfile

@@ -16,32 +16,22 @@ const ForFilter = (props) => {
                         <div className="clm">
                             <select className="filter-inputs">
                                 <option>-- Select Categories --</option>
-                                <option value="A">A</option>
-                                <option value="B">B</option>
-                                <option value="C">C</option>
-                                <option value="D">D</option>
-                                <option value="E">E</option>
-                                <option value="F">F</option>
-                                <option value="G">G</option>
-                                <option value="H">H</option>
-                                <option value="I">I</option>
-                                <option value="J">J</option>
-                                <option value="K">K</option>
-                                <option value="L">L</option>
-                                <option value="M">M</option>
-                                <option value="N">N</option>
-                                <option value="O">O</option>
-                                <option value="P">P</option>
-                                <option value="Q">Q</option>
-                                <option value="R">R</option>
-                                <option value="S">S</option>
-                                <option value="T">T</option>
-                                <option value="U">U</option>
-                                <option value="V">V</option>
-                                <option value="W">W</option>
-                                <option value="X">X</option>
-                                <option value="Y">Y</option>
-                                <option value="Z">Z</option>
+                                <option value="vehicles">Vehicles</option>
+                                <option value="classifieds">Classifieds</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="family">Family</option>
+                                <option value="garden-and-outdoors">Garden and outdoors</option>
+                                <option value="hobbies">Hobbies</option>
+                                <option value="home-goods">Home goods</option>
+                                <option value="home-improvement-supplies">Home Improvement supplies</option>
+                                <option value="musical-instruments">Musical instruments</option>
+                                <option value="office-supplies">Office supplies</option>
+                                <option value="pet-supplies">Pet supplies</option>
+                                <option value="property-for-sale">Property for sale</option>
+                                <option value="sporting-goods">Sporting goods</option>
+                                <option value="toys-and-games">Toys and games</option>
                             </select>
                         </div>
                     </div>

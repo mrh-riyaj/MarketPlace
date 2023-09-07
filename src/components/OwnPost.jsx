@@ -1,12 +1,15 @@
 import { useState } from "react"
-import ForProductDetails from "./popUps/ForProductDetails"
+import ForProductDelete from "./popUps/ForProductDelete"
 
-const NewPost = (props) => {
-    const [ProductDetailsPopUp, setProductDetailsPopUp] = useState(false)
+const OwnPost = (props) => {
+    const [ProductDeletePopUp, setProductDeletePopUp] = useState(false)
 
     return (
-        <section className="new-posts position-r">
-            <div onClick={() => setProductDetailsPopUp(true)}>
+        <section className="own-posts position-r">
+            <div onClick={() => alert("hi")}>
+                <span className="delete-icon position-a" onClick={() => setProductDeletePopUp(true)}>
+                    <i className="icon-cancel-circle"></i>
+                </span>
                 <div className="post-images d-flex">
                     <img src={props.productImage}/>
                 </div>
@@ -22,7 +25,7 @@ const NewPost = (props) => {
                 </div>
             </div>
 
-            {ProductDetailsPopUp && <ForProductDetails
+            {ProductDeletePopUp && <ForProductDelete
                 id={props.id}
                 name={props.name}
                 price={props.price}
@@ -32,10 +35,10 @@ const NewPost = (props) => {
                 sellerLocation={props.sellerLocation}
                 productDetails={props.productDetails}
                 productCondition={props.productCondition}
-                onClose={() => setProductDetailsPopUp(false)}
+                onClose={() => setProductDeletePopUp(false)}
             />}
         </section>
     )
 }
 
-export default NewPost
+export default OwnPost

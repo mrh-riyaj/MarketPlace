@@ -4,7 +4,7 @@ import { getProductById } from "../../services/product"
 import Button from "../Button"
 import LinkButton from "../LinkButton"
 
-const ProductDetails = (props) => {
+const ForProductDetails = (props) => {
     const [product, setProduct] = useState({})
     useEffect(() => {
         getProductById(props.id)
@@ -14,7 +14,7 @@ const ProductDetails = (props) => {
     return(
         createPortal(
         <div className="middle-popup-main-container d-flex position-a">
-            <div className="popup-container position-a">
+            <div className="details-popup-container position-a">
                 <div className="popup-header d-flex">
                     <div className="popup-title">Product Details</div>
                     <span className="popup-close" onClick={props.onClose}>
@@ -83,4 +83,4 @@ const ProductDetails = (props) => {
     )
 }
 
-export default ProductDetails
+export default ForProductDetails

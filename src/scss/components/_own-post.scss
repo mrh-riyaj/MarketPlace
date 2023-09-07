@@ -1,12 +1,18 @@
-.new-posts {
-    width: 19%;
-    cursor: pointer;
+.own-posts {
+    width: 24%;
     overflow: hidden;
+    margin: 6px auto;
     max-height: 400px;
-    margin: 10px auto;
     border-radius: 5px;
     border: 1px solid #eee;
     box-shadow: 0 0 5px 2px #eee;
+    
+    .delete-icon {
+        top: 15px;
+        right: 15px;
+        color: #ff5858;
+        cursor: pointer;
+    }
     
     .post-images {
         border-bottom: 1px solid #eee;
@@ -27,7 +33,7 @@
             color: #a1a1a1;
 
             &.old {
-                color: red;
+                color: #ff5858;
             }
         }
         

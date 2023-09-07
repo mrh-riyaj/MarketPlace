@@ -3,7 +3,6 @@ import LinkButton from "../components/LinkButton"
 // import { useEffect, useState } from "react"
 import Button from "../components/Button"
 import Input from "../components/Input"
-import Logo from "../components/Logo"
 import { useState } from "react"
 
 const CreateAccount = () => {
@@ -40,7 +39,7 @@ const CreateAccount = () => {
             console.log(formData)
             alert("Created")
 
-            // createProduct(formData)
+            // createUser(formData)
             // .then(re => {
             // alert("Created")
             // })
@@ -62,7 +61,6 @@ const CreateAccount = () => {
                     <div className="clm">
                         <span className="head-titles">Create account in <q>MarketPlace</q></span>
                     </div>
-                    <Logo />
                 </div>
                 <div className="form-container">
                     <div className="formRow">
@@ -97,7 +95,7 @@ const CreateAccount = () => {
                         <div className="clm">
                             <Input
                                 onChange={handInputField} required={true} 
-                                input name="address" label="Address"
+                                input name="address" label="Current address"
                             />
                         </div>
                         <div className="clm">

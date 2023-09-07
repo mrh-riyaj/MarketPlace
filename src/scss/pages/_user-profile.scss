@@ -58,10 +58,5 @@
     height: 92vh;
     padding: 20px;
     overflow: auto;
-    // flex-direction: column;
-
-    div {
-        height: 300px;
-        border-bottom: 1px solid #eee;
-    }
+    flex-wrap: wrap;
 }

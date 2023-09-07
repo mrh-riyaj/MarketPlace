@@ -6,7 +6,7 @@ import Input from "../Input"
 const ForEditProfile = (props) => {
     return(
         createPortal(
-        <div className="popup-main-container position-a">
+        <div className="middle-popup-main-container position-a">
             <div className="edit-profile-container position-a">
                 <div className="popup-header d-flex">
                     <div className="popup-title">Edit profile</div>

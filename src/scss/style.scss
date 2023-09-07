@@ -2,9 +2,10 @@
 @import './components/input';
 @import './components/filter';
 @import './components/new-post';
-@import './components/user.scss';
 @import './components/suggested';
 @import './components/logo.scss';
+@import './components//own-post';
+@import './components/user.scss';
 @import './components/icons.scss';
 @import './components/link-button';
 @import './components/button.scss';
@@ -26,7 +27,8 @@
 @import './layouts/nav-bar.scss';
 
 // Common Popup
-@import './components/popUps/product-details';
+@import './components/popUps/for-product-details';
+@import './components/popUps/for-product-delete';
 @import './components/popUps/for-edit-profile';
 
 // Hidden components
