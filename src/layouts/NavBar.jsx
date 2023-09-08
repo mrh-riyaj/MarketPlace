@@ -1,10 +1,7 @@
-import ForMore from "../components/hidden-components/ForMore";
 import MenuItem from "../components/MenuItem";
 import Filter from "../components/Filter";
-import { useState } from "react";
 
 const NavBar = () => {
-    const [moreMenu, setMoreMenu] = useState(false)
     return (
         <section className="position-r">
             <div className="filter-section">
@@ -16,18 +13,10 @@ const NavBar = () => {
                     <MenuItem text='Notification' icon='bell' notification path="/notification"/>
                     <MenuItem text='Inbox' icon="bubbles4" notification path="/inbox"/>
                     <MenuItem text='Create' icon="pencil2" path="create-post" />
-                    <MenuItem text='Profile' icon="user" path="/user-profile" />
+
+                    {/* will be delete */}
                     <MenuItem text='Login' icon="user" path="/login" />
                     <MenuItem text='Create account' icon="user" path="/create-account" />
-                </div>
-                <div className="position-r">
-                    <div className="menu_item d-flex" onClick={() => setMoreMenu(true)}>
-                        <i className="icon icon-list2"></i>
-                        <span className="item-text">More</span>
-                    </div>
-                    <div>
-                        {moreMenu && <ForMore onClose={() => setMoreMenu(false)}/>}
-                    </div>
                 </div>
                 <div className="tittle d-flex">
                     <span>Categories</span>

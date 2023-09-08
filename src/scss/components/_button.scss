@@ -19,6 +19,14 @@
             background-color: #397fd4;
         }
     }
+    &.red {
+        color: #ff5858;
+        background-color: #ffcdcd8e;
+        
+        &:hover {
+            background-color: #ffcdcdf5;
+        }
+    }
     
     .btn-text {
         padding: 0 5px;

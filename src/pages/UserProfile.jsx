@@ -19,11 +19,15 @@ const UserProfile = () => {
     let bio = "My name is riyja hossain i live in dhaka keranigong shuvadda school dhaka coligrat school";
     
     // For Product
-    let ProductImage = P_Imag;
-    let name = "Demo product";
+    let id = 1;
     let price = "100";
     let oldPrice = "150";
+    let name = "Demo product";
+    let ProductImage = P_Imag;
     let sellerLocation = "Dhaka";
+    let sellerName = "Demo Name";
+    let productDetails = "Demo Name ProductDetails";
+    let productCondition = "New";
 
     const [editProfile, setEditProfile] = useState(false)
 
@@ -66,13 +70,16 @@ const UserProfile = () => {
                 {products.map((item, k) => (
                     <OwnPost
                         key={k}
+                        id={id}
                         name={name}
-                        id={item.id}
                         price={price}
                         oldPrice={oldPrice}
+                        sellerName={sellerName}
                         productImage={ProductImage}
                         sellerLocation={sellerLocation}
-                        />
+                        productDetails={productDetails}
+                        productCondition={productCondition}
+                    />
                 ))}
             </div>
             {editProfile && <ForEditProfile

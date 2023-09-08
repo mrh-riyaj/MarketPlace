@@ -23,6 +23,7 @@ const ForMore = (props) => {
     //     },[])
 
     //ref={forMoreRef}
+
     return(
         <div className="more-container position-a" ref={props.ref} > 
             <div className="popup-header d-flex">
@@ -32,6 +33,7 @@ const ForMore = (props) => {
                 </span>
             </div>
             <div className="container">
+                <MenuItem name="profile" text="Profile" icon="user" path="/user-profile" />
                 <MenuItem text="Settings" icon="cog" />
                 <MenuItem text="Your activity" icon="history" />
                 <MenuItem text="Saved" icon="bookmarks" />

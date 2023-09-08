@@ -23,9 +23,11 @@ const NewPost = (props) => {
             </div>
 
             {ProductDetailsPopUp && <ForProductDetails
+                sendMessage
                 id={props.id}
                 name={props.name}
                 price={props.price}
+                title="Product details"
                 oldPrice={props.oldPrice}
                 sellerName={props.sellerName}
                 productImage={props.productImage}

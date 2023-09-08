@@ -1,15 +1,12 @@
 import { useState } from "react"
-import ForProductDelete from "./popUps/ForProductDelete"
+import ForProductDetails from "./popUps/ForProductDetails"
 
 const OwnPost = (props) => {
-    const [ProductDeletePopUp, setProductDeletePopUp] = useState(false)
+    const [ProductDetailsPopUp, setProductDetailsPopUp] = useState(false)
 
     return (
         <section className="own-posts position-r">
-            <div onClick={() => alert("hi")}>
-                <span className="delete-icon position-a" onClick={() => setProductDeletePopUp(true)}>
-                    <i className="icon-cancel-circle"></i>
-                </span>
+            <div onClick={() => setProductDetailsPopUp(true)}>
                 <div className="post-images d-flex">
                     <img src={props.productImage}/>
                 </div>
@@ -24,8 +21,9 @@ const OwnPost = (props) => {
                     }
                 </div>
             </div>
-
-            {ProductDeletePopUp && <ForProductDelete
+            {ProductDetailsPopUp && <ForProductDetails
+                title="Edit product"
+                titleIcon
                 id={props.id}
                 name={props.name}
                 price={props.price}
@@ -35,7 +33,7 @@ const OwnPost = (props) => {
                 sellerLocation={props.sellerLocation}
                 productDetails={props.productDetails}
                 productCondition={props.productCondition}
-                onClose={() => setProductDeletePopUp(false)}
+                onClose={() => setProductDetailsPopUp(false)}
             />}
         </section>
     )

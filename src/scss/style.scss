@@ -27,9 +27,10 @@
 @import './layouts/nav-bar.scss';
 
 // Common Popup
-@import './components/popUps/for-product-details';
-@import './components/popUps/for-product-delete';
 @import './components/popUps/for-edit-profile';
+@import './components/popUps/for-edit-product';
+@import './components/popUps/for-product-delete';
+@import './components/popUps/for-product-details';
 
 // Hidden components
 @import './components/hidden-components/for-more';

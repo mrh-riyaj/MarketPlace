@@ -6,7 +6,7 @@ import Input from "../Input"
 const ForEditProfile = (props) => {
     return(
         createPortal(
-        <div className="middle-popup-main-container position-a">
+        <div className="middle-popup-main-container d-flex position-a">
             <div className="edit-profile-container position-a">
                 <div className="popup-header d-flex">
                     <div className="popup-title">Edit profile</div>
@@ -22,21 +22,27 @@ const ForEditProfile = (props) => {
                         <div className="clm">
                             <Input input label="Change fullName" />
                         </div>
-                    </div>
-                    <div className="formRow">
                         <div className="clm">
                             <Input input label="Change mobile/email" />
                         </div>
-                        <div className="clm">
-                            <Input input label="Change date of birth" />
-                        </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input input label="Change address" />
+                            <Input input type="date" label="Change date of birth" />
                         </div>
                         <div className="clm">
-                            <Input input label="Change gender" />
+                            <span className="label">Change gender</span>
+                            <select
+                                className="input-body" name="gender"
+                            >
+                                <option>-- Select your gender --</option>
+                                <option value="male">male</option>
+                                <option value="female">female</option>
+                                <option value="others">others</option>
+                            </select>
+                        </div>
+                        <div className="clm">
+                            <Input input label="Change address" />
                         </div>
                     </div>
                     <div className="formRow">

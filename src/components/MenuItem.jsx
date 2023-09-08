@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 const MenuItem = (props) => {
     return (
         <Link
+            name={props.mane}
             to={props.path}
             onClick={props.onClick}
             className="menu_item d-flex position-r"

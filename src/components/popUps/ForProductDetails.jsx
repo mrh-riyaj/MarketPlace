@@ -1,11 +1,16 @@
-import { useEffect, useState } from "react"
-import { createPortal } from "react-dom"
-import { getProductById } from "../../services/product"
 import Button from "../Button"
 import LinkButton from "../LinkButton"
+import { createPortal } from "react-dom"
+import { useEffect, useState } from "react"
+import ForProductEdit from "./ForProductEdit"
+import ForProductDelete from "./ForProductDelete"
+import { getProductById } from "../../services/product"
 
 const ForProductDetails = (props) => {
     const [product, setProduct] = useState({})
+    const [ProductEditPopUp, setProductEditPopUp] = useState(false)
+    const [ProductDeletePopUp, setProductDeletePopUp] = useState(false)
+
     useEffect(() => {
         getProductById(props.id)
         .then(data => setProduct(data))
@@ -16,7 +21,21 @@ const ForProductDetails = (props) => {
         <div className="middle-popup-main-container d-flex position-a">
             <div className="details-popup-container position-a">
                 <div className="popup-header d-flex">
-                    <div className="popup-title">Product Details</div>
+                    <div className="popup-title">
+                        {props.titleIcon && 
+                            <span>
+                                <Button
+                                    type="red" class="details-icon" icon="bin"
+                                    onClick={() => setProductDeletePopUp(true)}
+                                />
+                                <Button
+                                    class="details-icon" icon="pencil"
+                                    onClick={() => setProductEditPopUp(true)}
+                                />
+                            </span>
+                        }
+                        {props.title && <span>{props.title}</span>}
+                    </div>
                     <span className="popup-close" onClick={props.onClose}>
                         <i className="icon-cancel-circle"></i>
                     </span>
@@ -37,18 +56,20 @@ const ForProductDetails = (props) => {
                                     </div>
                                 }
                             </div>
-                            <div className="message-seller d-flex">
-                                <input
-                                    className="message-value"
-                                    type="text"
-                                    disabled={true}
-                                    value={`Hi ${"props.sellerName"}, is this still available?`}
-                                />
-                                <Button
-                                    onClick={() => alert("Will be send")}
-                                    text="Send" type="primary" iconLeft="home"
-                                />
-                            </div>
+                            {props.sendMessage && 
+                                <div className="message-seller d-flex">
+                                    <input
+                                        className="message-value"
+                                        type="text"
+                                        disabled={true}
+                                        value={`Hi ${"props.sellerName"}, is this still available?`}
+                                    />
+                                    <Button
+                                        onClick={() => alert("Will be send")}
+                                        text="Send" type="primary" iconLeft="home"
+                                    />
+                                </div>
+                            }
                         </div>
                     </div>
                     <div className="column-right">
@@ -70,13 +91,21 @@ const ForProductDetails = (props) => {
                             </div>
                         }
                     </div>
-                    {/* <div className="seller-info d-flex">
-                        <div className="seller-img">
-                            Here seller image
-                        </div>
-                    </div> */}
                 </div>
             </div>
+            {ProductDeletePopUp && <ForProductDelete
+                id={props.id}
+                name={props.name}
+                price={props.price}
+                oldPrice={props.oldPrice}
+                sellerName={props.sellerName}
+                productImage={props.productImage}
+                sellerLocation={props.sellerLocation}
+                productDetails={props.productDetails}
+                productCondition={props.productCondition}
+                onClose={() => setProductDeletePopUp(false)}
+            />}
+            {ProductEditPopUp && <ForProductEdit onClose={() => setProductEditPopUp(false)}/>}
         </div>,
         document.body
         )
