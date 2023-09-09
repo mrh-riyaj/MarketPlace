@@ -15,7 +15,8 @@ const NewPost = (props) => {
                     {props.oldPrice && <del className="price old">৳{props.oldPrice}</del>}
                     {props.name && <div className="product-name">{props.name}</div>}
                     {props.sellerLocation &&
-                        <div className="location">{props.sellerLocation}
+                        <div className="d-flex">
+                            <span className="location">{props.sellerLocation}</span>
                             <i className="locket-icon icon-location"></i>
                         </div>
                     }
@@ -23,6 +24,8 @@ const NewPost = (props) => {
             </div>
 
             {ProductDetailsPopUp && <ForProductDetails
+                sendBtn
+                saveIcon
                 sendMessage
                 id={props.id}
                 name={props.name}
@@ -30,6 +33,7 @@ const NewPost = (props) => {
                 title="Product details"
                 oldPrice={props.oldPrice}
                 sellerName={props.sellerName}
+                sellerImage={props.sellerImage}
                 productImage={props.productImage}
                 sellerLocation={props.sellerLocation}
                 productDetails={props.productDetails}

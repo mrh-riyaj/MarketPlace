@@ -21,21 +21,9 @@ const ForProductDetails = (props) => {
         <div className="middle-popup-main-container d-flex position-a">
             <div className="details-popup-container position-a">
                 <div className="popup-header d-flex">
-                    <div className="popup-title">
-                        {props.titleIcon && 
-                            <span>
-                                <Button
-                                    type="red" class="details-icon" icon="bin"
-                                    onClick={() => setProductDeletePopUp(true)}
-                                />
-                                <Button
-                                    class="details-icon" icon="pencil"
-                                    onClick={() => setProductEditPopUp(true)}
-                                />
-                            </span>
-                        }
+                    <span className="popup-title">
                         {props.title && <span>{props.title}</span>}
-                    </div>
+                    </span>
                     <span className="popup-close" onClick={props.onClose}>
                         <i className="icon-cancel-circle"></i>
                     </span>
@@ -50,29 +38,31 @@ const ForProductDetails = (props) => {
                                 {props.price && <span className="price">৳{props.price}</span>}
                                 {props.oldPrice && <del className="price old">৳{props.oldPrice}</del>}
                                 {props.name && <div className="product-name">{product.name}</div>}
-                                {props.sellerLocation &&
-                                    <div className="location">{props.sellerLocation}
-                                        <i className="locket-icon icon-location"></i>
-                                    </div>
-                                }
                             </div>
-                            {props.sendMessage && 
-                                <div className="message-seller d-flex">
-                                    <input
-                                        className="message-value"
-                                        type="text"
-                                        disabled={true}
-                                        value={`Hi ${"props.sellerName"}, is this still available?`}
+                            {props.saveIcon &&
+                                <Button class="details-icon" icon="bookmark" />
+                            }
+                            {props.editIcon && 
+                                <span>
+                                    <Button
+                                        type="red" class="details-icon" icon="bin"
+                                        onClick={() => setProductDeletePopUp(true)}
                                     />
                                     <Button
-                                        onClick={() => alert("Will be send")}
-                                        text="Send" type="primary" iconLeft="home"
+                                        class="details-icon" icon="pencil"
+                                        onClick={() => setProductEditPopUp(true)}
                                     />
-                                </div>
+                                </span>
                             }
                         </div>
+                        {props.sellerLocation &&
+                            <div className="d-flex">
+                                <span className="location">{props.sellerLocation}</span>
+                                <i className="locket-icon icon-location"></i>
+                            </div>
+                        }
                     </div>
-                    <div className="column-right">
+                    <div className="column-right position-r">
                         {props.productCondition &&
                             <div className="product-infos">
                                 <span className="info-tittle">Condition : </span>
@@ -85,21 +75,36 @@ const ForProductDetails = (props) => {
                                 <span className="infos">{props.productDetails}</span>
                             </div>
                         }
-                        {props.sellerName &&
-                            <div className="sellerName">Seller Name :-
-                                <LinkButton color="black" text={props.sellerName} />
+                        <div className="seller-info position-a d-flex">
+                            <div className="img-box"> {/*Will be onClick*/}
+                                <img src={props.sellerImage}/>
                             </div>
-                        }
+                            <span className="message-value">
+                                {`Hi '${props.sellerName}' is this still available?`}
+                            </span>
+                            {props.sendBtn && 
+                                <Button
+                                    onClick={() => {
+                                        alert(`Hi '${props.sellerName}' is this still available?`)
+                                    }}
+                                    text="Send" type="primary" iconRight="home"
+                                />
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
             {ProductDeletePopUp && <ForProductDelete
                 id={props.id}
                 onClose={props.onClose}
-                onRemove={props.onRemove}
+                onDelete={props.onDelete}
                 onClose={() => setProductDeletePopUp(false)}
             />}
-            {ProductEditPopUp && <ForProductEdit onClose={() => setProductEditPopUp(false)}/>}
+            {ProductEditPopUp &&
+                <ForProductEdit
+                    onClose={() => setProductEditPopUp(false)}
+                />
+            }
         </div>,
         document.body
         )

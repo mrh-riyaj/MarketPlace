@@ -1,9 +1,14 @@
 .delete-popup-container {
-    width: 15%;
+    width: 18%;
 
-    .content {
+    .alert-text {
+        padding: 15px;
+    }
+
+    .alert-btn {
         padding: 15px;
         align-items: center;
+        border-top: 1px solid #eee;
         justify-content: space-between;
     }
 }

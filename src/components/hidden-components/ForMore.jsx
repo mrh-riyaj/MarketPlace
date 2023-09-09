@@ -1,4 +1,6 @@
+import userImage from "../../images/User.jpg"
 // import { useEffect, useRef } from "react"
+// import { Link } from "react-router-dom"
 import MenuItem from "../MenuItem"
 
 const ForMore = (props) => {
@@ -23,6 +25,7 @@ const ForMore = (props) => {
     //     },[])
 
     //ref={forMoreRef}
+    let image = userImage;
 
     return(
         <div className="more-container position-a" ref={props.ref} > 
@@ -33,7 +36,7 @@ const ForMore = (props) => {
                 </span>
             </div>
             <div className="container">
-                <MenuItem name="profile" text="Profile" icon="user" path="/user-profile" />
+                <MenuItem text="Profile" icon="user" img={image} path="/user-profile" />
                 <MenuItem text="Settings" icon="cog" />
                 <MenuItem text="Your activity" icon="history" />
                 <MenuItem text="Saved" icon="bookmarks" />

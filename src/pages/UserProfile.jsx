@@ -21,6 +21,7 @@ const UserProfile = () => {
 
 
     let userImage = image;
+    let sellerImage = image;
     let gender = "Male";
     let posts = products.length + " Posts";
     let userName = "riyaj_hossain007";
@@ -86,10 +87,13 @@ const UserProfile = () => {
                         name={name}
                         price={price}
                         oldPrice={oldPrice}
-                        sellerName={sellerName}
                         productImage={ProductImage}
-                        onRemove={() => removeItem(k)}
                         sellerLocation={sellerLocation}
+                        
+                        // For product details
+                        sellerName={sellerName}
+                        sellerImage={sellerImage}
+                        onDelete={() => removeItem(k)}
                         productDetails={productDetails}
                         productCondition={productCondition}
                         

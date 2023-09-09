@@ -32,19 +32,27 @@
         }
         
         .product-name {
+            max-width: 250px;
             padding: 8px 0;
             font-size: 15px;
+            overflow: hidden;
             font-weight: 600;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
         
         .location {
+            max-width: 250px;
             font-size: 15px;
+            overflow: hidden;
             color: #a1a1a1;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
-            .locket-icon {
-                color: #1b74e4;
-                font-size: 15px;
-            }
+        .locket-icon {
+            color: #1b74e4;
+            font-size: 15px;
         }
     }
 }

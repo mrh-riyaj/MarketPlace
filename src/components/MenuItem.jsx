@@ -8,7 +8,12 @@ const MenuItem = (props) => {
             onClick={props.onClick}
             className="menu_item d-flex position-r"
         >
-            {props.icon && 
+            {props.img &&
+                <div className="menu-img">
+                    <img src={props.img}/>
+                </div>
+            }
+            {!props.img && props.icon && 
                 <i className={'icon icon-' + props.icon}></i>
             }
             <span className={"item-text " + props.color}>{props.text}</span>
