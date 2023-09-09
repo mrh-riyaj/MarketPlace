@@ -5,8 +5,16 @@ const Notifications = (props) => {
     let productName = "Demo Cycle"
     let category = "Vehicles"
     let day = new Date();
-    let hh = day.getHours() - 12
+    let hh;
+    if(day.getHours() > 12) {
+        hh = day.getHours() - 12
+
+    }
+    else {
+        hh = day.getHours()
+    }
     let mm = day.getMinutes()
+
     return(
         <section className="notification-section">
             <div className="info-body">

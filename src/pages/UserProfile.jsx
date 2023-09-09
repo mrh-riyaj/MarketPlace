@@ -7,7 +7,19 @@ import { useState } from "react"
 
 const UserProfile = () => {
     // For User
-    let products = [1,2,3,4,5,6,7,8,9,10,11,12]
+    const [products, setProducts] = useState([1,2,3,4,5,6,7,8,9,10,11,12])
+    const removeItem = (key) => {
+        const newProducts = [...products]
+        const deletedProduct = newProducts.splice(key, 1)
+        setProducts(newProducts)
+
+        if(deletedProduct[0] >= 0) {
+            alert(deletedProduct[0] + " Deleted item")
+        }
+        // console.log(deletedProduct[0])
+    }
+
+
     let userImage = image;
     let gender = "Male";
     let posts = products.length + " Posts";
@@ -69,16 +81,18 @@ const UserProfile = () => {
             <div className="profile-right-panel d-flex">
                 {products.map((item, k) => (
                     <OwnPost
-                        key={k}
+                        kye={k}
                         id={id}
                         name={name}
                         price={price}
                         oldPrice={oldPrice}
                         sellerName={sellerName}
                         productImage={ProductImage}
+                        onRemove={() => removeItem(k)}
                         sellerLocation={sellerLocation}
                         productDetails={productDetails}
                         productCondition={productCondition}
+                        
                     />
                 ))}
             </div>

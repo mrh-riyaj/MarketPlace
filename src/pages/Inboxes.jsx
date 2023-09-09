@@ -5,13 +5,19 @@ const Inboxes = (props) => {
     let productName = "Demo Cycle"
     let category = "Vehicles"
     let day = new Date();
-    let hh = day.getHours() - 12
+    let hh;
+    if(day.getHours() >= 12) {
+        hh = day.getHours() - 12
+    }
+    else {
+        hh = day.getHours()
+    }
     let mm = day.getMinutes()
 
     return(
         <section className="inbox-section">
             <div className="info-body">
-                <div className="info-tittle">Messages</div>
+                <div className="info-tittle">Inboxes</div>
                 <div className="items-wrapper">
                     {notifications.map((item, k) => (
                         <div className="info-item-body d-flex" kye={k}>

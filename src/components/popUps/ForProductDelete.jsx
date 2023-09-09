@@ -1,15 +1,8 @@
-// import { getProductById } from "../../services/product"
-// import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import LinkButton from "../LinkButton"
 import Button from "../Button"
 
 const ForProductDelete = (props) => {
-    // useEffect(() => {
-    //     getProductById(props.id)
-    //     .then(data => setProduct(data))
-    //     // console.log(product)
-    // }, [])
     return(
         createPortal(
         <div className="middle-popup-main-container d-flex position-a">
@@ -23,7 +16,7 @@ const ForProductDelete = (props) => {
                 If you want to delete this product clock Remove
                 <div className="content d-flex">
                     <LinkButton text="Cancel" color="red" onClick={props.onClose} />
-                    <Button text="Remove" />
+                    <Button text="Remove" onClick={props.onRemove} />
                 </div>
             </div>
         </div>,

@@ -13,8 +13,10 @@ const NavBar = () => {
                     <MenuItem text='Notification' icon='bell' notification path="/notification"/>
                     <MenuItem text='Inbox' icon="bubbles4" notification path="/inbox"/>
                     <MenuItem text='Create' icon="pencil2" path="create-post" />
-
-                    {/* will be delete */}
+                    <div className="tittle d-flex">
+                        <span>Will be delete</span>
+                        <i className="tittle-icon icon-social-media"></i>
+                    </div>
                     <MenuItem text='Login' icon="user" path="/login" />
                     <MenuItem text='Create account' icon="user" path="/create-account" />
                 </div>

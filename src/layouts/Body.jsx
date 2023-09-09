@@ -12,11 +12,13 @@ const Body = () => {
     return(
         <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/login" element={<Login />} />
             <Route exact path="/inbox" element={<Inboxes />} />
             <Route exact path="/create-post" element={<CreatePost />} />
             <Route exact path="/user-profile" element={<UserProfile />} />
             <Route exact path="/notification" element={<Notifications />} />
+
+            {/* will be remove*/}
+            <Route exact path="/login" element={<Login />} />
             <Route exact path="/create-account" element={<CreateAccount />} />
         </Routes>
     )

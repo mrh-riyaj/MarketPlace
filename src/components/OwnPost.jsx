@@ -22,11 +22,12 @@ const OwnPost = (props) => {
                 </div>
             </div>
             {ProductDetailsPopUp && <ForProductDetails
-                title="Edit product"
                 titleIcon
                 id={props.id}
                 name={props.name}
                 price={props.price}
+                title="Edit product"
+                onRemove={props.onRemove}
                 oldPrice={props.oldPrice}
                 sellerName={props.sellerName}
                 productImage={props.productImage}
