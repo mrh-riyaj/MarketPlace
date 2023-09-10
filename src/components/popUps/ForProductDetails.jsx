@@ -63,18 +63,92 @@ const ForProductDetails = (props) => {
                         }
                     </div>
                     <div className="column-right position-r">
-                        {props.productCondition &&
-                            <div className="product-infos">
-                                <span className="info-tittle">Condition : </span>
-                                <span className={"condition " + props.productCondition}>{props.productCondition}</span>
-                            </div>
-                        }
-                        {props.productDetails &&
-                            <div className="product-infos">
-                                <span className="info-tittle">Details : </span>
-                                <span className="infos">{props.productDetails}</span>
-                            </div>
-                        }
+                        <div className="details-section">
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productCondition &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Condition : </span>
+                                    <span className={"condition " + props.productCondition}>{props.productCondition}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                        </div>
                         <div className="seller-info position-a d-flex">
                             <div className="img-box"> {/*Will be onClick*/}
                                 <img src={props.sellerImage}/>

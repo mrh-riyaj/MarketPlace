@@ -1,4 +1,4 @@
-import ProductImage from "../images/demo_product.jpg"
+import ProductImage from "../images/User.jpg"
 
 const Inboxes = (props) => {
     const notifications = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];

@@ -42,8 +42,12 @@
             }
 
             .location {
+                width: auto;
                 font-size: 15px;
+                overflow: hidden;
                 color: #a1a1a1;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
             
             .locket-icon {
@@ -56,36 +60,42 @@
         .column-right {
             width: 30%;
             overflow: auto;
-        
-            .product-infos {
-                margin: 20px 0;
-                align-items: center;
-        
-                .condition {
-                    font-size: 15px;
-                    padding: 5px 8px;
-                    border-radius: 4px;
-                    display: inline-block;
-                
-                    &.New {
-                        color: green;
-                        background-color: #bffcbf7c;
+
+            .details-section {
+                overflow: auto;
+                padding: 0 5px;
+                max-height: 470px;
+
+                .product-infos {
+                    margin: 20px 0;
+                    align-items: center;
+            
+                    .condition {
+                        font-size: 15px;
+                        padding: 5px 8px;
+                        border-radius: 4px;
+                        display: inline-block;
+                    
+                        &.New {
+                            color: green;
+                            background-color: #bffcbf7c;
+                        }
+                        &.Used {
+                            color: #ff5858;
+                            background-color: #f7b7b777;
+                        }
                     }
-                    &.Used {
-                        color: #ff5858;
-                        background-color: #f7b7b777;
+            
+                    .info-tittle {
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-right: 5px;
                     }
-                }
-        
-                .info-tittle {
-                    font-size: 16px;
-                    font-weight: 600;
-                    margin-right: 5px;
-                }
-                .infos {
-                    color: #a1a1a1;
-                    font-size: 15px;
-                    line-height: 1.3;
+                    .infos {
+                        color: #a1a1a1;
+                        font-size: 15px;
+                        line-height: 1.3;
+                    }
                 }
             }
         

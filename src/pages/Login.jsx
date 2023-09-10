@@ -2,13 +2,13 @@ import LinkButton from "../components/LinkButton"
 import Button from "../components/Button"
 import Input from "../components/Input"
 import Logo from "../components/Logo"
-import image from "../images/shopping.jpg"
+import image from "../images/shopping.gif"
 
 const Login = () => {
     return (
         <section className="login-page">
             <div className="login-container d-flex row">
-                <div className="clm ">
+                <div className="clm">
                     <div className="model-body">
                         <img src={image}/>
                     </div>
