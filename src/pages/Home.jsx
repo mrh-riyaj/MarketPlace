@@ -30,6 +30,7 @@ const Home = () => {
                             // For product details
                             sellerName={sellerName}
                             sellerImage={sellerImage}
+                            categoryId={item.categoryId}
                             productDetails={item.productDetails}
                             productCondition={item.productCondition}
                          />

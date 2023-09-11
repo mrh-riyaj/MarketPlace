@@ -2,7 +2,6 @@
 @import './components/input';
 @import './components/filter';
 @import './components/new-post';
-@import './components/suggested';
 @import './components/logo.scss';
 @import './components//own-post';
 @import './components/user.scss';
@@ -17,9 +16,10 @@
 @import './pages/home';
 @import './pages/login';
 @import './pages/inboxes';
-@import './pages/create-post';
+@import './pages/settings';
 @import './pages/user-profile';
 @import './pages/notifications';
+@import './pages/create-product';
 @import './pages/create-account';
 
 // Layouts

@@ -56,11 +56,21 @@ body {
     background-color: #deebfd;
 }
 
+::-webkit-file-upload-button {
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #7a7af5;
+
+}
+
 // Common page padding for pages
 .posts,
 .inbox-section,
 .create-section,
 .profile-section,
+.setting-section,
 .notification-section
 {
     padding-top: 70px;

@@ -12,7 +12,7 @@ const NavBar = () => {
                     <MenuItem text='Browse all' icon='home2' path="/"/>
                     <MenuItem text='Notification' icon='bell' notification path="/notification"/>
                     <MenuItem text='Inbox' icon="bubbles4" notification path="/inbox"/>
-                    <MenuItem text='Create' icon="pencil2" path="create-post" />
+                    <MenuItem text='Create' icon="pencil2" path="create-product" />
                     <div className="tittle d-flex">
                         <span>Will be delete</span>
                         <i className="tittle-icon icon-social-media"></i>
@@ -25,22 +25,20 @@ const NavBar = () => {
                     <i className="tittle-icon icon-social-media"></i>
                 </div>
                 <div>
-                    <MenuItem text='Vehicles' notification icon="user"/>
-                    <MenuItem text='Classifieds' icon="user"/>
+                    <MenuItem text='Beauty' icon="user"/>
+                    <MenuItem text='Baby products' icon="user"/>
+                    <MenuItem text='Books' icon="user"/>
+                    <MenuItem text='Beverages' icon="user"/>
                     <MenuItem text='Clothing' icon="user"/>
+                    <MenuItem text='Cleaning Supplies' icon="user"/>
                     <MenuItem text='Electronics' icon="user"/>
-                    <MenuItem text='Entertainment' icon="user"/>
-                    <MenuItem text='Family' icon="user"/>
-                    <MenuItem text='Garden and outdoors' icon="user"/>
-                    <MenuItem text='Hobbies' icon="user"/>
-                    <MenuItem text='Home goods' icon="user"/>
-                    <MenuItem text='Home Improvement supplies' icon="user"/>
                     <MenuItem text='Musical instruments' icon="user"/>
-                    <MenuItem text='Office supplies' icon="user"/>
-                    <MenuItem text='Pet supplies' icon="user"/>
+                    <MenuItem text='Office Products' icon="user"/>
                     <MenuItem text='Property for sale' icon="user"/>
-                    <MenuItem text='Sporting goods' icon="user"/>
+                    <MenuItem text='Sports' icon="user"/>
                     <MenuItem text='Toys and games' icon="user"/>
+                    <MenuItem text='Vehicles' notification icon="user"/>
+                    <MenuItem text='Watches' icon="user"/>
                 </div>
             </div>
         </section>

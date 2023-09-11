@@ -37,11 +37,11 @@ const ForMore = (props) => {
             </div>
             <div className="container">
                 <MenuItem text="Profile" icon="user" img={image} path="/user-profile" />
-                <MenuItem text="Settings" icon="cog" />
+                <MenuItem text="Settings" icon="cog" path="settings" />
                 <MenuItem text="Your activity" icon="history" />
                 <MenuItem text="Saved" icon="bookmarks" />
-                <MenuItem text="Keyboard shortcuts" icon="social-media" />
-                <MenuItem text="Switch appearance" icon ="sun"/>
+                <MenuItem text="Keyboard shortcuts will go setting" icon="social-media" />
+                <MenuItem text="Switch appearance will go setting" icon ="sun"/>
                 <MenuItem text="Switch accounts" icon="exit" />
                 <MenuItem text="Lock out" icon="evil"/>
             </div>

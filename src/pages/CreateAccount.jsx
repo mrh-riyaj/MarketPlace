@@ -67,13 +67,13 @@ const CreateAccount = () => {
                         <div className="clm">
                             <Input
                                 onChange={handInputField} required={true}
-                                input name="userName" label="userName"
+                                input name="User-name" label="User name"
                                 />
                         </div>
                         <div className="clm">
                             <Input
                                 onChange={handInputField} required={true}
-                                input name="fullName" label="fullName"
+                                input name="Full-name" label="Full name"
                             />
                         </div>
                     </div>
@@ -81,7 +81,7 @@ const CreateAccount = () => {
                         <div className="clm">
                             <Input
                                 onChange={handInputField} required={true} 
-                                input name="mobile/email" label="Mobile/Email"
+                                input name="mobile-email" label="Mobile/Email"
                             />
                         </div>
                         <div className="clm">

@@ -1,10 +1,9 @@
-.create-user-section {
-    height: 100vh;
+.create-section {
+    min-height: 100%;
     align-items: center;
     justify-content: center;
     
     .form-body {
-        max-width: 50%;
         overflow: hidden;
         border-radius: 10px;
         background-color: #fff;

@@ -4,7 +4,7 @@ import Input from "../components/Input"
 import LinkButton from "../components/LinkButton"
 import { createProduct } from "../services/product"
 
-const CreatePost = () => {
+const CreateProduct = () => {
     const [formData, setFormData] = useState({})
 
     const handInputField = (e) => {
@@ -16,10 +16,10 @@ const CreatePost = () => {
     }
 
     const validateForm = () => {
-        const requiredFields = [
-            "name", "price", "productDetails", "sellerLocation"
-        ]
         const addedFields = []
+        const requiredFields = [
+            "name", "price", "productDetails", "sellerLocation", "categoryId", "productImage"
+        ]
         if(Object.keys(formData).length) {
             requiredFields.forEach((item) => {
                 for(const k in formData) {
@@ -36,6 +36,7 @@ const CreatePost = () => {
             createProduct(formData)
             .then(re => {
                 alert("Created")
+                console.log(formData)
             })
             .catch(err => {
                 if(err) {
@@ -70,13 +71,46 @@ const CreatePost = () => {
                             <span className="label">Condition<i className="required">*</i></span>
                             <select 
                                 onChange={handInputField} required={true}
+                                className="input-body" name="categoryId"
+                            >
+                                <option>-- Categories --</option>
+                                <option value="1">Beauty</option>
+                                <option value="2">Baby products</option>
+                                <option value="3">Books</option>
+                                <option value="4">Beverages</option>
+                                <option value="5">Clothing</option>
+                                <option value="6">Cleaning Supplies</option>
+                                <option value="7">Electronics</option>
+                                <option value="8">Musical instruments</option>
+                                <option value="9">Office Products</option>
+                                <option value="10">Property for sale</option>
+                                <option value="11">Sports</option>
+                                <option value="12">Toys and games</option>
+                                <option value="13">Vehicles</option>
+                                <option value="14">Watches</option>
+                            </select>
+                        </div>
+                        <div className="clm">
+                            <span className="label">Condition<i className="required">*</i></span>
+                            <select 
+                                onChange={handInputField} required={true}
                                 className="input-body" name="productCondition"
                             >
                                 <option className="options">-- Select condition --</option>
                                 <option className="options" value="New">New</option>
-                                <option className="options" value="Used">Used</option>
+                                <option className="options" value="Used-like-new">Used like new</option>
+                                <option className="options" value="Used-good">Used good</option>
+                                <option className="options" value="Used-fair">Used fair</option>
                             </select>
                         </div>
+                        <div className="clm">
+                            <Input
+                                required={true} onChange={handInputField}
+                                input name="name" label="Product name"
+                            />
+                        </div>
+                    </div>
+                    <div className="formRow">
                         <div className="clm">
                             <Input
                                 required={true} onChange={handInputField}
@@ -87,14 +121,6 @@ const CreatePost = () => {
                             <Input
                                 onChange={handInputField}
                                 input type="number" name="oldPrice" label="OldPrice"
-                            />
-                        </div>
-                    </div>
-                    <div className="formRow">
-                        <div className="clm">
-                            <Input
-                                required={true} onChange={handInputField}
-                                input name="name" label="Product name"
                             />
                         </div>
                         <div className="clm">
@@ -122,7 +148,7 @@ const CreatePost = () => {
                         <LinkButton color="red" text="Cancel" />
                         <Button
                             onClick={validateForm}
-                            text="Submit" name="Submit" type="primary" iconLeft="pencil"
+                            text="Create" type="primary" iconLeft="pencil"
                         />
                     </div>
                 </div>
@@ -131,4 +157,4 @@ const CreatePost = () => {
     )
 }
 
-export default CreatePost
+export default CreateProduct

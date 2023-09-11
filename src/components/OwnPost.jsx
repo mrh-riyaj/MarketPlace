@@ -30,6 +30,7 @@ const OwnPost = (props) => {
                 onDelete={props.onDelete}
                 oldPrice={props.oldPrice}
                 sellerName={props.sellerName}
+                categoryId={props.categoryId}
                 sellerImage={props.sellerImage}
                 productImage={props.productImage}
                 sellerLocation={props.sellerLocation}

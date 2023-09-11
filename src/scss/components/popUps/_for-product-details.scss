@@ -69,18 +69,26 @@
                 .product-infos {
                     margin: 20px 0;
                     align-items: center;
+                    justify-content: space-between;
             
                     .condition {
                         font-size: 15px;
                         padding: 5px 8px;
                         border-radius: 4px;
-                        display: inline-block;
                     
                         &.New {
                             color: green;
                             background-color: #bffcbf7c;
                         }
-                        &.Used {
+                        &.Used-like-new {
+                            color: #4545fa;
+                            background-color: #6486f550;
+                        }
+                        &.Used-good {
+                            color: #fc8b5e;
+                            background-color: #ebf82c48;
+                        }
+                        &.Used-fair {
                             color: #ff5858;
                             background-color: #f7b7b777;
                         }

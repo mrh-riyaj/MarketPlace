@@ -21,7 +21,6 @@ const UserProfile = () => {
 
 
     let userImage = image;
-    let sellerImage = image;
     let gender = "Male";
     let posts = products.length + " Posts";
     let userName = "riyaj_hossain007";
@@ -41,6 +40,7 @@ const UserProfile = () => {
     let sellerName = "Demo Name";
     let productDetails = "Demo Name ProductDetails";
     let productCondition = "New";
+    let categoryId = 1;
 
     const [editProfile, setEditProfile] = useState(false)
 
@@ -92,7 +92,8 @@ const UserProfile = () => {
                         
                         // For product details
                         sellerName={sellerName}
-                        sellerImage={sellerImage}
+                        sellerImage={userImage}
+                        categoryId={categoryId}
                         onDelete={() => removeItem(k)}
                         productDetails={productDetails}
                         productCondition={productCondition}

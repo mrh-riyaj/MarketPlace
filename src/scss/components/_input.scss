@@ -14,7 +14,9 @@
         min-height: 120px;
     }
     &.select-photo {
+        cursor: pointer;
         min-height: 120px;
+        padding: 35px 15px;
     }
     
 }

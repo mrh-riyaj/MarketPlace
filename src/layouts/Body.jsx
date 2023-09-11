@@ -2,7 +2,8 @@ import React from "react"
 import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Inboxes from "../pages/Inboxes"
-import CreatePost from "../pages/CreatePost"
+import Settings from "../pages/Settings"
+import CreateProduct from "../pages/CreateProduct"
 import UserProfile from "../pages/UserProfile"
 import { Routes, Route } from "react-router-dom"
 import Notifications from "../pages/Notifications"
@@ -13,9 +14,10 @@ const Body = () => {
         <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/inbox" element={<Inboxes />} />
-            <Route exact path="/create-post" element={<CreatePost />} />
+            <Route exact path="/settings" element={<Settings />} />
             <Route exact path="/user-profile" element={<UserProfile />} />
             <Route exact path="/notification" element={<Notifications />} />
+            <Route exact path="/create-product" element={<CreateProduct />} />
 
             {/* will be remove*/}
             <Route exact path="/login" element={<Login />} />
