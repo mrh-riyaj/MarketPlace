@@ -18,9 +18,10 @@ const CreateAccount = () => {
 
     const validateForm = () => {
         const requiredFields = [
-            "userName", "fullName", "mobile/email", "birth", "address",
+            "user-name", "full-name", "mobile-email", "birth", "address",
             "gender", "password", "confirmPassword"
         ]
+
         const addedFields = []
         if(Object.keys(formData).length) {
             requiredFields.forEach((item) => {
@@ -36,7 +37,7 @@ const CreateAccount = () => {
         }
         if(addedFields.length === requiredFields.length) {
             // All Data here ="formData"
-            console.log(formData)
+            // console.log(formData)
             alert("Created")
 
             // createUser(formData)
@@ -67,13 +68,13 @@ const CreateAccount = () => {
                         <div className="clm">
                             <Input
                                 onChange={handInputField} required={true}
-                                input name="User-name" label="User name"
+                                input name="user-name" label="User name"
                                 />
                         </div>
                         <div className="clm">
                             <Input
                                 onChange={handInputField} required={true}
-                                input name="Full-name" label="Full name"
+                                input name="full-name" label="Full name"
                             />
                         </div>
                     </div>

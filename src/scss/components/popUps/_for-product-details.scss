@@ -19,6 +19,10 @@
                 padding: 10px 0;
                 align-items: center;
                 justify-content: space-between;
+
+                .info-wrapper {
+                    max-width: 82%;
+                }
         
                 .price {
                     font-size: 15px;
@@ -34,32 +38,32 @@
                     padding: 8px 0;
                     font-size: 18px;
                     font-weight: 600;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
                 }
     
                 .details-icon {
                     margin-left: 15px;
                 }
-            }
 
-            .location {
-                width: auto;
-                font-size: 15px;
-                overflow: hidden;
-                color: #a1a1a1;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                .location {
+                    font-size: 15px;
+                    overflow: hidden;
+                    color: #a1a1a1;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                
+                .locket-icon {
+                    color: #1b74e4;
+                    font-size: 15px;
+                }
             }
-            
-            .locket-icon {
-                color: #1b74e4;
-                font-size: 15px;
-            }
-            
         }
 
         .column-right {
             width: 30%;
-            overflow: auto;
 
             .details-section {
                 overflow: auto;
@@ -90,7 +94,7 @@
                         }
                         &.Used-fair {
                             color: #ff5858;
-                            background-color: #f7b7b777;
+                            background-color: #ffcdcd8e;
                         }
                     }
             
@@ -118,6 +122,7 @@
                 background-color: #fff;
         
                 .img-box {
+                    cursor: pointer;
                     max-width: 50px;
                     max-height: 50px;
                     overflow: hidden;

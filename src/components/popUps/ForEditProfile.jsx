@@ -17,10 +17,10 @@ const ForEditProfile = (props) => {
                 <div className="form-container">
                     <div className="formRow">
                         <div className="clm">
-                            <Input input label="Change userName" />
+                            <Input input label="Change User name" />
                         </div>
                         <div className="clm">
-                            <Input input label="Change fullName" />
+                            <Input input label="Change Full name" />
                         </div>
                         <div className="clm">
                             <Input input label="Change mobile/email" />

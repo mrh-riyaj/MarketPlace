@@ -7,15 +7,15 @@ import { getProductById } from "../../services/product"
 
 const ForProductDetails = (props) => {
     const [product, setProduct] = useState({})
-    const [ProductEditPopUp, setProductEditPopUp] = useState(false)
-    const [ProductDeletePopUp, setProductDeletePopUp] = useState(false)
+    const [ProductEdit, setProductEdit] = useState(false)
+    const [ProductDelete, setProductDelete] = useState(false)
 
     useEffect(() => {
         getProductById(props.id)
         .then(data => setProduct(data))
         // console.log(product)
         // For in future
-        .catch(err => console.log(err))
+        .catch(err => console.log("1 Error"))
     }, [])
     return(
         createPortal(
@@ -35,33 +35,31 @@ const ForProductDetails = (props) => {
                             <img src={props.productImage}/>
                         </div>
                         <div className="info-section d-flex">
-                            <div>
+                            <div className="info-wrapper">
                                 {props.price && <span className="price">৳{props.price}</span>}
                                 {props.oldPrice && <del className="price old">৳{props.oldPrice}</del>}
                                 {props.name && <div className="product-name">{props.name}</div>}
+                                {props.sellerLocation &&
+                                    <div className="d-flex">
+                                        <span className="location">{props.sellerLocation}</span>
+                                        <i className="locket-icon icon-location"></i>
+                                    </div>
+                                }
                             </div>
-                            {props.saveIcon &&
-                                <Button class="details-icon" icon="bookmark" />
-                            }
-                            {props.editIcon && 
+                            {props.saveBtn && <Button class="details-icon" icon="bookmark" />}
+                            {props.editBtn && 
                                 <span>
                                     <Button
                                         type="red" class="details-icon" icon="bin"
-                                        onClick={() => setProductDeletePopUp(true)}
+                                        onClick={() => setProductDelete(true)}
                                     />
                                     <Button
                                         class="details-icon" icon="pencil"
-                                        onClick={() => setProductEditPopUp(true)}
+                                        onClick={() => setProductEdit(true)}
                                     />
                                 </span>
                             }
                         </div>
-                        {props.sellerLocation &&
-                            <div className="d-flex">
-                                <span className="location">{props.sellerLocation}</span>
-                                <i className="locket-icon icon-location"></i>
-                            </div>
-                        }
                     </div>
                     <div className="column-right position-r">
                         <div className="details-section">
@@ -77,9 +75,21 @@ const ForProductDetails = (props) => {
                                     <span className="infos">{props.productDetails}</span>
                                 </div>
                             }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
+                            {props.productDetails &&
+                                <div className="product-infos">
+                                    <span className="info-tittle">Details : </span>
+                                    <span className="infos">{props.productDetails}</span>
+                                </div>
+                            }
                         </div>
                         <div className="seller-info position-a d-flex">
-                            <div className="img-box"> {/*Will be onClick*/}
+                            <div className="img-box" onClick={props.onClick}>
                                 <img src={props.sellerImage}/>
                             </div>
                             <span className="message-value">
@@ -97,15 +107,15 @@ const ForProductDetails = (props) => {
                     </div>
                 </div>
             </div>
-            {ProductDeletePopUp && <ForProductDelete
+            {ProductDelete && <ForProductDelete
                 id={props.id}
                 onClose={props.onClose}
                 onDelete={props.onDelete}
-                onClose={() => setProductDeletePopUp(false)}
+                onClose={() => setProductDelete(false)}
             />}
-            {ProductEditPopUp &&
+            {ProductEdit &&
                 <ForProductEdit
-                    onClose={() => setProductEditPopUp(false)}
+                    onClose={() => setProductEdit(false)}
                 />
             }
         </div>,

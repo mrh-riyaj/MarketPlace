@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import NewPost from "../components/NewPost"
+import NewProduct from "../components/NewProduct"
 import ProductImage from "../images/demo_product.jpg"
 import SellerImage from "../images/User.jpg"
 import { getAllProducts } from "../services/product"
@@ -18,16 +18,19 @@ const Home = () => {
             <div className="post-section">
                 <div className="posts d-flex">
                     {products.map((item, k) => (
-                        <NewPost
+                        <NewProduct
                             key={k}
                             id={item.id}
+                            sendBtn saveBtn
                             name={item.name}
                             price={item.price}
+                            title="Product details"
                             oldPrice={item.oldPrice}
                             productImage={ProductImage}
                             sellerLocation={item.sellerLocation}
                             
                             // For product details
+                            onClick={() => {alert("Will go seller profile")}}
                             sellerName={sellerName}
                             sellerImage={sellerImage}
                             categoryId={item.categoryId}

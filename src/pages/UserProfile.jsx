@@ -1,48 +1,46 @@
 import ForEditProfile from "../components/popUps/ForEditProfile"
+import productImage from "../images/demo_product.jpg"
+import { getAllProducts } from "../services/product"
 import LinkButton from "../components/LinkButton"
-import P_Imag from "../images/demo_product.jpg"
-import OwnPost from "../components/OwnPost"
+import NewProduct from "../components/NewProduct"
+import { useEffect, useState } from "react"
 import image from "../images/User.jpg"
-import { useState } from "react"
 
 const UserProfile = () => {
-    // For User
-    const [products, setProducts] = useState([1,2,3,4,5,6,7,8,9,10,11,12])
+    const [editProfile, setEditProfile] = useState(false)
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        getAllProducts()
+        .then(data => setProducts(data))
+    }, [])
+
     const removeItem = (key) => {
         const newProducts = [...products]
         const deletedProduct = newProducts.splice(key, 1)
         setProducts(newProducts)
-
+        
         if(deletedProduct[0] >= 0) {
             alert(deletedProduct[0] + " Deleted item")
         }
         // console.log(deletedProduct[0])
     }
-
-
-    let userImage = image;
+    
+    // For User
+    
     let gender = "Male";
-    let posts = products.length + " Posts";
+    let userImage = image;
+    let birth = "10 / 05 / 2000";
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
     let email = "a.mrh.riyaj@gmail.com";
-    let birth = "10 / 05 / 2000";
+    let posts = products.length + " Posts";
     let address = "Shuvadda west para puraton coloni dhaka";
     let bio = "My name is riyja hossain i live in dhaka keranigong shuvadda school dhaka coligrat school";
     
     // For Product
-    let id = 1;
-    let price = "100";
-    let oldPrice = "150";
-    let name = "Demo product";
-    let ProductImage = P_Imag;
-    let sellerLocation = "Dhaka";
-    let sellerName = "Demo Name";
-    let productDetails = "Demo Name ProductDetails";
-    let productCondition = "New";
-    let categoryId = 1;
-
-    const [editProfile, setEditProfile] = useState(false)
+    let sellerImage = image;
+    let sellerName = "Riyaj hossain"
+    let ProductImage = productImage;
 
     return (
         <section className="profile-section d-flex">
@@ -81,22 +79,25 @@ const UserProfile = () => {
             </div>
             <div className="profile-right-panel d-flex">
                 {products.map((item, k) => (
-                    <OwnPost
+                    <NewProduct
                         kye={k}
-                        id={id}
-                        name={name}
-                        price={price}
-                        oldPrice={oldPrice}
+                        editBtn
+                        id={item.id}
+                        name={item.name}
+                        price={item.price}
+                        class="own-product"
+                        title="Edit product"
+                        oldPrice={item.oldPrice}
                         productImage={ProductImage}
-                        sellerLocation={sellerLocation}
+                        sellerLocation={item.sellerLocation}
                         
                         // For product details
                         sellerName={sellerName}
-                        sellerImage={userImage}
-                        categoryId={categoryId}
+                        sellerImage={sellerImage}
+                        categoryId={item.categoryId}
                         onDelete={() => removeItem(k)}
-                        productDetails={productDetails}
-                        productCondition={productCondition}
+                        productDetails={item.productDetails}
+                        productCondition={item.productCondition}
                         
                     />
                 ))}

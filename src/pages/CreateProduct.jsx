@@ -18,7 +18,7 @@ const CreateProduct = () => {
     const validateForm = () => {
         const addedFields = []
         const requiredFields = [
-            "name", "price", "productDetails", "sellerLocation", "categoryId", "productImage"
+            "name", "price", "productDetails", "sellerLocation", "categoryId", "productImages"
         ]
         if(Object.keys(formData).length) {
             requiredFields.forEach((item) => {
@@ -36,7 +36,7 @@ const CreateProduct = () => {
             createProduct(formData)
             .then(re => {
                 alert("Created")
-                console.log(formData)
+                // console.log(formData)
             })
             .catch(err => {
                 if(err) {
@@ -68,7 +68,7 @@ const CreateProduct = () => {
                 <div className="form-container">
                     <div className="formRow">
                         <div className="clm">
-                            <span className="label">Condition<i className="required">*</i></span>
+                            <span className="label">Categories<i className="required">*</i></span>
                             <select 
                                 onChange={handInputField} required={true}
                                 className="input-body" name="categoryId"
@@ -140,7 +140,7 @@ const CreateProduct = () => {
                         <div className="clm">
                             <Input
                                 imageSelector onChange={handInputField}
-                                type="file" name="productImage" label="Select your item"
+                                type="file" name="productImages" label="Select your item"
                             />
                         </div>
                     </div>
