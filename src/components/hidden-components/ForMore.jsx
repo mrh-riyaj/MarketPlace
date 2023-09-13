@@ -1,7 +1,7 @@
-import userImage from "../../images/User.jpg"
-// import { useEffect, useRef } from "react"
-// import { Link } from "react-router-dom"
 import MenuItem from "../MenuItem"
+// import { Link } from "react-router-dom"
+// import { useEffect, useRef } from "react"
+import userImage from "../../images/User.jpg"
 
 const ForMore = (props) => {
     // const forMoreRef = useRef()
@@ -39,9 +39,7 @@ const ForMore = (props) => {
                 <MenuItem text="Profile" icon="user" img={image} path="/user-profile" />
                 <MenuItem text="Settings" icon="cog" path="settings" />
                 <MenuItem text="Your activity" icon="history" />
-                <MenuItem text="Saved" icon="bookmarks" />
-                <MenuItem text="Keyboard shortcuts will go setting" icon="social-media" />
-                <MenuItem text="Switch appearance will go setting" icon ="sun"/>
+                <MenuItem text="Saved" icon="bookmarks" path="save-items" />
                 <MenuItem text="Switch accounts" icon="exit" />
                 <MenuItem text="Lock out" icon="evil"/>
             </div>

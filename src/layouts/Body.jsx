@@ -3,10 +3,11 @@ import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Inboxes from "../pages/Inboxes"
 import Settings from "../pages/Settings"
-import CreateProduct from "../pages/CreateProduct"
+import SaveItems from "../pages/SaveItems"
 import UserProfile from "../pages/UserProfile"
 import { Routes, Route } from "react-router-dom"
 import Notifications from "../pages/Notifications"
+import CreateProduct from "../pages/CreateProduct"
 import CreateAccount from "../pages/CreateAccount"
 
 const Body = () => {
@@ -15,6 +16,7 @@ const Body = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/inbox" element={<Inboxes />} />
             <Route exact path="/settings" element={<Settings />} />
+            <Route exact path="/save-items" element={<SaveItems />} />
             <Route exact path="/user-profile" element={<UserProfile />} />
             <Route exact path="/notification" element={<Notifications />} />
             <Route exact path="/create-product" element={<CreateProduct />} />

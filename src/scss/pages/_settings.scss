@@ -8,49 +8,20 @@
         margin: 40px auto;
         border-radius: 10px;
         background-color: #fff;
-    
-        .setting-wrapper {
-            overflow: auto;
-            max-height: 700px;
-        }
-    
+
         .setting-tittle {
             font-size: 25px;
             font-weight: 600;
             padding: 0 0 20px 5px;
+            border-bottom: 1px solid #eee;
         }
-    
-        // .info-item-body {
-        //     padding: 5px;
-        //     cursor: pointer;
-        //     border-radius: 5px;
-        //     align-items: center;
-    
-        //     &:hover {
-        //         transition: .2s;
-        //         background-color: #ececec;
-        //     }
-    
-        //     .img-body {
-        //         max-width: 60px;
-        //         overflow: hidden;
-        //         max-height: 60px;
-        //         margin-right: 10px;
-        //         border-radius: 50%;
-        //     }
-    
-        //     .product-name{ 
-        //         padding: 5px;
-        //         font-size: 15px;
-        //         font-weight: 600;
-        //     }
-            
-        //     .post-time {
-        //         padding: 0 5px;
-        //         font-size: 15px;
-        //         font-weight: 600;
-        //         color: #1b74e4;
-        //     }
-        // }
+        
+        .setting-wrapper {
+            padding: 5px;
+
+            .settings {
+                width: 50%;
+            }
+        }
     }
 }
