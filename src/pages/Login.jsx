@@ -1,6 +1,6 @@
 import LinkButton from "../components/LinkButton"
 import Button from "../components/Button"
-import Input from "../components/Input"
+import Inputs from "../components/Inputs"
 import Logo from "../components/Logo"
 import image from "../images/shopping.gif"
 
@@ -25,12 +25,12 @@ const Login = () => {
                         </div>
                         <div className="row forms">
                             <div className="clm">
-                                <Input input placeholder="mobile/email" />
+                                <Inputs input placeholder="mobile/email" />
                             </div>
                         </div>
                         <div className="row forms">
                             <div className="clm">
-                                <Input input type="password" placeholder="Password" />
+                                <Inputs input type="password" placeholder="Password" />
                             </div>
                         </div>
                         <div className="row forms ">
@@ -45,7 +45,9 @@ const Login = () => {
                                 <LinkButton text="Forget Password" color="red" />
                         </div>
                         <div className="row other-webs">
-                            <Logo /> <Logo /> <Logo />
+                            <div className="clm">A</div>
+                            <div className="clm">B</div>
+                            <div className="clm">C</div>
                         </div>
                     </div>
                 </div>

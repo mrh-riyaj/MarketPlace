@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
+import Inputs from "../components/Inputs"
 import Button from "../components/Button"
-import Input from "../components/Input"
+import { useEffect, useState } from "react"
 import LinkButton from "../components/LinkButton"
 import { createProduct } from "../services/product"
 
@@ -104,7 +104,7 @@ const CreateProduct = () => {
                             </select>
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 required={true} onChange={handInputField}
                                 input name="name" label="Product name"
                             />
@@ -112,19 +112,19 @@ const CreateProduct = () => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 required={true} onChange={handInputField}
                                 input name="price" type="number" label="Price"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField}
                                 input type="number" name="oldPrice" label="OldPrice"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 required={true} onChange={handInputField}
                                 input name="sellerLocation" label="Seller location"
                             />
@@ -132,13 +132,13 @@ const CreateProduct = () => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 required={true} onChange={handInputField}
                                 textarea name="productDetails" label="Product details"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 imageSelector onChange={handInputField}
                                 type="file" name="productImages" label="Select your item"
                             />

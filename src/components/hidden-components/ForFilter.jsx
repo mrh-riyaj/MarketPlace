@@ -1,6 +1,6 @@
 import LinkButton from "../LinkButton"
 import Button from "../Button"
-import Input from "../Input"
+import Inputs from "../Inputs"
 
 const ForFilter = (props) => {
     return(
@@ -25,13 +25,13 @@ const ForFilter = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 input type="number" placeholder="Min"
                                 class="filter-inputs"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 input type="number" placeholder="Max"
                                 class="filter-inputs"
                             />

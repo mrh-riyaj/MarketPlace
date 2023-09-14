@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom"
 import LinkButton from "../LinkButton"
 import Button from "../Button"
-import Input from "../Input"
+import Inputs from "../Inputs"
 
 const ForProductEdit = (props) => {
     return(
@@ -47,26 +47,26 @@ const ForProductEdit = (props) => {
                             </select>
                         </div>
                         <div className="clm">
-                            <Input input label="Change product name" />
+                            <Inputs input label="Change product name" />
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input input type="number" label="Change price" />
+                            <Inputs input type="number" label="Change price" />
                         </div>
                         <div className="clm">
-                            <Input input type="number" label="Change old price" />
+                            <Inputs input type="number" label="Change old price" />
                         </div>
                         <div className="clm">
-                            <Input input label="Change seller location" />
+                            <Inputs input label="Change seller location" />
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input textarea label="Change details" />
+                            <Inputs textarea label="Change details" />
                         </div>
                         <div className="clm">
-                            <Input imageSelector class="select-photo" label="Change product image" />
+                            <Inputs imageSelector class="select-photo" label="Change product image" />
                         </div>
                     </div>
                     <div className="submit-section  d-flex">

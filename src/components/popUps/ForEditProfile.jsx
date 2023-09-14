@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom"
 import LinkButton from "../LinkButton"
 import Button from "../Button"
-import Input from "../Input"
+import Inputs from "../Inputs"
 
 const ForEditProfile = (props) => {
     return(
@@ -17,18 +17,18 @@ const ForEditProfile = (props) => {
                 <div className="form-container">
                     <div className="formRow">
                         <div className="clm">
-                            <Input input label="Change User name" />
+                            <Inputs input label="Change User name" />
                         </div>
                         <div className="clm">
-                            <Input input label="Change Full name" />
+                            <Inputs input label="Change Full name" />
                         </div>
                         <div className="clm">
-                            <Input input label="Change mobile/email" />
+                            <Inputs input label="Change mobile/email" />
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input input type="date" label="Change date of birth" />
+                            <Inputs input type="date" label="Change date of birth" />
                         </div>
                         <div className="clm">
                             <span className="label">Change gender</span>
@@ -42,18 +42,18 @@ const ForEditProfile = (props) => {
                             </select>
                         </div>
                         <div className="clm">
-                            <Input input label="Change address" />
+                            <Inputs input label="Change address" />
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 input type="password"
                                 label="New Password"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 input required={true} type="password"
                                 label="Current Password"
                             />
@@ -61,10 +61,10 @@ const ForEditProfile = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input textarea label="Change bio" />
+                            <Inputs textarea label="Change bio" />
                         </div>
                         <div className="clm">
-                            <Input imageSelector class="select-photo" label="Change your profile" />
+                            <Inputs imageSelector class="select-photo" label="Change your profile" />
                         </div>
                     </div>
                     <div className="submit-section  d-flex">

@@ -1,4 +1,4 @@
-const Input = (props) => {
+const Inputs = (props) => {
     return (
         <>
             {props.input &&
@@ -49,4 +49,4 @@ const Input = (props) => {
     )
 }
 
-export default Input
+export default Inputs

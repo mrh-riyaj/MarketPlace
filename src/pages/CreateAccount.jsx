@@ -2,7 +2,7 @@
 import LinkButton from "../components/LinkButton"
 // import { useEffect, useState } from "react"
 import Button from "../components/Button"
-import Input from "../components/Input"
+import Inputs from "../components/Inputs"
 import { useState } from "react"
 
 const CreateAccount = () => {
@@ -66,13 +66,13 @@ const CreateAccount = () => {
                 <div className="form-container">
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true}
                                 input name="user-name" label="User name"
                                 />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true}
                                 input name="full-name" label="Full name"
                             />
@@ -80,13 +80,13 @@ const CreateAccount = () => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true} 
                                 input name="mobile-email" label="Mobile/Email"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true} 
                                 input type="date" name="birth" label="Date of birth"
                             />
@@ -94,7 +94,7 @@ const CreateAccount = () => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true} 
                                 input name="address" label="Current address"
                             />
@@ -114,13 +114,13 @@ const CreateAccount = () => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true} 
                                 input type="password" name="password" label="Password"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField} required={true}
                                 input type="password" name="confirmPassword" label="Confirm password"
                                 />
@@ -128,13 +128,13 @@ const CreateAccount = () => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 onChange={handInputField}
                                 textarea name="bio" label="Bio"
                             />
                         </div>
                         <div className="clm">
-                            <Input
+                            <Inputs
                                 imageSelector required={true} onChange={handInputField}
                                 name="userImage" label="Select your profile"
                             />

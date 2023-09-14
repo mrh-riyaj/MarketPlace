@@ -13,17 +13,20 @@ const ForProductDetails = (props) => {
     useEffect(() => {
         getProductById(props.id)
         .then(data => setProduct(data))
-        // console.log(product)
+        
         // For in future
         .catch(err => console.log("1 Error"))
     }, [])
+
+    // print 4 times why?
+    console.log(props.id)
     return(
         createPortal(
         <div className="middle-popup-main-container d-flex position-a">
             <div className="details-popup-container position-a">
                 <div className="popup-header d-flex">
                     <span className="popup-title">
-                        {props.title && <span>{props.title} :- {props.categoryId}</span>}
+                        {props.title && <span>{props.title} :- CategoryId : {props.categoryId} -:</span>}
                     </span>
                     <span className="popup-close" onClick={props.onClose}>
                         <i className="icon-cancel-circle"></i>
