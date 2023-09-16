@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import NewProduct from "../components/NewProduct"
-import ProductImage from "../images/demo_product.jpg"
 import SellerImage from "../images/User.jpg"
-import { getAllProducts } from "../services/product"
+import NewProduct from "../components/NewProduct"
+import { getAllProducts } from "../services/products"
+import ProductImage from "../images/demo_product.jpg"
 
 const Home = () => {
     let sellerName = "Riyaj hossain"
@@ -30,12 +30,12 @@ const Home = () => {
                             sellerLocation={item.sellerLocation}
                             
                             // For product details
-                            onClick={() => {alert("Will go seller profile")}}
                             sellerName={sellerName}
                             sellerImage={sellerImage}
                             categoryId={item.categoryId}
                             productDetails={item.productDetails}
                             productCondition={item.productCondition}
+                            onClick={() => {alert("Will go seller profile")}}
                          />
                     ))}
                 </div>

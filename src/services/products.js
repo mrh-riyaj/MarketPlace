@@ -2,7 +2,14 @@ import axios from "axios"
 
 const API = "http://localhost:8888"
 const createProduct = (formData) => {
-    return axios.post(`${API}/products`, formData).then(res => res.data)
+    return axios.post(
+        `${API}/products`, 
+        formData, 
+        {
+            headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    }).then(res => res.data)
 }
 
 const getAllProducts = () => {

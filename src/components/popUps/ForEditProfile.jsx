@@ -64,7 +64,7 @@ const ForEditProfile = (props) => {
                             <Inputs textarea label="Change bio" />
                         </div>
                         <div className="clm">
-                            <Inputs imageSelector class="select-photo" label="Change your profile" />
+                            <Inputs input type="file" label="Change your profile" />
                         </div>
                     </div>
                     <div className="submit-section  d-flex">

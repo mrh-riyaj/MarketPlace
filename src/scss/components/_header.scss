@@ -15,15 +15,18 @@
     }
 
     .user-image {
+        cursor: pointer;
         max-width: 40px;
         overflow: hidden;
         max-height: 40px;
         border-radius: 50%;
+        border: 1px solid #1b74e4;
     }
 
     .search-bar {
+        min-width: 30%;
         padding: 3px 0;
-        margin-left: -35px;
+        margin-left: -10%;
         border-radius: 5px;
         background-color: #fff;
         box-shadow: 0 0 5px 5px #eee;
@@ -31,7 +34,6 @@
         .input-body {
             padding: 0 15px;
             font-size: 17px;
-            min-width: 400px;
             background: none;
         }
         .search-icon {
@@ -42,4 +44,9 @@
             }
         }
     }
+}
+
+.test {
+    padding: 15px;
+    background-color: red;
 }

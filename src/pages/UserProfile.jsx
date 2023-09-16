@@ -1,6 +1,6 @@
 import ForEditProfile from "../components/popUps/ForEditProfile"
 import productImage from "../images/demo_product.jpg"
-import { getAllProducts } from "../services/product"
+import { getAllProducts } from "../services/products"
 import LinkButton from "../components/LinkButton"
 import NewProduct from "../components/NewProduct"
 import { useEffect, useState } from "react"
@@ -16,13 +16,12 @@ const UserProfile = () => {
 
     const removeItem = (key) => {
         const newProducts = [...products]
-        const deletedProduct = newProducts.splice(key, 1)
+        const deletedItem = newProducts.splice(key, 1)
         setProducts(newProducts)
         
-        if(deletedProduct[0] >= 0) {
-            alert(deletedProduct[0] + " Deleted item")
+        if(deletedItem[0].id >= 0) {
+            alert(deletedItem[0].id + " Deleted item")
         }
-        // console.log(deletedProduct[0])
     }
     
     // For User

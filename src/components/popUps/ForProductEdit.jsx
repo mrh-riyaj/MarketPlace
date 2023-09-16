@@ -66,7 +66,7 @@ const ForProductEdit = (props) => {
                             <Inputs textarea label="Change details" />
                         </div>
                         <div className="clm">
-                            <Inputs imageSelector class="select-photo" label="Change product image" />
+                            <Inputs input type="file" label="Change product image" />
                         </div>
                     </div>
                     <div className="submit-section  d-flex">

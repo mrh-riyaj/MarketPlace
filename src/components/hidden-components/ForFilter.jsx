@@ -7,9 +7,6 @@ const ForFilter = (props) => {
             <div className="filter-container position-a">
                 <div className="popup-header d-flex">
                     <div className="popup-title">Filter item</div>
-                    <span className="popup-close" onClick={props.onClose}>
-                        <i className="icon-cancel-circle"></i>
-                    </span>
                 </div>
                 <div className="container">
                     <div className="row">

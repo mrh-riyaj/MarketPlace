@@ -3,7 +3,7 @@ import { createPortal } from "react-dom"
 import { useEffect, useState } from "react"
 import ForProductEdit from "./ForProductEdit"
 import ForProductDelete from "./ForProductDelete"
-import { getProductById } from "../../services/product"
+import { getProductById } from "../../services/products"
 
 const ForProductDetails = (props) => {
     const [product, setProduct] = useState({})
@@ -19,7 +19,7 @@ const ForProductDetails = (props) => {
     }, [])
 
     // print 4 times why?
-    console.log(props.id)
+    // console.log(props.id)
     return(
         createPortal(
         <div className="middle-popup-main-container d-flex position-a">
@@ -100,10 +100,8 @@ const ForProductDetails = (props) => {
                             </span>
                             {props.sendBtn && 
                                 <Button
-                                    onClick={() => {
-                                        alert(`Hi '${props.sellerName}' is this still available?`)
-                                    }}
                                     text="Send" type="primary" iconRight="home"
+                                    onClick={() => {alert(`Hi '${props.sellerName}' is this still available?`)}}
                                 />
                             }
                         </div>
@@ -112,15 +110,12 @@ const ForProductDetails = (props) => {
             </div>
             {ProductDelete && <ForProductDelete
                 id={props.id}
+                name={props.name}
                 onClose={props.onClose}
                 onDelete={props.onDelete}
                 onClose={() => setProductDelete(false)}
             />}
-            {ProductEdit &&
-                <ForProductEdit
-                    onClose={() => setProductEdit(false)}
-                />
-            }
+            {ProductEdit && <ForProductEdit onClose={() => setProductEdit(false)}/>}
         </div>,
         document.body
         )

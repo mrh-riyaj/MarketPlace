@@ -11,9 +11,9 @@ const Filter = () => {
             <Logo path="/"/>
             <Button
                 text="Filter" type="primary" iconRight="search"
-                onClick={() => setFilter(true)}
+                onClick={() => setFilter(!filter)}
             />
-            {filter && <ForFilter onClose={() => setFilter(false)} />}
+            {filter && <ForFilter />}
         </div>
     )
 }
