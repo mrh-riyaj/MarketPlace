@@ -25,18 +25,19 @@
             cursor: pointer;
             border-radius: 5px;
             align-items: center;
-    
+            border: 1px solid transparent;
+            
             &:hover {
-                transition: .2s;
-                background-color: #ececec;
+                border: 1px solid #eee;
             }
-    
+            
             .img-body {
-                max-width: 60px;
+                max-width: 50px;
                 overflow: hidden;
-                max-height: 60px;
+                max-height: 50px;
                 margin-right: 10px;
                 border-radius: 50%;
+                border: 1px solid #1b74e4;
             }
     
             .product-name{ 

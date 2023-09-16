@@ -20,7 +20,7 @@ const Login = () => {
                         </div>
                         <div className="row tittle">
                             <div className="clm">
-                                <strong>Login MarketPlace</strong>
+                                <strong>Login Marketplace</strong>
                             </div>
                         </div>
                         <div className="row forms">
