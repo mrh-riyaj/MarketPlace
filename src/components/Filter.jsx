@@ -13,7 +13,7 @@ const Filter = () => {
                 text="Filter" type="primary" iconRight="search"
                 onClick={() => setFilter(!filter)}
             />
-            {filter && <ForFilter />}
+            {filter && <ForFilter onClose={() => setFilter(false)} />}
         </div>
     )
 }

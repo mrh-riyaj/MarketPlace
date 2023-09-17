@@ -9,6 +9,8 @@ const ForProductDetails = (props) => {
     const [product, setProduct] = useState({})
     const [ProductEdit, setProductEdit] = useState(false)
     const [ProductDelete, setProductDelete] = useState(false)
+    const images = props.productImage && props.productImage.split(',')
+    const imagePath = 'http://localhost:8888/file/' + images[1]
 
     useEffect(() => {
         getProductById(props.id)
@@ -34,8 +36,8 @@ const ForProductDetails = (props) => {
                 </div>
                 <div className="content d-flex">
                     <div className="column-left">
-                        <div className="post-images">
-                            <img src={props.productImage}/>
+                        <div className="product-images">
+                            <img src={imagePath}/>
                         </div>
                         <div className="info-section d-flex">
                             <div className="info-wrapper">

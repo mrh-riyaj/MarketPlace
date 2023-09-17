@@ -1,5 +1,5 @@
 .new-product {
-    width: 19%;
+    width: 16%;
 }
 .own-product {
     width: 24%;
@@ -8,13 +8,14 @@
     cursor: pointer;
     overflow: hidden;
     max-height: 400px;
-    margin: 8px auto;
+    margin: 5px auto;
     border-radius: 5px;
     border: 1px solid #eee;
-    // box-shadow: 0 0 5px 2px #eee;
+    box-shadow: 0 0 5px 2px #eee;
     
     .product-images {
         height: 290px;
+        overflow: hidden;
         align-items: center;
         border-bottom: 1px solid #eee;
 

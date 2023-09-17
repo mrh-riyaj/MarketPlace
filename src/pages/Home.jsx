@@ -26,7 +26,7 @@ const Home = () => {
                             price={item.price}
                             title="Product details"
                             oldPrice={item.oldPrice}
-                            productImage={ProductImage}
+                            productImage={item.productImage}
                             sellerLocation={item.sellerLocation}
                             
                             // For product details

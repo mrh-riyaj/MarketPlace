@@ -3,12 +3,14 @@ import ForProductDetails from "./popUps/ForProductDetails"
 
 const NewProduct = (props) => {
     const [ProductDetailsPopUp, setProductDetailsPopUp] = useState(false)
+    const images = props.productImage && props.productImage.split(',')
+    const imagePath = 'http://localhost:8888/file/' + images[0]
 
     return (
         <section className={"new-product position-r " + (props.class)}>
             <div onClick={() => setProductDetailsPopUp(true)}>
                 <div className="product-images d-flex">
-                    <img src={props.productImage}/>
+                    <img src={imagePath}/>
                 </div>
                 <div className="info-section">
                     {props.price && <span className="price">৳{props.price}</span>}

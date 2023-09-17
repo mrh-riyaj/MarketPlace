@@ -14,6 +14,7 @@ const Inputs = (props) => {
                         className={props.class + " input-body " + (props.type ? props.type : "")}
                         onChange={props.onChange}
                         placeholder={props.placeholder}
+                        multiple={props.multiple}
                     />
                 </>
             }

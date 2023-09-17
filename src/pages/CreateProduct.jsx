@@ -2,15 +2,24 @@ import Inputs from "../components/Inputs"
 import Button from "../components/Button"
 import { useEffect, useState } from "react"
 import LinkButton from "../components/LinkButton"
-import { createProduct } from "../services/product"
+import { createProduct } from "../services/products"
 
 const CreateProduct = () => {
     const [formData, setFormData] = useState({})
 
     const handInputField = (e) => {
         const name = e.target.name
-        const value = e.target.value
+        let value = []
+        const files = e.target.files
         const currentData = {...formData}
+        if(files) {
+            for (let i = 0; i < files.length; i++) {
+                value.push(files[i])
+            }
+        }
+        else {
+            value = e.target.value
+        }
         currentData[name] = value
         setFormData(currentData)
     }
@@ -18,7 +27,8 @@ const CreateProduct = () => {
     const validateForm = () => {
         const addedFields = []
         const requiredFields = [
-            "name", "price", "productDetails", "sellerLocation", "categoryId", "productImages"
+            "name", "price", "productDetails", "sellerLocation",
+            "categoryId", "productImages"
         ]
         if(Object.keys(formData).length) {
             requiredFields.forEach((item) => {
@@ -33,7 +43,18 @@ const CreateProduct = () => {
             alert('All missing')
         }
         if(addedFields.length === requiredFields.length) {
-            createProduct(formData)
+            let formObject = new FormData()
+            for(let name in formData) {
+                if(name === 'productImages') {
+                    formData[name].forEach(file => {
+                        formObject.append('productImages', file)
+                    })
+                }
+                else {
+                    formObject.append(name, formData[name])
+                }
+            }
+            createProduct(formObject)
             .then(re => {
                 alert("Created")
                 // console.log(formData)
@@ -57,7 +78,7 @@ const CreateProduct = () => {
                         <span className="head-titles">For sell</span>
                     </div>
                     <div className="clm">
-                        <span className="head-titles">Market place</span>
+                        <span className="head-titles">Marketplace</span>
                     </div>
                     <div className="clm">
                         <span className="head-titles">
@@ -65,7 +86,7 @@ const CreateProduct = () => {
                         </span>
                     </div>
                 </div>
-                <div className="form-container">
+                <form className="form-container">
                     <div className="formRow">
                         <div className="clm">
                             <span className="label">Categories<i className="required">*</i></span>
@@ -139,8 +160,9 @@ const CreateProduct = () => {
                         </div>
                         <div className="clm">
                             <Inputs
-                                imageSelector onChange={handInputField}
+                                input onChange={handInputField}
                                 type="file" name="productImages" label="Select your item"
+                                multiple={true}
                             />
                         </div>
                     </div>
@@ -151,7 +173,7 @@ const CreateProduct = () => {
                             text="Create" type="primary" iconLeft="pencil"
                         />
                     </div>
-                </div>
+                </form>
             </div>
         </section>
     )

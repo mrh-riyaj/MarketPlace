@@ -4,7 +4,7 @@ import image from "../images/Logo.svg"
 const Logo = (props) => {
     return (
         <Link className="logo-body position-r" to={props.path}>
-            <span className="logo-design"></span>
+            {/* <span className="logo-design"></span> */}
             <div className="logo position-a">
                 <img src={image}/>
             </div>
