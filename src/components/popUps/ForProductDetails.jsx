@@ -6,8 +6,8 @@ import ForProductDelete from "./ForProductDelete"
 import { getProductById } from "../../services/products"
 
 // will be delete
-import user from "../../images/User.jpg"
-import DemoProduct from "../../images/demo_product.jpg"
+// import user from "../../images/User.jpg"
+// import DemoProduct from "../../images/demo_product.jpg"
 // will be delete
 
 const ForProductDetails = (props) => {
@@ -25,11 +25,11 @@ const ForProductDetails = (props) => {
 
 
     const images = props.productImage && props.productImage.split(',')
-    const imagePath = 'http://localhost:8888/file/' + images[1]
+    const imagePath = 'http://localhost:8888/file/' + images[0]
 
-    let test = [
-        DemoProduct,user
-    ]
+    // let test = [
+    //     DemoProduct,user
+    // ]
 
     // console.log(imagePath)
     
