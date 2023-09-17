@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import SellerImage from "../images/User.jpg"
 import NewProduct from "../components/NewProduct"
 import { getAllProducts } from "../services/products"
-import ProductImage from "../images/demo_product.jpg"
 
 const Home = () => {
     let sellerName = "Riyaj hossain"

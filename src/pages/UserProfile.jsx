@@ -1,14 +1,14 @@
-import ForEditProfile from "../components/popUps/ForEditProfile"
-import productImage from "../images/demo_product.jpg"
-import { getAllProducts } from "../services/products"
+import image from "../images/User.jpg"
+import { useEffect, useState } from "react"
 import LinkButton from "../components/LinkButton"
 import NewProduct from "../components/NewProduct"
-import { useEffect, useState } from "react"
-import image from "../images/User.jpg"
+import { getAllProducts } from "../services/products"
+// import productImage from "../images/demo_product.jpg"
+import ForEditProfile from "../components/popUps/ForEditProfile"
 
-const UserProfile = () => {
-    const [editProfile, setEditProfile] = useState(false)
+const UserProfile = (props) => {
     const [products, setProducts] = useState([])
+    const [editProfile, setEditProfile] = useState(false)
     useEffect(() => {
         getAllProducts()
         .then(data => setProducts(data))
@@ -24,10 +24,11 @@ const UserProfile = () => {
         }
     }
     
+    
     // For User
     
     let gender = "Male";
-    let userImage = image;
+    // let userImage = image;
     let birth = "10 / 05 / 2000";
     let userName = "riyaj_hossain007";
     let fullName = "Md Riyaj Hossain";
@@ -39,14 +40,14 @@ const UserProfile = () => {
     // For Product
     let sellerImage = image;
     let sellerName = "Riyaj hossain"
-    let ProductImage = productImage;
+    // let ProductImage = productImage;
 
     return (
         <section className="profile-section d-flex">
             <div className="profile-left-panel">
                 <div className="profile-header d-flex">
                     <div className="user-image-box">
-                        <img src={userImage} />
+                        <img src={sellerImage} />
                     </div>
                     <strong className="userName">{userName}</strong>
                     <div className="fullName">{fullName}</div>
@@ -87,7 +88,7 @@ const UserProfile = () => {
                         class="own-product"
                         title="Edit product"
                         oldPrice={item.oldPrice}
-                        productImage={ProductImage}
+                        productImage={item.productImage}
                         sellerLocation={item.sellerLocation}
                         
                         // For product details

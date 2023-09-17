@@ -2,7 +2,7 @@
     width: 16%;
 }
 .own-product {
-    width: 24%;
+    width: 19%;
 }
 .new-product, .own-product {
     cursor: pointer;
@@ -11,7 +11,7 @@
     margin: 5px auto;
     border-radius: 5px;
     border: 1px solid #eee;
-    box-shadow: 0 0 5px 2px #eee;
+    // box-shadow: 0 0 5px 2px #eee;
     
     .product-images {
         height: 290px;

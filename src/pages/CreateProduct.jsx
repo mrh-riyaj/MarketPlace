@@ -57,11 +57,10 @@ const CreateProduct = () => {
             createProduct(formObject)
             .then(re => {
                 alert("Created")
-                // console.log(formData)
             })
             .catch(err => {
                 if(err) {
-                    alert("Not Created")
+                    alert(err)
                 }
             })
         }

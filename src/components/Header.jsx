@@ -13,7 +13,6 @@ const Header = () => {
     window.addEventListener("click", (action) => {
         if(action.target !== imgRef.current) {
             setMoreOptions(false)
-            console.log("false")
         }
     })
 
@@ -35,10 +34,6 @@ const Header = () => {
             >
                 <img src={userImage} ref={imgRef}/>
             </div>
- 
-            {/* {moreOptions &&
-                <div className="rest" ref={menuRef}>for test</div>
-            } */}
             {moreOptions &&
                 <ForMore
                     onRef={menuRef}
