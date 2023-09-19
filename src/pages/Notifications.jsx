@@ -9,8 +9,7 @@ const Notifications = (props) => {
     if(day.getHours() > 12) {
         hh = day.getHours() - 12
 
-    }
-    else {
+    }else {
         hh = day.getHours()
     }
     let mm = day.getMinutes()
@@ -22,7 +21,7 @@ const Notifications = (props) => {
                 <div className="info-status">Recently Uploaded</div>
                 <div className="items-wrapper">
                     {notifications.map((item, k) => (
-                        <div className="info-item-body d-flex" kye={k}>
+                        <div className="info-item-body d-flex" key={k}>
                             <div className="img-body">
                                 <img src={ProductImage}/>
                             </div>

@@ -26,23 +26,16 @@ const NewProduct = (props) => {
             </div>
             {ProductDetailsPopUp && <ForProductDetails
                 id={props.id}
-                name={props.name}
-                price={props.price}
                 title={props.title}
                 editBtn={props.editBtn}
                 saveBtn={props.saveBtn}
                 onClick={props.onClick}
                 sendBtn={props.sendBtn}
-                oldPrice={props.oldPrice}
-                onDelete={props.onDelete}
                 sellerName={props.sellerName}
-                categoryId={props.categoryId}
                 sellerImage={props.sellerImage}
                 productImage={props.productImage}
-                sellerLocation={props.sellerLocation}
-                productDetails={props.productDetails}
-                productCondition={props.productCondition}
                 onClose={() => setProductDetailsPopUp(false)}
+                selfPopup = {setProductDetailsPopUp}
             />}
         </section>
     )

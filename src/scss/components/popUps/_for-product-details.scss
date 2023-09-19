@@ -4,13 +4,13 @@
     
     .content {
         padding: 15px;
-        height: 95%;
+        height: 94%;
 
         .column-left {
             width: 70%;
             padding-right: 15px;
                     
-            .product-images {
+            .single-images {
                 height: 100%;
                 overflow: hidden;
                 text-align: center;
@@ -23,6 +23,30 @@
                     max-height: 855px;
                 }
             }
+            .product-images {
+                z-index: 1;
+                justify-content: center;
+                right: 0; bottom: 20px; left: 0;
+
+                .image {
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 5px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    align-items: center;
+                    background-color: #fff;
+                    
+                    &:hover {
+                        box-shadow: 0 0 10px 3px #dddddd;
+                    }
+                }
+
+                img {
+                    height: auto;
+                }
+            }
         }
 
         .column-right {
@@ -30,11 +54,10 @@
 
             .info-section {
                 overflow: auto;
-                max-height: 88%;
+                max-height: 89%;
                 padding: 10px 0;
         
                 .product-name {
-                    // padding: 8px 0;
                     font-size: 18px;
                     font-weight: 600;
                 }
@@ -73,15 +96,12 @@
                         font-size: 15px;
                         color: #a1a1a1;
 
-                        &::after {
-                            content: "\e948";
+                        .locket-icon {
+                            color: #1b74e4;
+                            font-size: 15px;
                         }
                     }
                     
-                    .locket-icon {
-                        color: #1b74e4;
-                        font-size: 15px;
-                    }
                     
                     .condition {
                         font-size: 15px;
@@ -117,6 +137,7 @@
                 border-radius: 10px;
                 border: 1px solid #eee;
                 background-color: #fff;
+                justify-content: space-between;
         
                 .img-box {
                     cursor: pointer;

@@ -77,22 +77,20 @@ const CreateAccount = () => {
                                 input name="full-name" label="Full name"
                             />
                         </div>
-                    </div>
-                    <div className="formRow">
                         <div className="clm">
                             <Inputs
                                 onChange={handInputField} required={true} 
                                 input name="mobile-email" label="Mobile/Email"
                             />
                         </div>
+                    </div>
+                    <div className="formRow">
                         <div className="clm">
                             <Inputs
                                 onChange={handInputField} required={true} 
                                 input type="date" name="birth" label="Date of birth"
                             />
                         </div>
-                    </div>
-                    <div className="formRow">
                         <div className="clm">
                             <Inputs
                                 onChange={handInputField} required={true} 

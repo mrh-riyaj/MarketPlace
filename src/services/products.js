@@ -20,8 +20,20 @@ const getProductById = (id) => {
     return axios.get(`${API}/products/${id}`).then(res => res.data)
 }
 
+// For edit
+const updateProductById = (id) => {
+    return axios.put(`${API}/products/${id}`).then(res => res.data)
+}
+
+// For delete
+const deleteProductById = (id) => {
+    return axios.delete(`${API}/products/${id}`).then(res => res.data)
+}
+
 export {
     createProduct,
     getAllProducts,
-    getProductById
+    getProductById,
+    updateProductById,
+    deleteProductById
 }

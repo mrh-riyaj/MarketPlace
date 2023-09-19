@@ -1,10 +1,10 @@
 import './scss/style.scss'
-import {BrowserRouter as Router} from 'react-router-dom'
-// import CreateAccount from './pages/CreateAccount'
-import Header from './components/Header'
-import NavBar from './layouts/NavBar'
 // import Login from './pages/Login'
 import Body from './layouts/Body'
+import NavBar from './layouts/NavBar'
+import Header from './components/Header'
+// import CreateAccount from './pages/CreateAccount'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   return (

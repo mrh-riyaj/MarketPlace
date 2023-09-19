@@ -3,26 +3,19 @@ import { useEffect, useState } from "react"
 import LinkButton from "../components/LinkButton"
 import NewProduct from "../components/NewProduct"
 import { getAllProducts } from "../services/products"
-// import productImage from "../images/demo_product.jpg"
 import ForEditProfile from "../components/popUps/ForEditProfile"
+import { getProductState, setProductState } from "../globalState"
 
 const UserProfile = (props) => {
     const [products, setProducts] = useState([])
     const [editProfile, setEditProfile] = useState(false)
     useEffect(() => {
         getAllProducts()
-        .then(data => setProducts(data))
+        .then(data => {
+            setProducts(data)
+        })
     }, [])
-
-    const removeItem = (key) => {
-        const newProducts = [...products]
-        const deletedItem = newProducts.splice(key, 1)
-        setProducts(newProducts)
-        
-        if(deletedItem[0].id >= 0) {
-            alert(deletedItem[0].id + " Deleted item")
-        }
-    }
+    setProductState('proList', {products, setProducts})
     
     
     // For User
@@ -41,7 +34,6 @@ const UserProfile = (props) => {
     let sellerImage = image;
     let sellerName = "Riyaj hossain"
     // let ProductImage = productImage;
-
     return (
         <section className="profile-section d-flex">
             <div className="profile-left-panel">
@@ -80,9 +72,9 @@ const UserProfile = (props) => {
             <div className="profile-right-panel d-flex">
                 {products.map((item, k) => (
                     <NewProduct
-                        kye={k}
-                        editBtn
+                        key={k}
                         id={item.id}
+                        editBtn={true}
                         name={item.name}
                         price={item.price}
                         class="own-product"
@@ -95,7 +87,6 @@ const UserProfile = (props) => {
                         sellerName={sellerName}
                         sellerImage={sellerImage}
                         categoryId={item.categoryId}
-                        onDelete={() => removeItem(k)}
                         productDetails={item.productDetails}
                         productCondition={item.productCondition}
                         

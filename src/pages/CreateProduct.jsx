@@ -153,15 +153,14 @@ const CreateProduct = () => {
                     <div className="formRow">
                         <div className="clm">
                             <Inputs
-                                required={true} onChange={handInputField}
+                                 onChange={handInputField}
                                 textarea name="productDetails" label="Product details"
                             />
                         </div>
                         <div className="clm">
                             <Inputs
-                                input onChange={handInputField}
-                                type="file" name="productImages" label="Select your item"
-                                multiple={true}
+                                input required={true} onChange={handInputField} multiple={true}
+                                type="file" name="productImages" label="Select your item 'Max - 5'" 
                             />
                         </div>
                     </div>

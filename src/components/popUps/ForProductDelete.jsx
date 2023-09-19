@@ -13,7 +13,7 @@ const ForProductDelete = (props) => {
                 <div className="alert-text">Are you sure you want to delete this item? "{props.name}"</div>
                 <div className="alert-btn d-flex">
                     <LinkButton text="Cancel" onClick={props.onClose} />
-                    <Button type="red" text="Delete" onClick={props.onDelete} />
+                    <Button type="red" text="Delete" iconLeft="bin" onClick={props.onDelete} />
                 </div>
             </div>
         </div>,
