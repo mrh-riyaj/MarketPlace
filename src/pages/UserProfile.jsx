@@ -1,7 +1,7 @@
 import image from "../images/User.jpg"
 import { useEffect, useState } from "react"
 import LinkButton from "../components/LinkButton"
-import NewProduct from "../components/NewProduct"
+import ProductList from "../components/ProductList"
 import { getAllProducts } from "../services/products"
 import ForEditProfile from "../components/popUps/ForEditProfile"
 import { getProductState, setProductState } from "../globalState"
@@ -71,7 +71,7 @@ const UserProfile = (props) => {
             </div>
             <div className="profile-right-panel d-flex">
                 {products.map((item, k) => (
-                    <NewProduct
+                    <ProductList
                         key={k}
                         id={item.id}
                         editBtn={true}

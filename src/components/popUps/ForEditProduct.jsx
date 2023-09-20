@@ -1,9 +1,46 @@
-import { createPortal } from "react-dom"
-import LinkButton from "../LinkButton"
 import Button from "../Button"
 import Inputs from "../Inputs"
+import { useState } from "react"
+import LinkButton from "../LinkButton"
+import { createPortal } from "react-dom"
+// import { updateProductById } from "../../services/products"
 
-const ForProductEdit = (props) => {
+const ForEditProduct = (props) => {
+    const [formData, setFormData] = useState({})
+
+    const handInputField = (e) => {
+        const name = e.target.name
+        let value = []
+        const files = e.target.files
+        const currentData = {...formData}
+        if(files) {
+            for (let i = 0; i < files.length; i++) {
+                value.push(files[i])
+            }
+        }
+        else {
+            value = e.target.value
+        }
+        currentData[name] = value
+        setFormData(currentData)
+
+        // console.log(currentData)
+
+    }
+    
+    const UpdateProduct = () => {
+        console.log(formData)
+        // updateProductById(formData)
+        // .then(re => {
+        //     alert("Updated")
+        // })
+        // .catch(err => {
+        //     if(err) {
+        //         alert(err)
+        //     }
+        // })
+    }
+
     return(
         createPortal(
         <div className="middle-popup-main-container d-flex position-a">
@@ -18,7 +55,7 @@ const ForProductEdit = (props) => {
                     <div className="formRow">
                         <div className="clm">
                             <span className="label">Change Categories</span>
-                            <select className="input-body" name="categoryId">
+                            <select className="input-body" name="categoryId" onChange={handInputField}>
                                 <option>-- Categories --</option>
                                 <option value="1">Beauty</option>
                                 <option value="2">Baby products</option>
@@ -38,7 +75,7 @@ const ForProductEdit = (props) => {
                         </div>
                         <div className="clm">
                             <span className="label">Change Condition</span>
-                            <select className="input-body" name="productCondition">
+                            <select className="input-body" name="productCondition" onChange={handInputField}>
                                 <option className="options">-- Select condition --</option>
                                 <option className="options" value="New">New</option>
                                 <option className="options" value="Used-like-new">Used like new</option>
@@ -47,31 +84,49 @@ const ForProductEdit = (props) => {
                             </select>
                         </div>
                         <div className="clm">
-                            <Inputs input label="Change product name" />
+                            <Inputs
+                                onChange={handInputField}
+                                input label="Change product name" name="name"
+                            />
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs input type="number" label="Change price" />
+                            <Inputs
+                                onChange={handInputField}
+                                input type="number" label="Change price" name="price"
+                            />
                         </div>
                         <div className="clm">
-                            <Inputs input type="number" label="Change old price" />
+                            <Inputs
+                                onChange={handInputField}
+                                input type="number" label="Change old price" name="oldPrice"
+                            />
                         </div>
                         <div className="clm">
-                            <Inputs input label="Change seller location" />
+                            <Inputs
+                                onChange={handInputField}
+                                input label="Change seller location" name="sellerLocation"
+                            />
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs textarea label="Change details" />
+                            <Inputs
+                            onChange={handInputField}
+                            textarea label="Change details" name="productDetails"
+                        />
                         </div>
                         <div className="clm">
-                            <Inputs input type="file" label="Change product image" />
+                            <Inputs
+                                onChange={handInputField} multiple={true}
+                                input type="file" label="Change product image (Max - 10)" name="productImages"
+                            />
                         </div>
                     </div>
                     <div className="submit-section  d-flex">
                         <LinkButton text="Cancel" color="red" onClick={props.onClose} />
-                        <Button text="Save" type="primary" />
+                        <Button text="Save" type="primary" onClick={UpdateProduct} />
                     </div>
                 </div>
             </div>
@@ -81,4 +136,4 @@ const ForProductEdit = (props) => {
     )
 }
 
-export default ForProductEdit
+export default ForEditProduct

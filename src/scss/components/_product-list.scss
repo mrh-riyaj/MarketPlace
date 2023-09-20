@@ -11,10 +11,15 @@
     margin: 5px auto;
     border-radius: 5px;
     border: 1px solid #eee;
-    // box-shadow: 0 0 5px 2px #eee;
+
+
+    &:hover {
+
+        box-shadow: 0 0 10px 2px #eee;
+    }
     
     .product-images {
-        height: 290px;
+        height: 250px;
         overflow: hidden;
         align-items: center;
         border-bottom: 1px solid #eee;

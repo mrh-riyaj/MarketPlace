@@ -1,7 +1,7 @@
 import Button from "../Button"
 import { createPortal } from "react-dom"
 import { useEffect, useState } from "react"
-import ForProductEdit from "./ForProductEdit"
+import ForEditProduct from "./ForEditProduct"
 import ForProductDelete from "./ForProductDelete"
 import { getProductById, deleteProductById } from "../../services/products"
 import { getProductState, setProductState } from "../../globalState"
@@ -72,14 +72,14 @@ const ForProductDetails = (props) => {
                     </div>
                     <div className="column-right position-r">
                         <div className="info-section">
-                            <div className="product-infos product-name">{product.name}</div>
+                            <div className="product-name">{product.name}</div>
                             <div className="product-infos d-flex">
                                 <div>
                                     <span className="price">৳{product.price}</span>
                                     {product.oldPrice && <del className="price old">৳{product.oldPrice}</del>}
                                 </div>
                                 <div>
-                                    {props.saveBtn && <Button icon="bookmark" />}
+                                    {props.saveBtn && <Button icon="bookmark"/>}
                                     {props.editBtn && 
                                         <span>
                                             <Button type="red" icon="bin" onClick={() => setProductDelete(true)}/>
@@ -98,6 +98,16 @@ const ForProductDetails = (props) => {
                             <div className="product-infos d-flex">
                                 <span className="info-tittle">Condition : </span>
                                 <span className={"condition " + product.productCondition}>{product.productCondition}</span>
+                            </div>
+                            <div className="product-infos">
+                                <span className="info-tittle">Details : </span>
+                                <span className="infos">{product.productDetails}</span>
+                            </div>
+                            
+                            {/* Will be delete */}
+                            <div className="product-infos">
+                                <span className="info-tittle">Details : </span>
+                                <span className="infos">{product.productDetails}</span>
                             </div>
                             <div className="product-infos">
                                 <span className="info-tittle">Details : </span>
@@ -122,13 +132,12 @@ const ForProductDetails = (props) => {
                 </div>
             </div>
             {ProductDelete && <ForProductDelete
-                id={props.id}
-                name={props.name}
+                name={product.name}
                 onClose={props.onClose}
                 onDelete={() => deleteProduct(props.id)}
                 onClose={() => setProductDelete(false)}
             />}
-            {ProductEdit && <ForProductEdit onClose={() => setProductEdit(false)}/>}
+            {ProductEdit && <ForEditProduct onClose={() => setProductEdit(false)}/>}
         </div>,
         document.body
         )

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import ForProductDetails from "./popUps/ForProductDetails"
 
-const NewProduct = (props) => {
+const ProductList = (props) => {
     const [ProductDetailsPopUp, setProductDetailsPopUp] = useState(false)
     const images = props.productImage && props.productImage.split(',')
     const imagePath = 'http://localhost:8888/file/' + images[0]
@@ -41,4 +41,4 @@ const NewProduct = (props) => {
     )
 }
 
-export default NewProduct
+export default ProductList

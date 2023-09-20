@@ -12,9 +12,28 @@ const ForFilter = (props) => {
                     </span>
                 </div>
                 <div className="container">
-                    <div className="row">
+                    <div className="formRow">
                         <div className="clm">
-                            <select className="filter-inputs">
+                            <select className="input-body" name="categoryId">
+                                <option>-- Categories --</option>
+                                <option value="1">Beauty</option>
+                                <option value="2">Baby products</option>
+                                <option value="3">Books</option>
+                                <option value="4">Beverages</option>
+                                <option value="5">Clothing</option>
+                                <option value="6">Cleaning Supplies</option>
+                                <option value="7">Electronics</option>
+                                <option value="8">Musical instruments</option>
+                                <option value="9">Office Products</option>
+                                <option value="10">Property for sale</option>
+                                <option value="11">Sports</option>
+                                <option value="12">Toys and games</option>
+                                <option value="13">Vehicles</option>
+                                <option value="14">Watches</option>
+                            </select>
+                        </div>
+                        <div className="clm">
+                            <select className="input-body filter-inputs">
                                 <option>-- Condition --</option>
                                 <option value="new">New</option>
                                 <option value="used-like-new">Used - like new</option>

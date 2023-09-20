@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import SellerImage from "../images/User.jpg"
-import NewProduct from "../components/NewProduct"
+import ProductList from "../components/ProductList"
 import { getAllProducts } from "../services/products"
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
             <div className="post-section">
                 <div className="posts d-flex">
                     {products.map((item, k) => (
-                        <NewProduct
+                        <ProductList
                             key={k}
                             id={item.id}
                             sendBtn saveBtn
