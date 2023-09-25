@@ -7,8 +7,15 @@
     border-radius: 10px;
     align-items: center;
     text-decoration: none;
+    border-left: 4px solid transparent;
+
+    &:focus {
+        // transform: scale(5deg);
+        border-left: 4px solid #397fd4;
+    }
 
     &:hover {
+        // after clicked
         transition: 0.3s;
         background-color: #f0f2f5;
     }
