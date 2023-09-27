@@ -16,8 +16,7 @@ const CreateProduct = () => {
             for (let i = 0; i < files.length; i++) {
                 value.push(files[i])
             }
-        }
-        else {
+        }else {
             value = e.target.value
         }
         currentData[name] = value
@@ -38,8 +37,7 @@ const CreateProduct = () => {
                     }
                 }
             })
-        }
-        else {
+        }else {
             alert('All missing')
         }
         if(addedFields.length === requiredFields.length) {
@@ -49,8 +47,7 @@ const CreateProduct = () => {
                     formData[name].forEach(file => {
                         formObject.append('productImages', file)
                     })
-                }
-                else {
+                }else {
                     formObject.append(name, formData[name])
                 }
             }
@@ -63,8 +60,7 @@ const CreateProduct = () => {
                     alert(err)
                 }
             })
-        }
-        else {
+        }else {
             alert('Single field missing')
         }
     }
@@ -91,7 +87,7 @@ const CreateProduct = () => {
                             <span className="label">Categories<i className="required">*</i></span>
                             <select 
                                 onChange={handInputField} required={true}
-                                className="input-body" name="categoryId"
+                                className="input-body select-input" name="categoryId"
                             >
                                 <option>-- Categories --</option>
                                 <option value="1">Beauty</option>
@@ -114,7 +110,7 @@ const CreateProduct = () => {
                             <span className="label">Condition<i className="required">*</i></span>
                             <select 
                                 onChange={handInputField} required={true}
-                                className="input-body" name="productCondition"
+                                className="input-body select-input" name="productCondition"
                             >
                                 <option className="options">-- Select condition --</option>
                                 <option className="options" value="New">New</option>
@@ -153,7 +149,7 @@ const CreateProduct = () => {
                     <div className="formRow">
                         <div className="clm">
                             <Inputs
-                                 onChange={handInputField}
+                                onChange={handInputField}
                                 textarea name="productDetails" label="Product details"
                             />
                         </div>

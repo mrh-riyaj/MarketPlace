@@ -31,8 +31,7 @@ const CreateAccount = () => {
                     }
                 }
             })
-        }
-        else {
+        }else {
             alert('All missing')
         }
         if(addedFields.length === requiredFields.length) {
@@ -49,8 +48,7 @@ const CreateAccount = () => {
             //         alert("Not Created")
             //     }
             // })
-        }
-        else {
+        }else {
             alert('Single field missing')
         }
     }
@@ -101,7 +99,7 @@ const CreateAccount = () => {
                             <span className="label">Gender<i className="required">*</i></span>
                             <select 
                                 onChange={handInputField} required={true}
-                                className="input-body" name="gender"
+                                className="select-input input-body" name="gender"
                             >
                                 <option>-- Select your gender --</option>
                                 <option value="male">male</option>

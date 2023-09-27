@@ -1,22 +1,41 @@
+.input-wrapper {
+    display: flex;
+    padding: 0 10px;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #eee;
+    
+    .input-icon {
+        color: #a1a1a1;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
 .input-body {
     width: 100%;
     border: none;
     outline: none;
-    margin: 5px 0;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 17px;
-    border-radius: 5px;
-    background-color: #eee;
-
+    background: none;
+    
     
     &.textarea {
-        resize: none;
+        resize: vertical;
         min-height: 120px;
+        border-radius: 5px;
+        background-color: #eee;
     }
     &.file {
         cursor: pointer;
         min-height: 120px;
         padding: 35px 15px;
+        border-radius: 5px;
+        background-color: #eee;
+    }
+    &.select-input {
+        border-radius: 5px;
+        background-color: #eee;
     }
     
 }

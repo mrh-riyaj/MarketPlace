@@ -17,8 +17,7 @@ const ForEditProduct = (props) => {
             for (let i = 0; i < files.length; i++) {
                 value.push(files[i])
             }
-        }
-        else {
+        }else {
             value = e.target.value
         }
         currentData[name] = value
@@ -55,7 +54,7 @@ const ForEditProduct = (props) => {
                     <div className="formRow">
                         <div className="clm">
                             <span className="label">Change Categories</span>
-                            <select className="input-body" name="categoryId" onChange={handInputField}>
+                            <select className="input-body select-input" name="categoryId" onChange={handInputField}>
                                 <option>-- Categories --</option>
                                 <option value="1">Beauty</option>
                                 <option value="2">Baby products</option>
@@ -75,7 +74,7 @@ const ForEditProduct = (props) => {
                         </div>
                         <div className="clm">
                             <span className="label">Change Condition</span>
-                            <select className="input-body" name="productCondition" onChange={handInputField}>
+                            <select className="input-body select-input" name="productCondition" onChange={handInputField}>
                                 <option className="options">-- Select condition --</option>
                                 <option className="options" value="New">New</option>
                                 <option className="options" value="Used-like-new">Used like new</option>
@@ -84,38 +83,23 @@ const ForEditProduct = (props) => {
                             </select>
                         </div>
                         <div className="clm">
-                            <Inputs
-                                onChange={handInputField}
-                                input label="Change product name" name="name"
-                            />
+                            <Inputs onChange={handInputField} input label="Change product name" name="name"/>
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs
-                                onChange={handInputField}
-                                input type="number" label="Change price" name="price"
-                            />
+                            <Inputs onChange={handInputField} input type="number" label="Change price" name="price"/>
                         </div>
                         <div className="clm">
-                            <Inputs
-                                onChange={handInputField}
-                                input type="number" label="Change old price" name="oldPrice"
-                            />
+                            <Inputs onChange={handInputField} input type="number" label="Change old price" name="oldPrice"/>
                         </div>
                         <div className="clm">
-                            <Inputs
-                                onChange={handInputField}
-                                input label="Change seller location" name="sellerLocation"
-                            />
+                            <Inputs onChange={handInputField} input label="Change seller location" name="sellerLocation"/>
                         </div>
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs
-                            onChange={handInputField}
-                            textarea label="Change details" name="productDetails"
-                        />
+                            <Inputs onChange={handInputField} textarea label="Change details" name="productDetails"/>
                         </div>
                         <div className="clm">
                             <Inputs

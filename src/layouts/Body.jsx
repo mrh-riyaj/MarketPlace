@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom"
 import Notifications from "../pages/Notifications"
 import CreateProduct from "../pages/CreateProduct"
 import CreateAccount from "../pages/CreateAccount"
+import Components from "../pages/Components"
 
 const Body = () => {
     return(
@@ -24,6 +25,7 @@ const Body = () => {
             {/* will be remove*/}
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/create-account" element={<CreateAccount />} />
+            <Route exact path="/components" element={<Components />} />
         </Routes>
     )
 }

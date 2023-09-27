@@ -14,7 +14,7 @@ const ForFilter = (props) => {
                 <div className="container">
                     <div className="formRow">
                         <div className="clm">
-                            <select className="input-body" name="categoryId">
+                            <select className="input-body select-input" name="categoryId">
                                 <option>-- Categories --</option>
                                 <option value="1">Beauty</option>
                                 <option value="2">Baby products</option>
@@ -33,7 +33,7 @@ const ForFilter = (props) => {
                             </select>
                         </div>
                         <div className="clm">
-                            <select className="input-body filter-inputs">
+                            <select className="input-body select-input">
                                 <option>-- Condition --</option>
                                 <option value="new">New</option>
                                 <option value="used-like-new">Used - like new</option>
@@ -44,16 +44,10 @@ const ForFilter = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs
-                                input type="number" placeholder="Min"
-                                class="filter-inputs"
-                            />
+                            <Inputs input type="number" placeholder="Min"/>
                         </div>
                         <div className="clm">
-                            <Inputs
-                                input type="number" placeholder="Max"
-                                class="filter-inputs"
-                            />
+                            <Inputs input type="number" placeholder="Max"/>
                         </div>
                     </div>
                     <div className="row filter-buttons">

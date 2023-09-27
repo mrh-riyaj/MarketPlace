@@ -9,21 +9,24 @@
     
     &:hover {
         color: #81bbfd;
+        text-decoration: underline;
     }
 }
 
 .black {
     color: #000;
-
+    
     &:hover {
         color: #686868;
+        text-decoration: underline;
     }
 }
 
 .red {
     color: #ff0505;
-
+    
     &:hover {
         color: #fc6666;
+        text-decoration: underline;
     }
 }

@@ -15,10 +15,10 @@ const NavBar = () => {
                     <MenuItem text='Create' icon="pencil2" path="create-product" />
                     <div className="tittle d-flex">
                         <span>Will be delete</span>
-                        <i className="tittle-icon icon-social-media"></i>
                     </div>
-                    <MenuItem text='Login' icon="user" path="/login" />
-                    <MenuItem text='Create account' icon="user" path="/create-account" />
+                    <MenuItem text='Login' path="/login" />
+                    <MenuItem text='Create account' path="/create-account" />
+                    <MenuItem text='Components' path="/components" />
                 </div>
                 <div className="tittle d-flex">
                     <span>Categories</span>

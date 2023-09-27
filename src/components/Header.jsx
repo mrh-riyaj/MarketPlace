@@ -22,10 +22,7 @@ const Header = () => {
                 <span>Will be dynamic text</span>
             </div>
             <div className="search-bar d-flex">
-                <Inputs
-                    input class="search-input"
-                    placeholder="Search MarketPlace"
-                />
+                <Inputs input placeholder="Search here..."/>
                 <Button type="search-icon" icon="search" />
             </div>
             <div

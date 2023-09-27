@@ -32,9 +32,7 @@ const ForEditProfile = (props) => {
                         </div>
                         <div className="clm">
                             <span className="label">Change gender</span>
-                            <select
-                                className="input-body" name="gender"
-                            >
+                            <select className="input-body select-input" name="gender">
                                 <option>-- Select your gender --</option>
                                 <option value="male">male</option>
                                 <option value="female">female</option>
@@ -47,16 +45,10 @@ const ForEditProfile = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs
-                                input type="password"
-                                label="New Password"
-                            />
+                            <Inputs input type="password" label="New Password"/>
                         </div>
                         <div className="clm">
-                            <Inputs
-                                input required={true} type="password"
-                                label="Current Password"
-                            />
+                            <Inputs input required={true} type="password" label="Current Password"/>
                         </div>
                     </div>
                     <div className="formRow">

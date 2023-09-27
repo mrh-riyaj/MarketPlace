@@ -28,12 +28,12 @@
         padding: 3px 0;
         margin-left: -10%;
         border-radius: 5px;
+        align-items: center;
         background-color: #fff;
         box-shadow: 0 0 5px 5px #eee;
 
-        .input-body {
-            padding: 0 15px;
-            font-size: 17px;
+        .input-wrapper {
+            width: 100%;
             background: none;
         }
         .search-icon {
