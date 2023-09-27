@@ -156,7 +156,7 @@ const CreateProduct = () => {
                         <div className="clm">
                             <Inputs
                                 input required={true} onChange={handInputField} multiple={true}
-                                type="file" name="productImages" label="Select your item 'Max - 5'" 
+                                class="file" type="file" name="productImages" label="Select your item 'Max - 5'" 
                             />
                         </div>
                     </div>

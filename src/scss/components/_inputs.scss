@@ -4,12 +4,42 @@
     border-radius: 5px;
     align-items: center;
     background-color: #eee;
+    border: 1px solid transparent;
+
+    &.valid {
+        border: 1px solid #5ad15a;
+    }
+    &.invalid {
+        border: 1px solid #ff5858;
+    }
     
     .input-icon {
         color: #a1a1a1;
         font-size: 18px;
         padding: 0 10px;
     }
+    
+    .validation {
+        font-size: 15px;
+        padding: 2px 5px;
+        border-radius: 3px;
+        top: -25px; right: 0;
+        
+        .validation-icon {
+            font-size: 10px;
+            margin-right: 5px;
+        }
+        &.valid {
+            color: #5ad15a;
+            background-color: #bffcbf7c;
+        }
+        &.invalid {
+            color: #ff5858;
+            background-color: #ffcdcd8e;
+        }
+
+    }
+
 }
 .input-body {
     width: 100%;

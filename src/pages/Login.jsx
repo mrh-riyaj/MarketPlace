@@ -1,8 +1,8 @@
-import LinkButton from "../components/LinkButton"
+import Logo from "../components/Logo"
 import Button from "../components/Button"
 import Inputs from "../components/Inputs"
-import Logo from "../components/Logo"
-import image from "../images/shopping.gif"
+import image from "../images/cart.png"
+import LinkButton from "../components/LinkButton"
 
 const Login = () => {
     return (
@@ -25,12 +25,12 @@ const Login = () => {
                         </div>
                         <div className="row forms">
                             <div className="clm">
-                                <Inputs input placeholder="mobile/email" />
+                                <Inputs input iconLeft="user" placeholder="mobile/email" />
                             </div>
                         </div>
                         <div className="row forms">
                             <div className="clm">
-                                <Inputs input type="password" placeholder="Password" />
+                                <Inputs input iconLeft="lock" type="password" placeholder="Password" />
                             </div>
                         </div>
                         <div className="row forms ">

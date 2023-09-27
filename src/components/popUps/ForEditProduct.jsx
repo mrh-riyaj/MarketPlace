@@ -104,7 +104,7 @@ const ForEditProduct = (props) => {
                         <div className="clm">
                             <Inputs
                                 onChange={handInputField} multiple={true}
-                                input type="file" label="Change product image (Max - 10)" name="productImages"
+                                input class="file" type="file" label="Change product image (Max - 10)" name="productImages"
                             />
                         </div>
                     </div>
