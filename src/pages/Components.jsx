@@ -1,12 +1,12 @@
 import Button from "../components/Button"
 import Inputs from "../components/Inputs"
-import Toggle from "../components/Toggle"
+import Switches from "../components/Switches"
 import LinkButton from "../components/LinkButton"
 
 const Components = () => {
     return (
         <section style={{padding: "50px"}}>
-            <div style={{paddingTop: "30px"}}>Buttons</div>
+            <strong style={{paddingTop: "30px", display: "inline-block"}}>Buttons</strong>
             <div className="row" style={{paddingTop: "10px"}}>
                 <div className="clm"><Button text="Demo" /></div>
                 <div className="clm"><Button text="Demo" iconLeft="home" /></div>
@@ -29,14 +29,14 @@ const Components = () => {
                 <div className="clm"><Button icon="home" type="red"/></div>
             </div>
 
-            <div style={{paddingTop: "30px"}}>LinkButtons</div>
+            <strong style={{paddingTop: "30px", display: "inline-block"}}>LinkButtons</strong>
             <div className="row" style={{paddingTop: "20px"}}>
                 <div className="clm"><LinkButton text="Demo" /></div>
                 <div className="clm"><LinkButton text="Demo" color="black" /></div>
                 <div className="clm"><LinkButton text="Demo" color="red" /></div>
             </div>
 
-            <div style={{paddingTop: "30px"}}>Inputs</div>
+            <strong style={{paddingTop: "30px", display: "inline-block"}}>Inputs</strong>
             <div className="row" style={{paddingTop: "20px"}}>
                 <div className="clm">
                     <Inputs input label="Demo" />
@@ -72,19 +72,19 @@ const Components = () => {
                 </div>
             </div>
 
-            <div style={{paddingTop: "30px"}}>Inputs</div>
+            <strong style={{paddingTop: "30px", display: "inline-block"}}>Toggle / CheckBox</strong>
             <div className="row" style={{paddingTop: "20px"}}>
                 <div className="clm">
-                    <Toggle forId="1" />
+                    <Switches toggle forId="1" />
                 </div>
                 <div className="clm">
-                    <Toggle forId="2" />
+                    <Switches toggle forId="2" label="Demo" />
                 </div>
                 <div className="clm">
-                    <Toggle forId="3" />
+                    <Switches checkbox forId="A" />
                 </div>
                 <div className="clm">
-                    <Toggle forId="4" />
+                    <Switches checkbox forId="B" label="Demo" />
                 </div>
             </div>
         </section>

@@ -7,7 +7,7 @@
     border: 1px solid transparent;
 
     &.valid {
-        border: 1px solid #5ad15a;
+        border: 1px solid #90ee90;
     }
     &.invalid {
         border: 1px solid #ff5858;
@@ -30,7 +30,7 @@
             margin-right: 5px;
         }
         &.valid {
-            color: #5ad15a;
+            color: #90ee90;
             background-color: #bffcbf7c;
         }
         &.invalid {

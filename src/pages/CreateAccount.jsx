@@ -119,7 +119,7 @@ const CreateAccount = () => {
                             <Inputs
                                 onChange={handInputField} required={true}
                                 input type="password" name="confirmPassword" label="Confirm password"
-                                />
+                            />
                         </div>
                     </div>
                     <div className="formRow">
@@ -131,7 +131,7 @@ const CreateAccount = () => {
                         </div>
                         <div className="clm">
                             <Inputs
-                                input required={true} onChange={handInputField}
+                                input onChange={handInputField}
                                 class="file" type="file" name="userImage" label="Select your profile"
                             />
                         </div>

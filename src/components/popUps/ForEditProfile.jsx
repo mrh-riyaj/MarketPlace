@@ -17,10 +17,10 @@ const ForEditProfile = (props) => {
                 <div className="form-container">
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs input label="Change User name" />
+                            <Inputs input label="Change user name" />
                         </div>
                         <div className="clm">
-                            <Inputs input label="Change Full name" />
+                            <Inputs input label="Change full name" />
                         </div>
                         <div className="clm">
                             <Inputs input label="Change mobile/email" />
@@ -40,7 +40,7 @@ const ForEditProfile = (props) => {
                             </select>
                         </div>
                         <div className="clm">
-                            <Inputs input label="Change address" />
+                            <Inputs input label="Change current address" />
                         </div>
                     </div>
                     <div className="formRow">

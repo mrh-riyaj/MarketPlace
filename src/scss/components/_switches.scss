@@ -1,0 +1,82 @@
+.toggle {
+    .switch {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    
+    .switch:checked + .toggle-body::after {
+        left: 26px;
+        transition: 0.5s;
+        background-color: #b8f144;
+    }
+    
+    .toggle-body {
+        width: 50px;
+        height: 25px;
+        display: block;
+        cursor: pointer;
+        border-radius: 25px;
+        background-color: #ebebeb;
+        box-shadow: inset 0 0 5px #6b6b6b66;
+        
+        
+        &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            transition: 0.5s;
+            position: absolute;
+            top: 3px; left: 3px;
+            border-radius: 10px;
+            background-color: #f5cd04;
+        }
+    }
+}
+
+.checkbox {
+    height: 20px;
+    
+    .check[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        appearance: none;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        background-color: #eee;
+        border: 1px solid #eee;
+    }
+    .check[type="checkbox"]::after {
+        content: "\1f5f8";
+        display: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: #90ee90;
+        position: absolute;
+        top: -4px; left: 1px;
+    }
+    .check[type="checkbox"]:checked::after {
+        display: block;
+    }
+    .check[type="checkbox"]:checked {
+        background-color:#bffcbf7c;
+        border: 1px solid #90ee90;
+    }
+}
+
+.switch-body {
+    align-items: center;
+    // background-color: green;
+}
+
+.switch-label {
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 5px;
+    color: #a5a5a5;
+    
+    &:hover {
+        color: #d1d1d1;
+    }
+}
