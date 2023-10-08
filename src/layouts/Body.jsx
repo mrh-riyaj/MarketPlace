@@ -1,6 +1,7 @@
 import React from "react"
 import Home from "../pages/Home"
 import Login from "../pages/Login"
+import Array from "../pages/Array"
 import Inboxes from "../pages/Inboxes"
 import Settings from "../pages/Settings"
 import SaveItems from "../pages/SaveItems"
@@ -26,6 +27,7 @@ const Body = () => {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/create-account" element={<CreateAccount />} />
             <Route exact path="/components" element={<Components />} />
+            <Route exact path="/array" element={<Array />} />
         </Routes>
     )
 }

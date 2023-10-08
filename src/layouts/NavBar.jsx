@@ -19,6 +19,7 @@ const NavBar = () => {
                     <MenuItem text='Login' path="/login" />
                     <MenuItem text='Create account' path="/create-account" />
                     <MenuItem text='Components' path="/components" />
+                    <MenuItem text='Array' path="/array" />
                 </div>
                 <div className="tittle d-flex">
                     <span>Categories</span>

@@ -44,10 +44,10 @@ const ForFilter = (props) => {
                     </div>
                     <div className="formRow">
                         <div className="clm">
-                            <Inputs input type="number" placeholder="Min"/>
+                            <Inputs input type="number" textLeft="Min"/>
                         </div>
                         <div className="clm">
-                            <Inputs input type="number" placeholder="Max"/>
+                            <Inputs input type="number" textLeft="Max"/>
                         </div>
                     </div>
                     <div className="row filter-buttons">
