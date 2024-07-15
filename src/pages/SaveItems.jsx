@@ -21,7 +21,6 @@ const SaveItems = (props) => {
                             </div>
                             <div>
                                 <LinkButton
-                                    color="black"
                                     class="product-name"
                                     text={`${productName} & ${category}`}
                                 />
@@ -30,11 +29,11 @@ const SaveItems = (props) => {
                                     <span>{" ৳" + price}</span>
                                     <span>{sellerName}</span>
                                 </div>
-                                <div className="d-flex">
+                                <div className="seller-info d-flex">
                                     <div className="seller-image">
                                         <img src={sellerImage}/>
                                     </div>
-                                    <span>Saved from</span>
+                                    <span>Saved from </span>
                                     <LinkButton color="black" text={sellerName + "'s post"} />
                                 </div>
                             </div>
