@@ -39,8 +39,19 @@ const Components = () => {
             <strong style={{paddingTop: "30px", display: "inline-block"}}>Inputs</strong>
             <div className="row" style={{paddingTop: "20px"}}>
                 <div className="clm">
-                    <Inputs input label="Demo" />
+                    <Inputs input label="Demo" textRight="Demo"/>
                 </div>
+                <div className="clm">
+                    <Inputs input label="Demo" textLeft="Demo"/>
+                </div>
+                <div className="clm">
+                    <Inputs input label="Demo" textRight="Demo" iconLeft="home" />
+                </div>
+                <div className="clm">
+                    <Inputs input label="Demo" textLeft="Demo" iconRight="home"/>
+                </div>
+            </div>
+            <div className="row" style={{paddingTop: "20px"}}>
                 <div className="clm">
                     <Inputs input label="Demo" required={true}/>
                 </div>
