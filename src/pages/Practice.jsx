@@ -1,12 +1,12 @@
 import Button from "../components/Button"
 import Inputs from "../components/Inputs"
 
-const Array = () => {
+const Practice = () => {
     // const rows = 10
     // const columns = 8
     // const myArray = new Array(rows)
     // console.log(myArray)
-    const text = [1,2,3,4,5];
+    const text = [1,2,3];
     return (
         <section style={{padding: "50px"}}>
             <div className="row" style={{paddingTop: "50px"}}>
@@ -50,4 +50,4 @@ const Array = () => {
     )
 }
 
-export default Array
+export default Practice

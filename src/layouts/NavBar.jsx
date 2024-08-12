@@ -20,6 +20,7 @@ const NavBar = () => {
                     <MenuItem text='Create account' path="/create-account" />
                     <MenuItem text='Components' path="/components" />
                     <MenuItem text='Array' path="/array" />
+                    <MenuItem text='Practice' path="/practice" />
                 </div>
                 <div className="tittle d-flex">
                     <span>Categories</span>

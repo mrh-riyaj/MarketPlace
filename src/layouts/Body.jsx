@@ -1,7 +1,5 @@
 import React from "react"
 import Home from "../pages/Home"
-import Login from "../pages/Login"
-import Array from "../pages/Array"
 import Inboxes from "../pages/Inboxes"
 import Settings from "../pages/Settings"
 import SaveItems from "../pages/SaveItems"
@@ -9,8 +7,13 @@ import UserProfile from "../pages/UserProfile"
 import { Routes, Route } from "react-router-dom"
 import Notifications from "../pages/Notifications"
 import CreateProduct from "../pages/CreateProduct"
-import CreateAccount from "../pages/CreateAccount"
+
+// will be remove
+import Array from "../pages/Array"
+import Login from "../pages/Login"
+import Practice from "../pages/Practice"
 import Components from "../pages/Components"
+import CreateAccount from "../pages/CreateAccount"
 
 const Body = () => {
     return(
@@ -28,6 +31,7 @@ const Body = () => {
             <Route exact path="/create-account" element={<CreateAccount />} />
             <Route exact path="/components" element={<Components />} />
             <Route exact path="/array" element={<Array />} />
+            <Route exact path="/practice" element={<Practice />} />
         </Routes>
     )
 }
