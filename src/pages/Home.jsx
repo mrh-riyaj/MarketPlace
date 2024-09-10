@@ -19,8 +19,9 @@ const Home = () => {
                     {products.map((item, k) => (
                         <ProductList
                             key={k}
+                            sendBtn
+                            saveBtn
                             id={item.id}
-                            sendBtn saveBtn
                             name={item.name}
                             price={item.price}
                             title="Product details"

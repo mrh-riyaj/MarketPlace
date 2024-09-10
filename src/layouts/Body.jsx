@@ -11,7 +11,6 @@ import CreateProduct from "../pages/CreateProduct"
 // will be remove
 import Array from "../pages/Array"
 import Login from "../pages/Login"
-import Practice from "../pages/Practice"
 import Components from "../pages/Components"
 import CreateAccount from "../pages/CreateAccount"
 
@@ -31,7 +30,6 @@ const Body = () => {
             <Route exact path="/create-account" element={<CreateAccount />} />
             <Route exact path="/components" element={<Components />} />
             <Route exact path="/array" element={<Array />} />
-            <Route exact path="/practice" element={<Practice />} />
         </Routes>
     )
 }

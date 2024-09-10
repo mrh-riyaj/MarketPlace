@@ -1,30 +1,62 @@
+import { useState } from "react"
 import Button from "../components/Button"
 import Inputs from "../components/Inputs"
 
 const Array = () => {
-    // const rows = 10
-    // const columns = 8
-    // const myArray = new Array(rows)
-    // console.log(myArray)
-    const text = [1,2,3,4,5];
+    const [formData, setFormData] = useState({})
+    const handInputField = (e) => {
+        const name = e.target.name
+        let value = []
+        const files = e.target.files
+        const currentData = {...formData}
+        if(files) {
+            for (let i = 0; i < files.length; i++) {
+                value.push(files[i])
+            }
+        }else {
+            value = e.target.value
+        }
+        currentData[name] = value
+        setFormData(currentData)
+    }
+    const validateForm = () => {
+        const addedFields = []
+        const requiredFields = ["name", "age", "class", "roll"]
+        if(Object.keys(formData).length) {
+            requiredFields.forEach((item) => {
+                for(const k in formData) {
+                    if(k === item && formData[k] !== '') {
+                        addedFields.push(item)
+                    }
+                }
+            })
+        }else {
+            alert('All missing')
+        }
+    }
+    var newData = [Object.values(formData)]
+
+    console.log(Object.values(formData));
+    
     return (
         <section style={{padding: "50px"}}>
             <div className="row" style={{paddingTop: "50px"}}>
                 <div className="clm" style={{borderRight: "1px solid #eee", width: "30%"}}>
                     <div className="formRow">
-                        <Inputs input textLeft="Name" />
+                        <Inputs name="name" input textLeft="Name" onChange={handInputField} />
                     </div>
                     <div className="formRow">
-                        <Inputs input type="number" textLeft="Age"/>
+                        <Inputs name="age" textLeft="Age" input type="number" onChange={handInputField} />
                     </div>
                     <div className="formRow">
-                        <Inputs input type="number" textLeft="Class"/>
+                        <Inputs name="class" input type="number" textLeft="Class" onChange={handInputField}/>
                     </div>
                     <div className="formRow">
-                        <Inputs input type="number" textLeft="Roll"/>
+                        <Inputs name="roll" input type="number" textLeft="Roll" onChange={handInputField}/>
                     </div>
                     <div className="formRow">
-                        <Button text="Create" iconLeft="pencil" type="primary"/>
+                        {/* <Button text="Create" iconLeft="pencil" type="primary"/> */}
+                        <Button onClick={validateForm} text="Create" iconLeft="pencil" type="primary"/>
                     </div>
                 </div>
                 <div className="clm">
@@ -35,12 +67,12 @@ const Array = () => {
                             <div className="clm head-titles">Class</div>
                             <div className="clm head-titles">Roll</div>
                         </div>
-                        {text.map((item, k) => (
+                        {newData.map((newData, k) => (
                             <div className="formRow" key={k}>
-                                <div className="clm">1</div>
-                                <div className="clm">2</div>
-                                <div className="clm">3</div>
-                                <div className="clm">4</div>
+                                <div className="clm">{newData[0]}</div>
+                                <div className="clm">{newData[1]}</div>
+                                <div className="clm">{newData[2]}</div>
+                                <div className="clm">{newData[3]}</div>
                             </div>
                         ))}
                     </div>
