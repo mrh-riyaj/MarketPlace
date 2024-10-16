@@ -34,7 +34,7 @@ const Array = () => {
             alert('All missing')
         }
     }
-    var newData = [Object.values(formData)]
+    let newData = [Object.values(formData)]
 
     console.log(Object.values(formData));
     
@@ -56,7 +56,7 @@ const Array = () => {
                     </div>
                     <div className="formRow">
                         {/* <Button text="Create" iconLeft="pencil" type="primary"/> */}
-                        <Button onClick={validateForm} text="Create" iconLeft="pencil" type="primary"/>
+                        <Button onClick={validateForm} text="Add it" iconLeft="pencil" type="primary"/>
                     </div>
                 </div>
                 <div className="clm">

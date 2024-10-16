@@ -28,7 +28,7 @@ const UserProfile = (props) => {
     let email = "a.mrh.riyaj@gmail.com";
     let posts = products.length + " Posts";
     let address = "Shuvadda west para puraton coloni dhaka";
-    let bio = "My name is riyja hossain i live in dhaka keranigong shuvadda school dhaka coligrat school";
+    let bio = "My name is riyja hossain i live in dhaka keranigong shuvadda";
     
     // For Product
     let sellerImage = image;
